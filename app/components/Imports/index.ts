@@ -1,9 +1,0 @@
-export { default as Navbar } from "@components/Navbar";
-export { default as Footer } from "@components/Footer";
-export { default as HeroSlider } from "@components/Home/Heroslider";
-export { default as StatsBar } from "@components/Home/Statsbar";
-export { default as ServicesGrid } from "@components/Home/ServicesGrid";
-export { default as WhyChooseUs } from "@components/Home/WhyChooseUs";
-export { default as Testimonials } from "@components/Home/Testimonials";
-export { default as AreasCovered } from "@components/Home/AreasCovered";
-export { default as CtaBanner } from "@components/Home/CtaBanner";

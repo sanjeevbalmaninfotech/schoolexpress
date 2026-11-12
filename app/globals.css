@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-/* Inter / Bricolage Grotesque / Public Sans come from next/font in layout.tsx
-   (no Google @import needed here) */
 
 @theme inline {
   --font-sans: var(--font-inter), system-ui, sans-serif;
@@ -71,5 +69,34 @@ body {
 
   to {
     width: 100%;
+  }
+}
+
+/* reusable section heading + paragraph (12px gap between them) */
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section-heading {
+  font-family: var(--font-bricolage), "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.section-paragraph {
+  font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.25;
+  color: #b4c4c6;
+}
+
+@media (min-width: 768px) {
+  .section-heading {
+    font-size: 42px;
   }
 }
