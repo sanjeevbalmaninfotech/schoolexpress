@@ -22,8 +22,8 @@ type Slide = {
   statBottom?: Stat; // bottom left of image
 };
 
-const ICON_TOP = "/home/icons/toptag.svg";
-const ICON_BOTTOM = "/home/icons/hometag.svg";
+const ICON_TOP = "/home/icons/hartinpink.svg";
+const ICON_BOTTOM = "/home/icons/busicon.svg";
 
 const CTAS = {
   primaryCta: { label: "Request a quote", href: "#quote" },
@@ -139,15 +139,14 @@ function SlideView({
   return (
     <div
       aria-hidden={!active}
-      className={`col-start-1 row-start-1 grid grid-cols-1 items-center gap-[20px] transition-[opacity,visibility] duration-500 lg:grid-cols-2 ${
-        active ? "visible opacity-100" : "invisible opacity-0"
-      }`}
+      className={`col-start-1 row-start-1 grid grid-cols-1 items-center gap-[20px] transition-[opacity,visibility] duration-500 lg:grid-cols-2 ${active ? "visible opacity-100" : "invisible opacity-0"
+        }`}
     >
       {/* Left */}
       <div className="flex flex-col gap-[20px]">
         <div className="ff-ui inline-flex w-fit items-center gap-2 rounded-[50px] bg-[#18373D] px-5 py-2 text-[16px] font-medium capitalize text-[#8FD3D2] backdrop-blur-[20px]">
           <Image
-            src="/home/fem.svg"
+            src="/home/icons/rightarrow.svg"
             alt=""
             width={20}
             height={20}
@@ -312,7 +311,8 @@ export default function HeroSlider() {
                 className={controlBtn}
               >
                 <Image
-                  src="/home/icons/leftArrow.svg"
+                  src="/home/icons/rightarrow.svg"
+
                   alt=""
                   width={24}
                   height={24}
@@ -328,7 +328,8 @@ export default function HeroSlider() {
                 className={`${controlBtn} aria-pressed:bg-[#FFFFFF33]`}
               >
                 <Image
-                  src="/home/icons/pose.svg"
+
+                  src="/home/icons/leftArrow.svg"
                   alt=""
                   width={24}
                   height={24}
@@ -343,7 +344,7 @@ export default function HeroSlider() {
                 className={controlBtn}
               >
                 <Image
-                  src="/home/icons/rightArrow.svg"
+                  src="/home/icons/push.svg"
                   alt=""
                   width={24}
                   height={24}

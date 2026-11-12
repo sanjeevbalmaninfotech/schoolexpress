@@ -4,38 +4,39 @@ import Link from "next/link";
 const TAGS = [
   {
     label: "Parents and carers",
-    icon: "/home/icons/Parentsandcarers.svg",
+    icon: "/home/icons/men.svg",
     color: "#F59E9A",
   },
   {
     label: "Schools, trusts and colleges",
-    icon: "/home/icons/Schoolstrustscolleges.svg",
+    icon: "/home/icons/phonepad.svg",
     color: "#6AC5F6",
   },
   {
     label: "Care homes and social care",
-    icon: "/home/icons/Carehomessocialcare.svg",
+    icon: "/home/icons/heartCyan.svg",
     color: "#009D66",
   },
   {
     label: "Groups and events",
-    icon: "/home/icons/Groupsevents.svg",
+    icon: "/home/icons/groups.svg",
     color: "#0BAFC9",
   },
 ];
 
 const CARDS = [
   {
+    // "C:\repos\schoolexpress\public\home\images\Schooltrustsand.jpg"
     href: "/school-college-transport",
-    src: "/images/pupils-walking-to-school-transport.jpg",
+    src: "/home/images/Schooltrustsand.jpg",
     alt: "Pupils with backpacks walking towards their school transport",
     title: "Schools, trusts and colleges",
     text: "Daily home-to-school and college runs, booked by families, schools, trusts and colleges.",
     color: "#67BDF5",
   },
   {
-    href: "/adult-social-care-transport",
-    src: "/images/carers-with-older-woman-in-wheelchair.jpg",
+    href: "/adult-social-care-transport", // adultsandsocialcare
+    src: "/home/images/adultsandsocialcare.jpg",
     alt: "Two carers smiling with an older woman in a wheelchair",
     title: "Adults and social care",
     text: "Travel for adults and care home residents to day centres, appointments and activities.",
@@ -43,7 +44,7 @@ const CARDS = [
   },
   {
     href: "/group-travel",
-    src: "/images/teenagers-on-group-day-out.jpg",
+    src: "/home/images/grouptravel.jpg",
     alt: "Group of smiling teenagers on a day out",
     title: "Group travel and events",
     text: "Minibus travel for school trips, sports fixtures, proms and outings.",
@@ -51,7 +52,7 @@ const CARDS = [
   },
   {
     href: "/wheelchair-accessible-transport",
-    src: "/images/wheelchair-user-boarding-van-ramp.jpg",
+    src: "/home/images/Wheelchairaccessible.jpg",
     alt: "Wheelchair user boarding a van by its ramp",
     title: "Wheelchair accessible",
     text: "20+ accessible vehicles, the largest fleet in our area, for wheelchair users of any age and any journey.",
@@ -59,7 +60,7 @@ const CARDS = [
   },
   {
     href: "/send-transport",
-    src: "/images/boy-in-wheelchair-with-basketball.jpg",
+    src: "/home/images/additional.jpg",
     alt: "Boy in a wheelchair holding a basketball and smiling",
     title: "SEND and additional needs",
     text: "Trained passenger assistants and journeys planned around each passenger's needs.",
@@ -107,7 +108,7 @@ export default function TransportSection() {
               className="group inline-flex shrink-0 items-center gap-2 text-[17px] font-semibold leading-none text-[#31CDD7]"
             >
               All services
-              <ArrowRight className="transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="" />
             </Link>
           </div>
 
@@ -168,7 +169,7 @@ export default function TransportSection() {
                     </p>
                     <span className="mt-auto inline-flex items-center gap-2 pt-3 text-[17px] font-semibold leading-none text-[#31CDD7]">
                       Find out more
-                      <ArrowRight className="transition-transform group-hover:translate-x-1" />
+                      <ArrowRight className="" />
                     </span>
                   </div>
                 </Link>
