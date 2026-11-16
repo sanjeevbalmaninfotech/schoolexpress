@@ -1,105 +1,12 @@
 "use client";
 
+import { COLOR_TAGS, HomeSlides } from "@/constants/homepage";
+import { HomeSlide, Stat } from "@/types/home";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
 const SLIDE_MS = 5000;
-
-type Stat = { icon: string; value?: string; label: string };
-
-type Slide = {
-  tab: string;
-  badge: string;
-  headingWhite: string;
-  headingAccent?: string;
-  text: string;
-  audience: string[];
-  primaryCta: { label: string; href: string };
-  secondaryCta: { label: string; href: string };
-  image: { src: string; alt: string };
-  statTop?: Stat; // top right of image
-  statBottom?: Stat; // bottom left of image
-};
-
-const ICON_TOP = "/home/icons/hartinpink.svg";
-const ICON_BOTTOM = "/home/icons/busicon.svg";
-
-const CTAS = {
-  primaryCta: { label: "Request a quote", href: "#quote" },
-  secondaryCta: { label: "Call 01491 414040", href: "tel:01491414040" },
-};
-
-const SLIDES: Slide[] = [
-  {
-    tab: "All services",
-    badge: "Trusted by local councils across the South East",
-    headingWhite: "Safe, reliable transport for every journey,",
-    headingAccent: "trusted for 15+ years",
-    text: "School and college runs, care home and social care journeys, wheelchair-accessible transport and group travel across the South East. All built on more than 15 years of specialist SEND transport and 10,000+ children carried safely.",
-    audience: [
-      "Families",
-      "Schools and trusts",
-      "Colleges",
-      "Care homes",
-      "Social care",
-    ],
-    ...CTAS,
-    image: {
-      src: "/images/children-walking-into-school.jpg",
-      alt: "Children with colourful backpacks walking into school",
-    },
-    statTop: {
-      icon: ICON_TOP,
-      value: "10,000+",
-      label: "children transported safely",
-    },
-    statBottom: {
-      icon: ICON_BOTTOM,
-      value: "100+",
-      label: "1200+ user ratings",
-    },
-  },
-  {
-    tab: "Schools & colleges",
-    badge: "School and college transport",
-    headingWhite: "Daily school and college runs families rely on",
-    text: "Regular home-to-school and college routes with a familiar driver each day, passenger assistants for children who need extra support, and minibuses for school trips and fixtures.",
-    audience: ["Parents and carers", "Schools and trusts", "Colleges"],
-    ...CTAS,
-    image: {
-      src: "/images/primary-pupils-walking-to-school.jpg",
-      alt: "Primary school pupils in uniform walking together",
-    },
-    statBottom: { icon: ICON_BOTTOM, label: "A familiar driver every morning" },
-  },
-  {
-    tab: "Care & accessible",
-    badge: "Care, social care and accessible transport",
-    headingWhite: "Accessible, unhurried travel for adults and care homes",
-    text: "Comfortable journeys to day centres, appointments and activities, with ramp and lift access and secure wheelchair restraints. Our 20+ wheelchair-accessible vehicles make up the largest accessible fleet in the area.",
-    audience: ["Care homes", "Social care providers", "Adults and families"],
-    ...CTAS,
-    image: {
-      src: "/images/wheelchair-user-accessible-van-lift.jpg",
-      alt: "Wheelchair user rolling onto the lowered lift of an accessible van",
-    },
-    statBottom: {
-      icon: ICON_BOTTOM,
-      value: "20+",
-      label: "accessible vehicles ready to go",
-    },
-  },
-];
-
-const COLOR_TAGS = [
-  "#5BB8F0",
-  "#F4A1A1",
-  "#0B8C4A",
-  "#9AAFC2",
-  "#00A9C4",
-  "#1F9A8A",
-];
 
 function StatCard({ stat, className }: { stat: Stat; className: string }) {
   return (
@@ -132,21 +39,21 @@ function SlideView({
   active,
   priority,
 }: {
-  slide: Slide;
+  slide: HomeSlide;
   active: boolean;
   priority: boolean;
 }) {
   return (
     <div
       aria-hidden={!active}
-      className={`col-start-1 row-start-1 grid grid-cols-1 items-center gap-[20px] transition-[opacity,visibility] duration-500 lg:grid-cols-2 ${active ? "visible opacity-100" : "invisible opacity-0"
+      className={`col-start-1 row-start-1 grid grid-cols-1 items-center gap-8 transition-[opacity,visibility] duration-500 lg:grid-cols-2 lg:gap-[20px] ${active ? "visible opacity-100" : "invisible opacity-0"
         }`}
     >
       {/* Left */}
       <div className="flex flex-col gap-[20px]">
-        <div className="ff-ui inline-flex w-fit items-center gap-2 rounded-[50px] bg-[#18373D] px-5 py-2 text-[16px] font-medium capitalize text-[#8FD3D2] backdrop-blur-[20px]">
+        <div className="ff-ui inline-flex w-fit items-center gap-2 rounded-[50px] bg-[#18373D] px-5 py-2 text-[14px] font-medium capitalize text-[#8FD3D2] backdrop-blur-[20px] md:text-[16px]">
           <Image
-            src="/home/icons/rightarrow.svg"
+            src="/home/icons/homeHeroicon.svg"
             alt=""
             width={20}
             height={20}
@@ -155,14 +62,14 @@ function SlideView({
           {slide.badge}
         </div>
 
-        <h1 className="ff-heading max-w-[560px] text-[30px] font-bold leading-[1.2] text-white md:text-[40px] xl:text-[56px]">
+        <h1 className="ff-heading max-w-[560px] text-[34px] font-bold leading-[1.2] text-white md:text-[40px] xl:text-[56px]">
           {slide.headingWhite}{" "}
           {slide.headingAccent && (
             <span className="text-[#59C6C8]">{slide.headingAccent}</span>
           )}
         </h1>
 
-        <p className="ff-body max-w-[560px] text-[16px] font-normal leading-[1.2] text-[#B4C4C6] md:text-[20px]">
+        <p className="ff-body max-w-[560px] text-[20px] font-normal leading-[1.2] text-[#B4C4C6]">
           {slide.text}
         </p>
 
@@ -173,7 +80,7 @@ function SlideView({
           {slide.audience.map((a) => (
             <span
               key={a}
-              className="ff-ui rounded-[50px] border border-[#FFFFFF4D] bg-[#FFFFFF1A] px-[14px] py-1 text-[13px] text-white"
+              className="ff-ui rounded-[50px] border border-[#FFFFFF4D] bg-[#FFFFFF1A] px-[14px] py-1 text-[15px] text-white md:text-[13px]"
             >
               {a}
             </span>
@@ -198,8 +105,8 @@ function SlideView({
         </div>
       </div>
 
-      {/* Right */}
-      <div className="relative w-full max-w-[520px] lg:justify-self-end">
+      {/* Right (image comes first on mobile) */}
+      <div className="relative order-first w-full max-w-[520px] lg:order-none lg:justify-self-end">
         <div className="relative aspect-square w-full overflow-hidden rounded-t-[24px]">
           <Image
             src={slide.image.src}
@@ -224,13 +131,13 @@ function SlideView({
         {slide.statTop && (
           <StatCard
             stat={slide.statTop}
-            className="right-3 top-4 lg:-right-[24px] xl:-right-[63px] xl:top-[69px]"
+            className="-right-3 -top-6 lg:top-4 lg:-right-[24px] xl:-right-[63px] xl:top-[69px]"
           />
         )}
         {slide.statBottom && (
           <StatCard
             stat={slide.statBottom}
-            className="bottom-8 left-3 lg:-left-[24px] xl:-left-[59px] xl:bottom-[84px]"
+            className="-left-2 bottom-9 lg:bottom-8 lg:-left-[24px] xl:-left-[59px] xl:bottom-[84px]"
           />
         )}
       </div>
@@ -239,14 +146,14 @@ function SlideView({
 }
 
 const controlBtn =
-  "flex h-[30px] w-[30px] items-center justify-center rounded-[4px] border border-[#FFFFFF1A] bg-[#FFFFFF1A] transition-colors hover:bg-[#FFFFFF33] md:h-[46px] md:w-[46px]";
+  "flex h-[46px] w-[46px] items-center justify-center rounded-[4px] border border-[#FFFFFF1A] bg-[#FFFFFF1A] transition-colors hover:bg-[#FFFFFF33]";
 
-const iconCls = "h-4 w-4 md:h-6 md:w-6";
+const iconCls = "h-6 w-6";
 
 export default function HeroSlider() {
   const [index, setIndex] = useState(0);
   const [playing, setPlaying] = useState(true);
-  const total = SLIDES.length;
+  const total = HomeSlides.length;
 
   const next = () => setIndex((i) => (i + 1) % total);
   const prev = () => setIndex((i) => (i - 1 + total) % total);
@@ -257,11 +164,12 @@ export default function HeroSlider() {
       aria-label="Services"
       className="w-full overflow-x-clip bg-[var(--hero-bg)]"
     >
-      <div className="section-container section-y">
+      {/* mobile: 24px side / 56px top-bottom padding (! beats the global unlayered classes) */}
+      <div className="section-container section-y max-md:px-6! max-md:py-14!">
         <div className="flex flex-col gap-[50px]">
           {/* Slides (stacked in one grid cell so height never jumps) */}
           <div className="grid">
-            {SLIDES.map((s, i) => (
+            {HomeSlides.map((s, i) => (
               <SlideView
                 key={s.tab}
                 slide={s}
@@ -271,10 +179,10 @@ export default function HeroSlider() {
             ))}
           </div>
 
-          {/* Tabs + controls */}
-          <div className="flex items-center justify-between gap-4 xl:gap-[50px]">
-            <div className="flex flex-1 gap-2">
-              {SLIDES.map((s, i) => (
+          {/* Tabs + controls (mobile: controls centered below tabs) */}
+          <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between md:gap-4 xl:gap-[50px]">
+            <div className="flex w-full flex-1 gap-2">
+              {HomeSlides.map((s, i) => (
                 <button
                   key={s.tab}
                   type="button"
@@ -295,14 +203,14 @@ export default function HeroSlider() {
                       />
                     )}
                   </div>
-                  <span className="mt-3 hidden truncate text-[16px] font-normal text-[#8FA3A8] transition-colors group-hover:text-white md:block xl:text-[20px]">
+                  <span className="mt-3 block text-[14px] font-normal text-[#8FA3A8] transition-colors group-hover:text-white md:truncate md:text-[16px] xl:text-[20px]">
                     {s.tab}
                   </span>
                 </button>
               ))}
             </div>
 
-            {/* Controls (right of timeline) */}
+            {/* Controls */}
             <div className="flex shrink-0 items-center gap-2">
               <button
                 type="button"

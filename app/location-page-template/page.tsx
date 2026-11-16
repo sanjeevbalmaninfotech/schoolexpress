@@ -128,37 +128,37 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <LegacyScope>
-        <header className="phero">
-          <div className="wrap">
+        <header className="page-hero">
+          <div className="container">
             <div>
-              <div className="crumbs" role="navigation" aria-label="Breadcrumb">
+              <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
                 <Link href="/">Home</Link>
                 <span aria-hidden="true">/</span>
                 <Link href="/contact#areas">Areas we cover</Link>
                 <span aria-hidden="true">/</span>
                 <span aria-current="page">[Town]</span>
               </div>
-              <span className="chip">
-                <svg className="ic">
+              <span className="label-chip">
+                <svg className="icon">
                   <use href="#i-cap" />
                 </svg>
                 School transport in [Town]
               </span>
               <h1>School Transport Services in [Town]</h1>
-              <p className="lead">
+              <p className="text-lead">
                 [2-3 original sentences: the schools, trusts and colleges you
                 take pupils to in [Town], the council you work with there, and
                 why families choose you.]
               </p>
-              <div className="ctas">
+              <div className="button-group">
                 <Link
-                  className="btn btn-p"
+                  className="btn btn-primary"
                   href="/contact?service=school-college-transport#quote"
                 >
                   Request a quote
                 </Link>
-                <a className="btn btn-o" href="tel:01491414040">
-                  <svg className="ic" style={{ width: "20px", height: "20px" }}>
+                <a className="btn btn-outline" href="tel:01491414040">
+                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
                     <use href="#i-phone" />
                   </svg>
                   Call 01491 414040
@@ -167,7 +167,7 @@ export default function Page() {
             </div>
             <div className="keyfacts">
               <div>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-users" />
                 </svg>
                 <span>
@@ -176,7 +176,7 @@ export default function Page() {
                 </span>
               </div>
               <div>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-cap" />
                 </svg>
                 <span>
@@ -184,7 +184,7 @@ export default function Page() {
                 </span>
               </div>
               <div>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-bus" />
                 </svg>
                 <span>
@@ -202,45 +202,45 @@ export default function Page() {
             <i style={{ background: "var(--lteal)" }}></i>
           </div>
         </header>
-        <section className="sec">
-          <div className="wrap">
-            <div className="head">
+        <section className="section-spacing">
+          <div className="container">
+            <div className="section-header">
               <div>
                 <h2>Schools and colleges we serve in [Town]</h2>
                 <p>[One original sentence introducing the local schools.]</p>
               </div>
             </div>
-            <div className="grid3">
-              <div className="card">
+            <div className="content-grid-3">
+              <div className="content-card">
                 <span
-                  className="ico"
+                  className="icon-box"
                   style={{ "--bg": "#FAC9C6" } as React.CSSProperties}
                 >
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-heart" />
                   </svg>
                 </span>
                 <h3>[School or trust name]</h3>
                 <p>[What you provide for this school, in your own words.]</p>
               </div>
-              <div className="card">
+              <div className="content-card">
                 <span
-                  className="ico"
+                  className="icon-box"
                   style={{ "--bg": "#B7DDF9" } as React.CSSProperties}
                 >
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-cap" />
                   </svg>
                 </span>
                 <h3>[School or college name]</h3>
                 <p>[Another real school or college you serve in [Town].]</p>
               </div>
-              <div className="card">
+              <div className="content-card">
                 <span
-                  className="ico"
+                  className="icon-box"
                   style={{ "--bg": "#A9DEC3" } as React.CSSProperties}
                 >
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-users" />
                   </svg>
                 </span>
@@ -250,17 +250,17 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="sec band">
-          <div className="wrap split">
+        <section className="section-spacing section-band">
+          <div className="container content-split">
             <div>
               <h2>Getting around [Town]</h2>
               <p style={{ color: "var(--ink2)", marginTop: "16px" }}>
                 [Original paragraph about local routes, traffic, timings or
                 areas you collect from, such as nearby villages.]
               </p>
-              <ul className="checks">
+              <ul className="checklist">
                 <li>
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-check" />
                   </svg>
                   <span>
@@ -268,7 +268,7 @@ export default function Page() {
                   </span>
                 </li>
                 <li>
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-check" />
                   </svg>
                   <span>
@@ -276,7 +276,7 @@ export default function Page() {
                   </span>
                 </li>
                 <li>
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-check" />
                   </svg>
                   <span>
@@ -284,7 +284,7 @@ export default function Page() {
                   </span>
                 </li>
                 <li>
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-check" />
                   </svg>
                   <span>
@@ -292,7 +292,7 @@ export default function Page() {
                   </span>
                 </li>
                 <li>
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-check" />
                   </svg>
                   <span>
@@ -300,15 +300,15 @@ export default function Page() {
                   </span>
                 </li>
               </ul>
-              <div className="ctas">
+              <div className="button-group">
                 <Link
-                  className="btn btn-p"
+                  className="btn btn-primary"
                   href="/contact?service=school-college-transport#quote"
                 >
                   Request a quote
                 </Link>
-                <a className="btn btn-o" href="tel:01491414040">
-                  <svg className="ic" style={{ width: "20px", height: "20px" }}>
+                <a className="btn btn-outline" href="tel:01491414040">
+                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
                     <use href="#i-phone" />
                   </svg>
                   Call 01491 414040
@@ -324,7 +324,7 @@ export default function Page() {
                 height={240}
               />
               <figcaption>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-clock" />
                 </svg>
                 [Short caption about [Town]]
@@ -332,15 +332,15 @@ export default function Page() {
             </figure>
           </div>
         </section>
-        <section className="sec">
-          <div className="wrap">
-            <div className="head">
+        <section className="section-spacing">
+          <div className="container">
+            <div className="section-header">
               <div>
                 <h2>[How it works in [Town]]</h2>
                 <p>[One original sentence.]</p>
               </div>
             </div>
-            <ol className="steps">
+            <ol className="step-list">
               <li>
                 <b>[Step 1]</b>
                 <span>[Original step description]</span>
@@ -360,8 +360,8 @@ export default function Page() {
             </ol>
           </div>
         </section>
-        <section className="sec" id="faq">
-          <div className="wrap faqwrap">
+        <section className="section-spacing" id="faq">
+          <div className="container faq-layout">
             <div>
               <h2>School transport in [Town]: your questions</h2>
               <p>[One original intro sentence.]</p>
@@ -394,15 +394,15 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="sec band">
-          <div className="wrap">
-            <div className="head">
+        <section className="section-spacing section-band">
+          <div className="container">
+            <div className="section-header">
               <div>
                 <h2>Our services in [Town]</h2>
               </div>
-              <Link className="more" href="/services">
+              <Link className="link-arrow" href="/services">
                 All services{" "}
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-arrow" />
                 </svg>
               </Link>
@@ -425,7 +425,7 @@ export default function Page() {
                   <span>[One original line about this service in [Town]]</span>
                   <em>
                     Find out more{" "}
-                    <svg className="ic">
+                    <svg className="icon">
                       <use href="#i-arrow" />
                     </svg>
                   </em>
@@ -448,7 +448,7 @@ export default function Page() {
                   <span>[One original line about this service in [Town]]</span>
                   <em>
                     Find out more{" "}
-                    <svg className="ic">
+                    <svg className="icon">
                       <use href="#i-arrow" />
                     </svg>
                   </em>
@@ -471,7 +471,7 @@ export default function Page() {
                   <span>[One original line about this service in [Town]]</span>
                   <em>
                     Find out more{" "}
-                    <svg className="ic">
+                    <svg className="icon">
                       <use href="#i-arrow" />
                     </svg>
                   </em>
@@ -494,7 +494,7 @@ export default function Page() {
                   <span>[One original line about this service in [Town]]</span>
                   <em>
                     Find out more{" "}
-                    <svg className="ic">
+                    <svg className="icon">
                       <use href="#i-arrow" />
                     </svg>
                   </em>
@@ -503,7 +503,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="ctaband">
+        <section className="cta-band">
           <div className="tiles" aria-hidden="true">
             <i style={{ background: "var(--sky)" }}></i>
             <i style={{ background: "var(--pink)" }}></i>
@@ -512,20 +512,20 @@ export default function Page() {
             <i style={{ background: "var(--cyan)" }}></i>
             <i style={{ background: "var(--lteal)" }}></i>
           </div>
-          <div className="wrap">
+          <div className="container">
             <div>
               <h2>[Call to action for [Town]]</h2>
               <p>[One original sentence inviting a quote.]</p>
             </div>
-            <div className="ctas">
+            <div className="button-group">
               <Link
-                className="btn btn-w"
+                className="btn btn-white"
                 href="/contact?service=school-college-transport#quote"
               >
                 Request a quote
               </Link>
-              <a className="btn btn-ow" href="tel:01491414040">
-                <svg className="ic" style={{ width: "20px", height: "20px" }}>
+              <a className="btn btn-outline-white" href="tel:01491414040">
+                <svg className="icon" style={{ width: "20px", height: "20px" }}>
                   <use href="#i-phone" />
                 </svg>
                 Call 01491 414040

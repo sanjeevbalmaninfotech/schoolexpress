@@ -154,32 +154,32 @@ export default async function Page({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <LegacyScope>
-        <header className="phero">
-          <div className="wrap">
+        <header className="page-hero">
+          <div className="container">
             <div>
-              <div className="crumbs" role="navigation" aria-label="Breadcrumb">
+              <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
                 <Link href="/">Home</Link>
                 <span aria-hidden="true">/</span>
                 <span aria-current="page">Contact</span>
               </div>
-              <span className="chip">
-                <svg className="ic">
+              <span className="label-chip">
+                <svg className="icon">
                   <use href="#i-chat" />
                 </svg>
                 Get in touch
               </span>
               <h1>Let’s plan your journey</h1>
-              <p className="lead">
+              <p className="text-lead">
                 Need a school run, a care journey, accessible transport or a
                 minibus for a trip? Talk to our friendly team and we’ll help you
                 plan safe, reliable travel across the South East.
               </p>
-              <div className="ctas">
-                <a className="btn btn-p" href="#quote">
+              <div className="button-group">
+                <a className="btn btn-primary" href="#quote">
                   Get a free quote
                 </a>
-                <a className="btn btn-o" href="tel:01491414040">
-                  <svg className="ic" style={{ width: "20px", height: "20px" }}>
+                <a className="btn btn-outline" href="tel:01491414040">
+                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
                     <use href="#i-phone" />
                   </svg>
                   Call 01491 414040
@@ -188,7 +188,7 @@ export default async function Page({
             </div>
             <div className="keyfacts">
               <div>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-clock" />
                 </svg>
                 <span>
@@ -196,7 +196,7 @@ export default async function Page({
                 </span>
               </div>
               <div>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-chat" />
                 </svg>
                 <span>
@@ -205,7 +205,7 @@ export default async function Page({
                 </span>
               </div>
               <div>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-users" />
                 </svg>
                 <span>
@@ -224,14 +224,14 @@ export default async function Page({
             <i style={{ background: "var(--lteal)" }}></i>
           </div>
         </header>
-        <section className="sec" id="details">
-          <div className="wrap contact">
+        <section className="section-spacing" id="details">
+          <div className="container contact">
             <div>
               <h2>Contact details</h2>
               <div className="cl">
                 <div>
-                  <span className="ico">
-                    <svg className="ic">
+                  <span className="icon-box">
+                    <svg className="icon">
                       <use href="#i-phone" />
                     </svg>
                   </span>
@@ -241,8 +241,8 @@ export default async function Page({
                   </span>
                 </div>
                 <div>
-                  <span className="ico">
-                    <svg className="ic">
+                  <span className="icon-box">
+                    <svg className="icon">
                       <use href="#i-phone" />
                     </svg>
                   </span>
@@ -252,8 +252,8 @@ export default async function Page({
                   </span>
                 </div>
                 <div>
-                  <span className="ico">
-                    <svg className="ic">
+                  <span className="icon-box">
+                    <svg className="icon">
                       <use href="#i-mail" />
                     </svg>
                   </span>
@@ -268,8 +268,8 @@ export default async function Page({
                   </span>
                 </div>
                 <div>
-                  <span className="ico">
-                    <svg className="ic">
+                  <span className="icon-box">
+                    <svg className="icon">
                       <use href="#i-pin" />
                     </svg>
                   </span>
@@ -294,8 +294,8 @@ export default async function Page({
                   </span>
                 </div>
                 <div>
-                  <span className="ico">
-                    <svg className="ic">
+                  <span className="icon-box">
+                    <svg className="icon">
                       <use href="#i-clock" />
                     </svg>
                   </span>
@@ -403,14 +403,14 @@ export default async function Page({
                   placeholder="Number of passengers, days and times, and any wheelchair, access, medical or care needs"
                 ></textarea>
               </label>
-              <button className="btn btn-p" type="submit">
+              <button className="btn btn-primary" type="submit">
                 Send enquiry
               </button>
             </form>
           </div>
         </section>
-        <section className="sec band" id="areas">
-          <div className="wrap two">
+        <section className="section-spacing section-band" id="areas">
+          <div className="container content-two-col">
             <div>
               <h2>Areas we cover</h2>
               <p style={{ color: "var(--ink2)", marginTop: "16px" }}>
@@ -685,8 +685,8 @@ export default async function Page({
             </div>
           </div>
         </section>
-        <section className="sec" id="faq">
-          <div className="wrap faqwrap">
+        <section className="section-spacing" id="faq">
+          <div className="container faq-layout">
             <div>
               <h2>Before you get in touch</h2>
               <p>

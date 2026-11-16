@@ -180,37 +180,37 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <LegacyScope>
-        <header className="phero">
-          <div className="wrap">
+        <header className="page-hero">
+          <div className="container">
             <div>
-              <div className="crumbs" role="navigation" aria-label="Breadcrumb">
+              <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
                 <Link href="/">Home</Link>
                 <span aria-hidden="true">/</span>
                 <Link href="/services">Services</Link>
                 <span aria-hidden="true">/</span>
                 <span aria-current="page">Adults and social care</span>
               </div>
-              <span className="chip">
-                <svg className="ic">
+              <span className="label-chip">
+                <svg className="icon">
                   <use href="#i-home" />
                 </svg>
                 Adult and social care transport
               </span>
               <h1>Adult and social care transport, provided with dignity</h1>
-              <p className="lead">
+              <p className="text-lead">
                 Comfortable, unhurried travel for adults, care home residents
                 and social care clients, to day centres, appointments,
                 activities and outings. Regular routes or one-off journeys.
               </p>
-              <div className="ctas">
+              <div className="button-group">
                 <Link
-                  className="btn btn-p"
+                  className="btn btn-primary"
                   href="/contact?service=adult-social-care-transport#quote"
                 >
                   Request a quote
                 </Link>
-                <a className="btn btn-o" href="tel:01491414040">
-                  <svg className="ic" style={{ width: "20px", height: "20px" }}>
+                <a className="btn btn-outline" href="tel:01491414040">
+                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
                     <use href="#i-phone" />
                   </svg>
                   Call 01491 414040
@@ -219,7 +219,7 @@ export default function Page() {
             </div>
             <div className="keyfacts">
               <div>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-wheel" />
                 </svg>
                 <span>
@@ -227,7 +227,7 @@ export default function Page() {
                 </span>
               </div>
               <div>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-cal" />
                 </svg>
                 <span>
@@ -236,7 +236,7 @@ export default function Page() {
                 </span>
               </div>
               <div>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-plus" />
                 </svg>
                 <span>
@@ -254,9 +254,9 @@ export default function Page() {
             <i style={{ background: "var(--lteal)" }}></i>
           </div>
         </header>
-        <section className="sec">
-          <div className="wrap">
-            <div className="head">
+        <section className="section-spacing">
+          <div className="container">
+            <div className="section-header">
               <div>
                 <h2>Who we work with</h2>
                 <p>
@@ -265,13 +265,13 @@ export default function Page() {
                 </p>
               </div>
             </div>
-            <div className="grid3">
-              <div className="card">
+            <div className="content-grid-3">
+              <div className="content-card">
                 <span
-                  className="ico"
+                  className="icon-box"
                   style={{ "--bg": "#A9DEC3" } as React.CSSProperties}
                 >
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-home" />
                   </svg>
                 </span>
@@ -281,12 +281,12 @@ export default function Page() {
                   for residents.
                 </p>
               </div>
-              <div className="card">
+              <div className="content-card">
                 <span
-                  className="ico"
+                  className="icon-box"
                   style={{ "--bg": "#CBD8E2" } as React.CSSProperties}
                 >
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-users" />
                   </svg>
                 </span>
@@ -296,12 +296,12 @@ export default function Page() {
                   timetable.
                 </p>
               </div>
-              <div className="card">
+              <div className="content-card">
                 <span
-                  className="ico"
+                  className="icon-box"
                   style={{ "--bg": "#FAC9C6" } as React.CSSProperties}
                 >
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-heart" />
                   </svg>
                 </span>
@@ -314,8 +314,8 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="sec band">
-          <div className="wrap split">
+        <section className="section-spacing section-band">
+          <div className="container content-split">
             <div>
               <h2>What care providers can expect</h2>
               <p style={{ color: "var(--ink2)", marginTop: "16px" }}>
@@ -323,9 +323,9 @@ export default function Page() {
                 resident is heading out for the afternoon, everyone is treated
                 with dignity and respect.
               </p>
-              <ul className="checks">
+              <ul className="checklist">
                 <li>
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-check" />
                   </svg>
                   <span>
@@ -334,7 +334,7 @@ export default function Page() {
                   </span>
                 </li>
                 <li>
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-check" />
                   </svg>
                   <span>
@@ -343,7 +343,7 @@ export default function Page() {
                   </span>
                 </li>
                 <li>
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-check" />
                   </svg>
                   <span>
@@ -352,7 +352,7 @@ export default function Page() {
                   </span>
                 </li>
                 <li>
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-check" />
                   </svg>
                   <span>
@@ -361,7 +361,7 @@ export default function Page() {
                   </span>
                 </li>
                 <li>
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-check" />
                   </svg>
                   <span>
@@ -374,19 +374,19 @@ export default function Page() {
                 <b>Care extras on request</b>
                 <ul>
                   <li>
-                    <svg className="ic">
+                    <svg className="icon">
                       <use href="#i-female" />
                     </svg>
                     Female drivers for passengers who prefer one
                   </li>
                   <li>
-                    <svg className="ic">
+                    <svg className="icon">
                       <use href="#i-female" />
                     </svg>
                     First aid and epilepsy buccal medication trained assistants
                   </li>
                   <li>
-                    <svg className="ic">
+                    <svg className="icon">
                       <use href="#i-female" />
                     </svg>
                     Trained Healthcare Assistants (HCAs) for residents and
@@ -394,15 +394,15 @@ export default function Page() {
                   </li>
                 </ul>
               </div>
-              <div className="ctas">
+              <div className="button-group">
                 <Link
-                  className="btn btn-p"
+                  className="btn btn-primary"
                   href="/contact?service=adult-social-care-transport#quote"
                 >
                   Request a quote
                 </Link>
-                <a className="btn btn-o" href="tel:01491414040">
-                  <svg className="ic" style={{ width: "20px", height: "20px" }}>
+                <a className="btn btn-outline" href="tel:01491414040">
+                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
                     <use href="#i-phone" />
                   </svg>
                   Call 01491 414040
@@ -418,7 +418,7 @@ export default function Page() {
                 height={240}
               />
               <figcaption>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-heart" />
                 </svg>
                 Every passenger treated with dignity
@@ -427,7 +427,7 @@ export default function Page() {
           </div>
         </section>
         <section className="stats proof" aria-label="School Express in numbers">
-          <div className="wrap">
+          <div className="container">
             <div
               className="stat"
               style={{ "--c": "var(--sky)" } as React.CSSProperties}
@@ -466,9 +466,9 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="sec">
-          <div className="wrap">
-            <div className="head">
+        <section className="section-spacing">
+          <div className="container">
+            <div className="section-header">
               <div>
                 <h2>Arranging care transport</h2>
                 <p>
@@ -477,7 +477,7 @@ export default function Page() {
                 </p>
               </div>
             </div>
-            <ol className="steps">
+            <ol className="step-list">
               <li>
                 <b>Share the schedule</b>
                 <span>
@@ -509,8 +509,8 @@ export default function Page() {
             </ol>
           </div>
         </section>
-        <section className="sec" id="faq">
-          <div className="wrap faqwrap">
+        <section className="section-spacing" id="faq">
+          <div className="container faq-layout">
             <div>
               <h2>Questions from care providers and families</h2>
               <p>
@@ -574,15 +574,15 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="sec band">
-          <div className="wrap">
-            <div className="head">
+        <section className="section-spacing section-band">
+          <div className="container">
+            <div className="section-header">
               <div>
                 <h2>More ways we support care providers</h2>
               </div>
-              <Link className="more" href="/services">
+              <Link className="link-arrow" href="/services">
                 All services{" "}
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-arrow" />
                 </svg>
               </Link>
@@ -608,7 +608,7 @@ export default function Page() {
                   </span>
                   <em>
                     Find out more{" "}
-                    <svg className="ic">
+                    <svg className="icon">
                       <use href="#i-arrow" />
                     </svg>
                   </em>
@@ -634,7 +634,7 @@ export default function Page() {
                   </span>
                   <em>
                     Find out more{" "}
-                    <svg className="ic">
+                    <svg className="icon">
                       <use href="#i-arrow" />
                     </svg>
                   </em>
@@ -660,7 +660,7 @@ export default function Page() {
                   </span>
                   <em>
                     Find out more{" "}
-                    <svg className="ic">
+                    <svg className="icon">
                       <use href="#i-arrow" />
                     </svg>
                   </em>
@@ -686,7 +686,7 @@ export default function Page() {
                   </span>
                   <em>
                     Find out more{" "}
-                    <svg className="ic">
+                    <svg className="icon">
                       <use href="#i-arrow" />
                     </svg>
                   </em>
@@ -695,7 +695,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="ctaband">
+        <section className="cta-band">
           <div className="tiles" aria-hidden="true">
             <i style={{ background: "var(--sky)" }}></i>
             <i style={{ background: "var(--pink)" }}></i>
@@ -704,7 +704,7 @@ export default function Page() {
             <i style={{ background: "var(--cyan)" }}></i>
             <i style={{ background: "var(--lteal)" }}></i>
           </div>
-          <div className="wrap">
+          <div className="container">
             <div>
               <h2>Arrange transport for your residents or clients</h2>
               <p>
@@ -712,15 +712,15 @@ export default function Page() {
                 come back with options and a free quote.
               </p>
             </div>
-            <div className="ctas">
+            <div className="button-group">
               <Link
-                className="btn btn-w"
+                className="btn btn-white"
                 href="/contact?service=adult-social-care-transport#quote"
               >
                 Request a quote
               </Link>
-              <a className="btn btn-ow" href="tel:01491414040">
-                <svg className="ic" style={{ width: "20px", height: "20px" }}>
+              <a className="btn btn-outline-white" href="tel:01491414040">
+                <svg className="icon" style={{ width: "20px", height: "20px" }}>
                   <use href="#i-phone" />
                 </svg>
                 Call 01491 414040

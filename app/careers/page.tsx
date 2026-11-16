@@ -138,32 +138,32 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <LegacyScope>
-        <header className="phero">
-          <div className="wrap">
+        <header className="page-hero">
+          <div className="container">
             <div>
-              <div className="crumbs" role="navigation" aria-label="Breadcrumb">
+              <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
                 <Link href="/">Home</Link>
                 <span aria-hidden="true">/</span>
                 <span aria-current="page">Careers</span>
               </div>
-              <span className="chip">
-                <svg className="ic">
+              <span className="label-chip">
+                <svg className="icon">
                   <use href="#i-users" />
                 </svg>
                 Join our team
               </span>
               <h1>Work that fits around school hours, and matters</h1>
-              <p className="lead">
+              <p className="text-lead">
                 We’re recruiting drivers and passenger assistants across the
                 South East. If you’re patient, reliable and good with people,
                 we’ll give you the training to do the rest.
               </p>
-              <div className="ctas">
-                <a className="btn btn-p" href="#apply">
+              <div className="button-group">
+                <a className="btn btn-primary" href="#apply">
                   Apply now
                 </a>
-                <a className="btn btn-o" href="tel:01491414040">
-                  <svg className="ic" style={{ width: "20px", height: "20px" }}>
+                <a className="btn btn-outline" href="tel:01491414040">
+                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
                     <use href="#i-phone" />
                   </svg>
                   Call 01491 414040
@@ -172,7 +172,7 @@ export default function Page() {
             </div>
             <div className="keyfacts">
               <div>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-cal" />
                 </svg>
                 <span>
@@ -180,7 +180,7 @@ export default function Page() {
                 </span>
               </div>
               <div>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-medal" />
                 </svg>
                 <span>
@@ -189,7 +189,7 @@ export default function Page() {
                 </span>
               </div>
               <div>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-users" />
                 </svg>
                 <span>
@@ -208,9 +208,9 @@ export default function Page() {
             <i style={{ background: "var(--lteal)" }}></i>
           </div>
         </header>
-        <section className="sec" id="roles">
-          <div className="wrap">
-            <div className="head">
+        <section className="section-spacing" id="roles">
+          <div className="container">
+            <div className="section-header">
               <div>
                 <h2>The roles</h2>
                 <p>Two ways to join the team behind every journey.</p>
@@ -244,7 +244,7 @@ export default function Page() {
                     </dd>
                   </div>
                 </dl>
-                <a className="btn btn-p" href="#apply">
+                <a className="btn btn-primary" href="#apply">
                   Apply to drive
                 </a>
               </article>
@@ -274,44 +274,44 @@ export default function Page() {
                     </dd>
                   </div>
                 </dl>
-                <a className="btn btn-p" href="#apply">
+                <a className="btn btn-primary" href="#apply">
                   Apply to assist
                 </a>
               </article>
             </div>
           </div>
         </section>
-        <section className="sec band">
-          <div className="wrap">
-            <div className="head">
+        <section className="section-spacing section-band">
+          <div className="container">
+            <div className="section-header">
               <div>
                 <h2>Why work with us</h2>
               </div>
             </div>
             <div
-              className="grid3"
+              className="content-grid-3"
               style={{
                 gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
               }}
             >
-              <div className="card">
+              <div className="content-card">
                 <span
-                  className="ico"
+                  className="icon-box"
                   style={{ "--bg": "#B7DDF9" } as React.CSSProperties}
                 >
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-cal" />
                   </svg>
                 </span>
                 <h3>Term-time hours</h3>
                 <p>Morning and afternoon routes, with school holidays free.</p>
               </div>
-              <div className="card">
+              <div className="content-card">
                 <span
-                  className="ico"
+                  className="icon-box"
                   style={{ "--bg": "#FAC9C6" } as React.CSSProperties}
                 >
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-medal" />
                   </svg>
                 </span>
@@ -321,12 +321,12 @@ export default function Page() {
                   <mark className="tbc">£[X]</mark> per hour.
                 </p>
               </div>
-              <div className="card">
+              <div className="content-card">
                 <span
-                  className="ico"
+                  className="icon-box"
                   style={{ "--bg": "#A9DEC3" } as React.CSSProperties}
                 >
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-users" />
                   </svg>
                 </span>
@@ -335,12 +335,12 @@ export default function Page() {
                   The same passengers each day, so you really get to know them.
                 </p>
               </div>
-              <div className="card">
+              <div className="content-card">
                 <span
-                  className="ico"
+                  className="icon-box"
                   style={{ "--bg": "#CBD8E2" } as React.CSSProperties}
                 >
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-heart" />
                   </svg>
                 </span>
@@ -353,8 +353,8 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="sec">
-          <div className="wrap contact">
+        <section className="section-spacing">
+          <div className="container contact">
             <div>
               <h2>Ready to apply?</h2>
               <p style={{ color: "var(--ink2)", marginTop: "16px" }}>
@@ -431,14 +431,14 @@ export default function Page() {
                   placeholder="Any relevant experience, and when you're available"
                 ></textarea>
               </label>
-              <button className="btn btn-p" type="submit">
+              <button className="btn btn-primary" type="submit">
                 Send application
               </button>
             </form>
           </div>
         </section>
-        <section className="sec band" id="faq">
-          <div className="wrap faqwrap">
+        <section className="section-spacing section-band" id="faq">
+          <div className="container faq-layout">
             <div>
               <h2>Working with us</h2>
               <p>

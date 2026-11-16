@@ -146,11 +146,11 @@ export default function Page() {
       <StatsBar />
       <TransportSection />
       <LegacyScope>
-        <section className="sec band" id="send">
-          <div className="wrap split">
+        <section className="section-spacing section-band" id="send">
+          <div className="container content-split">
             <div>
-              <span className="chip">
-                <svg className="ic">
+              <span className="label-chip">
+                <svg className="icon">
                   <use href="#i-heart" />
                 </svg>
                 Our SEND expertise
@@ -164,7 +164,7 @@ export default function Page() {
                 we do, so every school run, care home trip and group booking
                 gets the same level of care.
               </p>
-              <div className="wavcall">
+              <div className="wavcall max-md:flex-col! max-md:items-start! max-md:gap-3!">
                 <b>20+</b>
                 <span>
                   <strong>vehicles with wheelchair access</strong>The biggest
@@ -172,9 +172,9 @@ export default function Page() {
                   families and group trips.
                 </span>
               </div>
-              <ul className="checks">
+              <ul className="checklist">
                 <li>
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-check" />
                   </svg>
                   <span>
@@ -184,7 +184,7 @@ export default function Page() {
                   </span>
                 </li>
                 <li>
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-check" />
                   </svg>
                   <span>
@@ -193,7 +193,7 @@ export default function Page() {
                   </span>
                 </li>
                 <li>
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-check" />
                   </svg>
                   <span>
@@ -204,7 +204,7 @@ export default function Page() {
                   </span>
                 </li>
                 <li>
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-check" />
                   </svg>
                   <span>
@@ -213,7 +213,7 @@ export default function Page() {
                   </span>
                 </li>
                 <li>
-                  <svg className="ic">
+                  <svg className="icon">
                     <use href="#i-check" />
                   </svg>
                   <span>
@@ -224,32 +224,15 @@ export default function Page() {
               </ul>
               <div className="onreq">
                 <b>On request</b>
-                <ul>
-                  <li>
-                    <svg className="ic">
-                      <use href="#i-female" />
-                    </svg>
-                    Female drivers
-                  </li>
-                  <li>
-                    <svg className="ic">
-                      <use href="#i-female" />
-                    </svg>
-                    Assistants trained in epilepsy buccal medication and first
-                    aid
-                  </li>
-                  <li>
-                    <svg className="ic">
-                      <use href="#i-female" />
-                    </svg>
-                    Healthcare Assistants (HCAs) for passengers with health
-                    needs
-                  </li>
+                <ul className="!list-disc !block !pl-5 space-y-2 marker:text-[#FF5900] [&>li]:!list-item">
+                  <li>Female drivers</li>
+                  <li>Assistants trained in epilepsy buccal medication and first aid</li>
+                  <li>Healthcare Assistants (HCAs) for passengers with health needs</li>
                 </ul>
               </div>
-              <Link className="more" href="/send-transport">
+              <Link className="link-arrow" href="/send-transport">
                 How we support passengers with additional needs{" "}
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-arrow" />
                 </svg>
               </Link>
@@ -257,14 +240,14 @@ export default function Page() {
             <figure className="sendphoto">
               <Image
                 className="crop-top"
-                src="/images/smiling-girl-in-wheelchair.jpg"
+                src="/home/images/smiling-girl-in-wheelchair.jpg"
                 alt="Smiling girl sitting in her wheelchair outdoors"
                 width={896}
                 height={673}
                 loading="lazy"
               />
               <figcaption>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-cap" />
                 </svg>
                 SEND and safeguarding trained drivers and assistants
@@ -273,43 +256,43 @@ export default function Page() {
           </div>
         </section>
         <section className="safe" id="safety">
-          <div className="wrap">
+          <div className="container">
             <div className="safehead">
               <h2>Safety you can check</h2>
             </div>
             <ul className="safelist">
               <li>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-lic" />
                 </svg>
                 Licensed private hire operator
               </li>
               <li>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-doc" />
                 </svg>
                 Insured for passenger transport
               </li>
               <li>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-shield" />
                 </svg>
                 Enhanced DBS checks for every driver and assistant
               </li>
               <li>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-cap" />
                 </svg>
                 SEND and safeguarding training for all staff
               </li>
               <li>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-wrench" />
                 </svg>
                 Regular servicing and MOT checks
               </li>
               <li>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-star" />
                 </svg>
                 Clean, comfortable vehicles
@@ -317,9 +300,9 @@ export default function Page() {
             </ul>
           </div>
         </section>
-        <section className="sec band" id="fleet">
-          <div className="wrap">
-            <div className="head">
+        <section className="section-spacing section-band" id="fleet">
+          <div className="container">
+            <div className="section-header">
               <div>
                 <h2>A 100+ vehicle fleet for every route</h2>
                 <p>
@@ -330,19 +313,19 @@ export default function Page() {
             </div>
             <div className="fsum">
               <span>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-bus" />
                 </svg>
                 100+ vehicles in total
               </span>
               <span>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-wheel" />
                 </svg>
                 20+ wheelchair accessible
               </span>
               <span>
-                <svg className="ic">
+                <svg className="icon">
                   <use href="#i-users" />
                 </svg>
                 4 to 16 seats
@@ -470,8 +453,8 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="sec" id="councils">
-          <div className="wrap two">
+        <section className="section-spacing" id="councils">
+          <div className="container content-two-col">
             <div>
               <h2>Trusted by local authorities</h2>
               <p style={{ color: "var(--ink2)", marginTop: "16px" }}>
@@ -502,7 +485,7 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-              <a className="btn btn-p" href="#quote">
+              <a className="btn btn-primary" href="#quote">
                 Request a quote
               </a>
             </div>
@@ -784,8 +767,8 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="sec" id="faq">
-          <div className="wrap faqwrap">
+        <section className="section-spacing" id="faq">
+          <div className="container faq-layout">
             <div>
               <h2>Common questions</h2>
               <p>
@@ -853,8 +836,8 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="sec band" id="contact">
-          <div className="wrap contact">
+        <section className="section-spacing section-band" id="contact">
+          <div className="container contact">
             <div>
               <h2>Get a quote or ask a question</h2>
               <p style={{ color: "var(--ink2)", marginTop: "16px" }}>
@@ -863,8 +846,8 @@ export default function Page() {
               </p>
               <div className="cl">
                 <div>
-                  <span className="ico">
-                    <svg className="ic">
+                  <span className="icon-box">
+                    <svg className="icon">
                       <use href="#i-phone" />
                     </svg>
                   </span>
@@ -874,8 +857,8 @@ export default function Page() {
                   </span>
                 </div>
                 <div>
-                  <span className="ico">
-                    <svg className="ic">
+                  <span className="icon-box">
+                    <svg className="icon">
                       <use href="#i-phone" />
                     </svg>
                   </span>
@@ -885,8 +868,8 @@ export default function Page() {
                   </span>
                 </div>
                 <div>
-                  <span className="ico">
-                    <svg className="ic">
+                  <span className="icon-box">
+                    <svg className="icon">
                       <use href="#i-mail" />
                     </svg>
                   </span>
@@ -901,8 +884,8 @@ export default function Page() {
                   </span>
                 </div>
                 <div>
-                  <span className="ico">
-                    <svg className="ic">
+                  <span className="icon-box">
+                    <svg className="icon">
                       <use href="#i-pin" />
                     </svg>
                   </span>
@@ -927,8 +910,8 @@ export default function Page() {
                   </span>
                 </div>
                 <div>
-                  <span className="ico">
-                    <svg className="ic">
+                  <span className="icon-box">
+                    <svg className="icon">
                       <use href="#i-clock" />
                     </svg>
                   </span>
@@ -1031,7 +1014,7 @@ export default function Page() {
                   placeholder="Number of passengers, days and times, and any wheelchair, access, medical or care needs"
                 ></textarea>
               </label>
-              <button className="btn btn-p" type="submit">
+              <button className="btn btn-primary" type="submit">
                 Send enquiry
               </button>
             </form>
