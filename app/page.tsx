@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import LegacyScope from "@/components/legacy/LegacyScope";
 import HeroSlider from "@/components/HeroSlider";
 import StatsBar from "@/components/StatsBar";
+import LegacyScope from "@/components/legacy/LegacyScope";
 import TransportSection from "@/components/TransportSection";
 
 export const metadata: Metadata = {
