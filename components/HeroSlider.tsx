@@ -1,9 +1,9 @@
 "use client";
-
+import Link from "next/link";
 import { COLOR_TAGS, HomeSlides } from "@/constants/homepage";
 import { HomeSlide, Stat } from "@/types/home";
 import Image from "next/image";
-import Link from "next/link";
+
 import { useState } from "react";
 
 const SLIDE_MS = 5000;
