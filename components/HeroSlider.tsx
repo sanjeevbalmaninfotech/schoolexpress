@@ -237,7 +237,7 @@ export default function HeroSlider() {
               >
                 <Image
 
-                  src="/home/icons/leftArrow.svg"
+                  src="/home/icons/MidImg.svg"
                   alt=""
                   width={24}
                   height={24}
