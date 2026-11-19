@@ -238,7 +238,7 @@ export default function Page() {
                 </svg>
               </Link>
             </div>
-            <figure className="sendphoto">
+            <figure className="sendphoto md:self-start! md:sticky! md:top-24! max-md:order-first">
               <Image
                 className="crop-top"
                 src="/home/images/smiling-girl-in-wheelchair.jpg"
