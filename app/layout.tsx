@@ -33,6 +33,11 @@ export const metadata: Metadata = {
   title: "School Express",
   description:
     "Safe, reliable school, college, care and group transport across Berkshire, Oxfordshire, Hampshire and the South East.",
+  icons: {
+    icon: "/school-express-logo.png",
+    shortcut: "/school-express-logo.png",
+    apple: "/school-express-logo.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
