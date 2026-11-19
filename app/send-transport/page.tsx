@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import CountUp from "@/components/legacy/CountUp";
 import LegacyScope from "@/components/legacy/LegacyScope";
+import CtaBand from "@/components/CtaBand";
+import FaqSection from "@/components/FaqSection";
 
 export const metadata: Metadata = {
   title: {
@@ -439,6 +441,7 @@ export default function Page() {
         </section>
         <section className="stats proof" aria-label="School Express in numbers">
           <div className="container">
+            <div className="wrap">
             <div
               className="stat"
               style={{ "--c": "var(--sky)" } as React.CSSProperties}
@@ -475,6 +478,7 @@ export default function Page() {
               <span>
                 <strong>young passengers</strong> supported since we began
               </span>
+            </div>
             </div>
           </div>
         </section>
@@ -518,71 +522,46 @@ export default function Page() {
             </ol>
           </div>
         </section>
-        <section className="section-spacing" id="faq">
-          <div className="container faq-layout">
-            <div>
-              <h2>SEND transport questions</h2>
-              <p>
-                Families and schools often have questions before the first
-                journey. These are the ones we hear most.{" "}
-                <Link href="/contact">Ask us anything else</Link>.
-              </p>
-            </div>
-            <div className="faq">
-              <details open>
-                <summary>Can you provide a passenger assistant?</summary>
-                <p>
-                  Yes. Our trained passenger assistants, male or female, travel
-                  with passengers who need extra support, and we match them to
-                  each passenger’s needs.
-                </p>
-              </details>
-              <details>
-                <summary>
-                  Can your team support passengers with epilepsy or other
-                  medical needs?
-                </summary>
-                <p>
-                  Yes. On request, we can send a passenger assistant trained to
-                  give epilepsy buccal medication and first aid, or a trained
-                  Healthcare Assistant for more complex needs. Share the care
-                  plan with us when you enquire.
-                </p>
-              </details>
-              <details>
-                <summary>
-                  My child’s transport is arranged by the council. Can I book
-                  you directly?
-                </summary>
-                <p>
-                  If your child is eligible for council-funded transport, routes
-                  are arranged through your council’s transport team. For
-                  journeys the council doesn’t cover, such as private school
-                  runs, activities or appointments, you can book with us
-                  directly.
-                </p>
-              </details>
-              <details>
-                <summary>What happens before the first journey?</summary>
-                <p>
-                  We agree a written plan with the family covering pick-up,
-                  drop-off and anything the team needs to know, so everyone is
-                  ready from day one.
-                </p>
-              </details>
-              <details>
-                <summary>
-                  How do you help a passenger who finds change difficult?
-                </summary>
-                <p>
-                  We keep the same driver and assistant wherever possible. If
-                  someone new has to cover, we tell the family first so it’s
-                  never a surprise.
-                </p>
-              </details>
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading="SEND transport questions"
+          description={
+            <>
+              Families and schools often have questions before the first
+              journey. These are the ones we hear most.{" "}
+              <Link href="/contact">Ask us anything else</Link>.
+            </>
+          }
+          items={[
+            {
+              question: "Can you provide a passenger assistant?",
+              answer:
+                "Yes. Our trained passenger assistants, male or female, travel with passengers who need extra support, and we match them to each passenger’s needs.",
+            },
+            {
+              question:
+                "Can your team support passengers with epilepsy or other medical needs?",
+              answer:
+                "Yes. On request, we can send a passenger assistant trained to give epilepsy buccal medication and first aid, or a trained Healthcare Assistant for more complex needs. Share the care plan with us when you enquire.",
+            },
+            {
+              question:
+                "My child’s transport is arranged by the council. Can I book you directly?",
+              answer:
+                "If your child is eligible for council-funded transport, routes are arranged through your council’s transport team. For journeys the council doesn’t cover, such as private school runs, activities or appointments, you can book with us directly.",
+            },
+            {
+              question: "What happens before the first journey?",
+              answer:
+                "We agree a written plan with the family covering pick-up, drop-off and anything the team needs to know, so everyone is ready from day one.",
+            },
+            {
+              question:
+                "How do you help a passenger who finds change difficult?",
+              answer:
+                "We keep the same driver and assistant wherever possible. If someone new has to cover, we tell the family first so it’s never a surprise.",
+            },
+          ]}
+        />
         <section className="section-spacing section-band">
           <div className="container">
             <div className="section-header">
@@ -704,39 +683,11 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="cta-band">
-          <div className="tiles" aria-hidden="true">
-            <i style={{ background: "var(--sky)" }}></i>
-            <i style={{ background: "var(--pink)" }}></i>
-            <i style={{ background: "var(--green)" }}></i>
-            <i style={{ background: "var(--slate)" }}></i>
-            <i style={{ background: "var(--cyan)" }}></i>
-            <i style={{ background: "var(--lteal)" }}></i>
-          </div>
-          <div className="container">
-            <div>
-              <h2>Planning transport for a passenger with SEND?</h2>
-              <p>
-                Talk to us about the passenger’s needs and we’ll suggest a
-                vehicle, a team and a clear price.
-              </p>
-            </div>
-            <div className="button-group">
-              <Link
-                className="btn btn-white"
-                href="/contact?service=send-transport#quote"
-              >
-                Request a quote
-              </Link>
-              <a className="btn btn-outline-white" href="tel:01491414040">
-                <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                  <use href="#i-phone" />
-                </svg>
-                Call 01491 414040
-              </a>
-            </div>
-          </div>
-        </section>
+        <CtaBand
+          heading="Planning transport for a passenger with SEND?"
+          body="Talk to us about the passenger's needs and we'll suggest a vehicle, a team and a clear price."
+          quoteHref="/contact?service=send-transport#quote"
+        />
       </LegacyScope>
     </>
   );

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import LegacyScope from "@/components/legacy/LegacyScope";
+import CtaBand from "@/components/CtaBand";
+import FaqSection from "@/components/FaqSection";
 
 export const metadata: Metadata = {
   title: { absolute: "School Transport Services in [Town] | School Express" },
@@ -360,40 +362,32 @@ export default function Page() {
             </ol>
           </div>
         </section>
-        <section className="section-spacing" id="faq">
-          <div className="container faq-layout">
-            <div>
-              <h2>School transport in [Town]: your questions</h2>
-              <p>[One original intro sentence.]</p>
-            </div>
-            <div className="faq">
-              <details open>
-                <summary>
-                  [Local question 1, e.g. Do you cover [nearby village]?]
-                </summary>
-                <p>[Original answer]</p>
-              </details>
-              <details>
-                <summary>
-                  [Local question 2, e.g. Do you cover [nearby village]?]
-                </summary>
-                <p>[Original answer]</p>
-              </details>
-              <details>
-                <summary>
-                  [Local question 3, e.g. Do you cover [nearby village]?]
-                </summary>
-                <p>[Original answer]</p>
-              </details>
-              <details>
-                <summary>
-                  [Local question 4, e.g. Do you cover [nearby village]?]
-                </summary>
-                <p>[Original answer]</p>
-              </details>
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading="School transport in [Town]: your questions"
+          description="[One original intro sentence.]"
+          items={[
+            {
+              question:
+                "[Local question 1, e.g. Do you cover [nearby village]?]",
+              answer: "[Original answer]",
+            },
+            {
+              question:
+                "[Local question 2, e.g. Do you cover [nearby village]?]",
+              answer: "[Original answer]",
+            },
+            {
+              question:
+                "[Local question 3, e.g. Do you cover [nearby village]?]",
+              answer: "[Original answer]",
+            },
+            {
+              question:
+                "[Local question 4, e.g. Do you cover [nearby village]?]",
+              answer: "[Original answer]",
+            },
+          ]}
+        />
         <section className="section-spacing section-band">
           <div className="container">
             <div className="section-header">
@@ -503,36 +497,10 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="cta-band">
-          <div className="tiles" aria-hidden="true">
-            <i style={{ background: "var(--sky)" }}></i>
-            <i style={{ background: "var(--pink)" }}></i>
-            <i style={{ background: "var(--green)" }}></i>
-            <i style={{ background: "var(--slate)" }}></i>
-            <i style={{ background: "var(--cyan)" }}></i>
-            <i style={{ background: "var(--lteal)" }}></i>
-          </div>
-          <div className="container">
-            <div>
-              <h2>[Call to action for [Town]]</h2>
-              <p>[One original sentence inviting a quote.]</p>
-            </div>
-            <div className="button-group">
-              <Link
-                className="btn btn-white"
-                href="/contact?service=school-college-transport#quote"
-              >
-                Request a quote
-              </Link>
-              <a className="btn btn-outline-white" href="tel:01491414040">
-                <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                  <use href="#i-phone" />
-                </svg>
-                Call 01491 414040
-              </a>
-            </div>
-          </div>
-        </section>
+        <CtaBand
+          heading="Ready to get started?"
+          body="Tell us about your journey and we'll get back to you with a clear, honest quote."
+        />
       </LegacyScope>
     </>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LegacyScope from "@/components/legacy/LegacyScope";
+import FaqSection from "@/components/FaqSection";
 
 export const metadata: Metadata = {
   title: {
@@ -437,50 +438,45 @@ export default function Page() {
             </form>
           </div>
         </section>
-        <section className="section-spacing section-band" id="faq">
-          <div className="container faq-layout">
-            <div>
-              <h2>Working with us</h2>
-              <p>
-                Questions about working with us? Call the office on{" "}
-                <a href="tel:01491414040">01491 414040</a>.
-              </p>
-            </div>
-            <div className="faq">
-              <details open>
-                <summary>Do I need experience?</summary>
-                <p>
-                  Not necessarily. Patience and reliability matter more than a
-                  CV, and we provide all the training, including SEND and
-                  safeguarding.
-                </p>
-              </details>
-              <details>
-                <summary>
-                  Do I need a driving licence to be a passenger assistant?
-                </summary>
-                <p>
-                  No. Passenger assistants travel with passengers who need extra
-                  support, so no driving licence is needed.
-                </p>
-              </details>
-              <details>
-                <summary>What are the hours?</summary>
-                <p>
+        <FaqSection
+          band
+          heading="Working with us"
+          description={
+            <>
+              Questions about working with us? Call the office on{" "}
+              <a href="tel:01491414040">01491 414040</a>.
+            </>
+          }
+          items={[
+            {
+              question: "Do I need experience?",
+              answer:
+                "Not necessarily. Patience and reliability matter more than a CV, and we provide all the training, including SEND and safeguarding.",
+            },
+            {
+              question:
+                "Do I need a driving licence to be a passenger assistant?",
+              answer:
+                "No. Passenger assistants travel with passengers who need extra support, so no driving licence is needed.",
+            },
+            {
+              question: "What are the hours?",
+              answer: (
+                <>
                   Most school routes are a morning and an afternoon run in term
                   time, with school holidays free.{" "}
                   <mark className="tbc">
                     [Confirm hours for adult and social care routes]
                   </mark>
-                </p>
-              </details>
-              <details>
-                <summary>Who pays for my DBS check and training?</summary>
-                <p>We do. Your enhanced DBS check and training are paid for.</p>
-              </details>
-            </div>
-          </div>
-        </section>
+                </>
+              ),
+            },
+            {
+              question: "Who pays for my DBS check and training?",
+              answer: "We do. Your enhanced DBS check and training are paid for.",
+            },
+          ]}
+        />
       </LegacyScope>
     </>
   );

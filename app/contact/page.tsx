@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LegacyScope from "@/components/legacy/LegacyScope";
+import FaqSection from "@/components/FaqSection";
 
 export const metadata: Metadata = {
   title: {
@@ -685,56 +686,38 @@ export default async function Page({
             </div>
           </div>
         </section>
-        <section className="section-spacing" id="faq">
-          <div className="container faq-layout">
-            <div>
-              <h2>Before you get in touch</h2>
-              <p>
-                Getting in touch should be easy. These answers explain what to
-                send us, when we reply and how quickly transport can begin.
-              </p>
-            </div>
-            <div className="faq">
-              <details open>
-                <summary>What should I include in my enquiry?</summary>
-                <p>
-                  The school or destination, the pick-up postcode, the days and
-                  times you need, and the number of passengers. If anyone has
-                  access, medical or behaviour needs, a short note helps us
-                  suggest the right vehicle and staff.
-                </p>
-              </details>
-              <details>
-                <summary>How can I reach you outside office hours?</summary>
-                <p>
+        <FaqSection
+          heading="Before you get in touch"
+          description="Getting in touch should be easy. These answers explain what to send us, when we reply and how quickly transport can begin."
+          items={[
+            {
+              question: "What should I include in my enquiry?",
+              answer:
+                "The school or destination, the pick-up postcode, the days and times you need, and the number of passengers. If anyone has access, medical or behaviour needs, a short note helps us suggest the right vehicle and staff.",
+            },
+            {
+              question: "How can I reach you outside office hours?",
+              answer: (
+                <>
                   Email us at any time and we’ll reply when the office opens at
                   7am. Families on an active route are given a direct number for
                   the morning and afternoon runs.{" "}
                   <mark className="tbc">[Confirm]</mark>
-                </p>
-              </details>
-              <details>
-                <summary>
-                  How soon can transport start after I accept a quote?
-                </summary>
-                <p>
-                  For a straightforward school run, often within a week. Routes
-                  that need a passenger assistant or a wheelchair-accessible
-                  vehicle can take a little longer while we arrange the right
-                  team.
-                </p>
-              </details>
-              <details>
-                <summary>Do you charge for a quote?</summary>
-                <p>
-                  No. Quotes are free and there’s no obligation to book. We’ll
-                  also explain exactly what the price includes, such as a
-                  passenger assistant or waiting time.
-                </p>
-              </details>
-            </div>
-          </div>
-        </section>
+                </>
+              ),
+            },
+            {
+              question: "How soon can transport start after I accept a quote?",
+              answer:
+                "For a straightforward school run, often within a week. Routes that need a passenger assistant or a wheelchair-accessible vehicle can take a little longer while we arrange the right team.",
+            },
+            {
+              question: "Do you charge for a quote?",
+              answer:
+                "No. Quotes are free and there’s no obligation to book. We’ll also explain exactly what the price includes, such as a passenger assistant or waiting time.",
+            },
+          ]}
+        />
       </LegacyScope>
     </>
   );

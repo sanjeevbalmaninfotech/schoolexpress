@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import CountUp from "@/components/legacy/CountUp";
 import LegacyScope from "@/components/legacy/LegacyScope";
+import CtaBand from "@/components/CtaBand";
+import FaqSection from "@/components/FaqSection";
 
 export const metadata: Metadata = {
   title: {
@@ -510,6 +512,7 @@ export default function Page() {
         </section>
         <section className="stats proof" aria-label="School Express in numbers">
           <div className="container">
+            <div className="wrap">
             <div
               className="stat"
               style={{ "--c": "var(--sky)" } as React.CSSProperties}
@@ -547,6 +550,7 @@ export default function Page() {
                 <strong>team members</strong> vetted and trained to support
                 every passenger
               </span>
+            </div>
             </div>
           </div>
         </section>
@@ -590,86 +594,47 @@ export default function Page() {
             </ol>
           </div>
         </section>
-        <section className="section-spacing section-band" id="faq">
-          <div className="container faq-layout">
-            <div>
-              <h2>Choosing the right service</h2>
-              <p>
-                Weighing up your options? These answers will help you choose,
-                and our office is always happy to advise.{" "}
-                <Link href="/contact">Get in touch</Link>.
-              </p>
-            </div>
-            <div className="faq">
-              <details open>
-                <summary>Which service should I choose?</summary>
-                <p>
-                  Start with the passenger. If they need extra support or travel
-                  in a wheelchair, our SEND or wheelchair-accessible services
-                  are the best fit. For everyday school runs, care journeys or
-                  trips, pick the matching service, or simply tell us what you
-                  need and we’ll recommend one.
-                </p>
-              </details>
-              <details>
-                <summary>Can one booking cover more than one service?</summary>
-                <p>
-                  Yes. Many schools and care homes use us for regular routes and
-                  occasional trips, and we set them up together so you deal with
-                  one team.
-                </p>
-              </details>
-              <details>
-                <summary>
-                  Do you take one-off bookings as well as regular routes?
-                </summary>
-                <p>
-                  Yes. Alongside term-time and weekly routes, we cover single
-                  appointments, events and days out.
-                </p>
-              </details>
-              <details>
-                <summary>
-                  Do you run journeys during the school holidays?
-                </summary>
-                <p>
+        <FaqSection
+          band
+          heading="Choosing the right service"
+          description={
+            <>
+              Weighing up your options? These answers will help you choose, and
+              our office is always happy to advise.{" "}
+              <Link href="/contact">Get in touch</Link>.
+            </>
+          }
+          items={[
+            {
+              question: "Which service should I choose?",
+              answer:
+                "Start with the passenger. If they need extra support or travel in a wheelchair, our SEND or wheelchair-accessible services are the best fit. For everyday school runs, care journeys or trips, pick the matching service, or simply tell us what you need and we’ll recommend one.",
+            },
+            {
+              question: "Can one booking cover more than one service?",
+              answer:
+                "Yes. Many schools and care homes use us for regular routes and occasional trips, and we set them up together so you deal with one team.",
+            },
+            {
+              question: "Do you take one-off bookings as well as regular routes?",
+              answer:
+                "Yes. Alongside term-time and weekly routes, we cover single appointments, events and days out.",
+            },
+            {
+              question: "Do you run journeys during the school holidays?",
+              answer: (
+                <>
                   Care, group and one-off journeys can run outside term time.{" "}
                   <mark className="tbc">[Confirm holiday availability]</mark>
-                </p>
-              </details>
-            </div>
-          </div>
-        </section>
-        <section className="cta-band">
-          <div className="tiles" aria-hidden="true">
-            <i style={{ background: "var(--sky)" }}></i>
-            <i style={{ background: "var(--pink)" }}></i>
-            <i style={{ background: "var(--green)" }}></i>
-            <i style={{ background: "var(--slate)" }}></i>
-            <i style={{ background: "var(--cyan)" }}></i>
-            <i style={{ background: "var(--lteal)" }}></i>
-          </div>
-          <div className="container">
-            <div>
-              <h2>Not sure which service you need?</h2>
-              <p>
-                Tell us who’s travelling, where and when, and we’ll recommend
-                the right option. There’s no charge for a quote.
-              </p>
-            </div>
-            <div className="button-group">
-              <Link className="btn btn-white" href="/contact#quote">
-                Request a quote
-              </Link>
-              <a className="btn btn-outline-white" href="tel:01491414040">
-                <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                  <use href="#i-phone" />
-                </svg>
-                Call 01491 414040
-              </a>
-            </div>
-          </div>
-        </section>
+                </>
+              ),
+            },
+          ]}
+        />
+        <CtaBand
+          heading="Not sure which service you need?"
+          body="Tell us who's travelling, where and when, and we'll recommend the right option. There's no charge for a quote."
+        />
       </LegacyScope>
     </>
   );

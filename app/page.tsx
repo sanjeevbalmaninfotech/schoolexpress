@@ -5,6 +5,7 @@ import HeroSlider from "@/components/HeroSlider";
 import StatsBar from "@/components/StatsBar";
 import LegacyScope from "@/components/legacy/LegacyScope";
 import TransportSection from "@/components/TransportSection";
+import FaqSection from "@/components/FaqSection";
 
 export const metadata: Metadata = {
   title: {
@@ -767,75 +768,48 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="section-spacing" id="faq">
-          <div className="container faq-layout">
-            <div>
-              <h2>Common questions</h2>
-              <p>
-                Quick answers for schools, trusts, colleges, care providers and
-                families. Can’t see yours? <a href="#contact">Get in touch</a>.
-              </p>
-            </div>
-            <div className="faq">
-              <details open>
-                <summary>Who can book transport with you?</summary>
-                <p>
-                  Anyone. Schools, academy trusts, colleges, care homes, social
-                  care providers and families all book with us directly, for
-                  regular routes or one-off journeys. Just tell us where, when
-                  and how many passengers.
-                </p>
-              </details>
-              <details>
-                <summary>Do you only transport children with SEND?</summary>
-                <p>
-                  No. We carry pupils at mainstream schools, college students,
-                  adults, care home residents and social care clients, as well
-                  as groups on trips and outings. Our SEND experience simply
-                  means every passenger gets the same high standard of care.
-                </p>
-              </details>
-              <details>
-                <summary>
-                  Can you provide female drivers or medically trained staff?
-                </summary>
-                <p>
-                  Yes, on request. We can provide female drivers, passenger
-                  assistants trained in epilepsy buccal medication and first
-                  aid, and trained Healthcare Assistants (HCAs). Just let us
-                  know when you enquire.
-                </p>
-              </details>
-              <details>
-                <summary>What vehicles do you use?</summary>
-                <p>
-                  Our 100+ vehicles include Toyota Prius saloons, Volkswagen
-                  Sharan and Mercedes-Benz Vito MPVs, Peugeot Boxer
-                  wheelchair-accessible vans and a new 16-seater minibus. We’ll
-                  suggest the best fit when we quote.
-                </p>
-              </details>
-              <details>
-                <summary>How experienced is your team?</summary>
-                <p>
-                  We’ve provided specialist passenger transport for more than 15
-                  years and transported more than 10,000 children safely in that
-                  time. Our 200+ drivers and passenger assistants are enhanced
-                  DBS checked and trained in SEND and safeguarding.
-                </p>
-              </details>
-              <details>
-                <summary>Which areas do you cover?</summary>
-                <p>
-                  We cover Berkshire, South Oxfordshire and Hampshire, including
-                  Reading, Wokingham, Bracknell, Newbury, Henley-on-Thames and
-                  Fareham, and we’re growing across the South East. If your area
-                  isn’t listed, get in touch, as we may still be able to help.
-                </p>
-              </details>
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading="Common questions"
+          description={
+            <>
+              Quick answers for schools, trusts, colleges, care providers and
+              families. Can’t see yours? <a href="#contact">Get in touch</a>.
+            </>
+          }
+          items={[
+            {
+              question: "Who can book transport with you?",
+              answer:
+                "Anyone. Schools, academy trusts, colleges, care homes, social care providers and families all book with us directly, for regular routes or one-off journeys. Just tell us where, when and how many passengers.",
+            },
+            {
+              question: "Do you only transport children with SEND?",
+              answer:
+                "No. We carry pupils at mainstream schools, college students, adults, care home residents and social care clients, as well as groups on trips and outings. Our SEND experience simply means every passenger gets the same high standard of care.",
+            },
+            {
+              question:
+                "Can you provide female drivers or medically trained staff?",
+              answer:
+                "Yes, on request. We can provide female drivers, passenger assistants trained in epilepsy buccal medication and first aid, and trained Healthcare Assistants (HCAs). Just let us know when you enquire.",
+            },
+            {
+              question: "What vehicles do you use?",
+              answer:
+                "Our 100+ vehicles include Toyota Prius saloons, Volkswagen Sharan and Mercedes-Benz Vito MPVs, Peugeot Boxer wheelchair-accessible vans and a new 16-seater minibus. We’ll suggest the best fit when we quote.",
+            },
+            {
+              question: "How experienced is your team?",
+              answer:
+                "We’ve provided specialist passenger transport for more than 15 years and transported more than 10,000 children safely in that time. Our 200+ drivers and passenger assistants are enhanced DBS checked and trained in SEND and safeguarding.",
+            },
+            {
+              question: "Which areas do you cover?",
+              answer:
+                "We cover Berkshire, South Oxfordshire and Hampshire, including Reading, Wokingham, Bracknell, Newbury, Henley-on-Thames and Fareham, and we’re growing across the South East. If your area isn’t listed, get in touch, as we may still be able to help.",
+            },
+          ]}
+        />
         <section className="section-spacing section-band" id="contact">
           <div className="container contact">
             <div>

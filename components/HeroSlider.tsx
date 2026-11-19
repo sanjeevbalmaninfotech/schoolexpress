@@ -164,8 +164,8 @@ export default function HeroSlider() {
       aria-label="Services"
       className="w-full overflow-x-clip bg-[var(--hero-bg)]"
     >
-      {/* mobile: 24px side / 56px top-bottom padding (! beats the global unlayered classes) */}
-      <div className="section-container section-y max-md:px-6! max-md:py-14!">
+      {/* mobile: 24px side / 56px top-bottom padding handled responsively via .section-container & .section-y */}
+      <div className="section-container section-y">
         <div className="flex flex-col gap-[50px]">
           {/* Slides (stacked in one grid cell so height never jumps) */}
           <div className="grid">

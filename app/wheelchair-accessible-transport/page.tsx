@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import CountUp from "@/components/legacy/CountUp";
 import LegacyScope from "@/components/legacy/LegacyScope";
+import CtaBand from "@/components/CtaBand";
+import FaqSection from "@/components/FaqSection";
 
 export const metadata: Metadata = {
   title: {
@@ -449,6 +451,7 @@ export default function Page() {
         </section>
         <section className="stats proof" aria-label="School Express in numbers">
           <div className="container">
+            <div className="wrap">
             <div
               className="stat"
               style={{ "--c": "var(--sky)" } as React.CSSProperties}
@@ -485,6 +488,7 @@ export default function Page() {
               <span>
                 <strong>team members</strong> who help passengers board safely
               </span>
+            </div>
             </div>
           </div>
         </section>
@@ -531,60 +535,53 @@ export default function Page() {
             </ol>
           </div>
         </section>
-        <section className="section-spacing" id="faq">
-          <div className="container faq-layout">
-            <div>
-              <h2>Accessible travel questions</h2>
-              <p>
-                Questions from families and care providers about travelling in a
-                wheelchair with us. <Link href="/contact">Get in touch</Link>{" "}
-                for anything else.
-              </p>
-            </div>
-            <div className="faq">
-              <details open>
-                <summary>Can passengers stay in their own wheelchair?</summary>
-                <p>
-                  Yes. Most passengers stay seated in their wheelchair, which is
-                  locked to the vehicle floor, and wear their own seatbelt as
-                  well.
-                </p>
-              </details>
-              <details>
-                <summary>How many wheelchairs can one vehicle carry?</summary>
-                <p>
+        <FaqSection
+          heading="Accessible travel questions"
+          description={
+            <>
+              Questions from families and care providers about travelling in a
+              wheelchair with us. <Link href="/contact">Get in touch</Link> for
+              anything else.
+            </>
+          }
+          items={[
+            {
+              question: "Can passengers stay in their own wheelchair?",
+              answer:
+                "Yes. Most passengers stay seated in their wheelchair, which is locked to the vehicle floor, and wear their own seatbelt as well.",
+            },
+            {
+              question: "How many wheelchairs can one vehicle carry?",
+              answer: (
+                <>
                   Up to <mark className="tbc">[3]</mark> wheelchair users per
                   vehicle, depending on the vehicle and any seated passengers
                   travelling with them.
-                </p>
-              </details>
-              <details>
-                <summary>Can family members or carers travel too?</summary>
-                <p>
-                  Yes. Our accessible vehicles also have seats, so companions
-                  and carers can travel alongside wheelchair users.
-                </p>
-              </details>
-              <details>
-                <summary>Is this only for children?</summary>
-                <p>
-                  No. We provide wheelchair-accessible transport for passengers
-                  of any age, including adults and care home residents.
-                </p>
-              </details>
-              <details>
-                <summary>
-                  What if the wheelchair is powered or extra large?
-                </summary>
-                <p>
+                </>
+              ),
+            },
+            {
+              question: "Can family members or carers travel too?",
+              answer:
+                "Yes. Our accessible vehicles also have seats, so companions and carers can travel alongside wheelchair users.",
+            },
+            {
+              question: "Is this only for children?",
+              answer:
+                "No. We provide wheelchair-accessible transport for passengers of any age, including adults and care home residents.",
+            },
+            {
+              question: "What if the wheelchair is powered or extra large?",
+              answer: (
+                <>
                   Tell us the type, size and rough weight when you enquire, and
                   we’ll send a vehicle with a suitable lift.{" "}
                   <mark className="tbc">[Confirm size and weight limits]</mark>
-                </p>
-              </details>
-            </div>
-          </div>
-        </section>
+                </>
+              ),
+            },
+          ]}
+        />
         <section className="section-spacing section-band">
           <div className="container">
             <div className="section-header">
@@ -705,39 +702,11 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="cta-band">
-          <div className="tiles" aria-hidden="true">
-            <i style={{ background: "var(--sky)" }}></i>
-            <i style={{ background: "var(--pink)" }}></i>
-            <i style={{ background: "var(--green)" }}></i>
-            <i style={{ background: "var(--slate)" }}></i>
-            <i style={{ background: "var(--cyan)" }}></i>
-            <i style={{ background: "var(--lteal)" }}></i>
-          </div>
-          <div className="container">
-            <div>
-              <h2>Arrange an accessible journey</h2>
-              <p>
-                Tell us about the wheelchair and the journey, and we’ll match a
-                suitable vehicle and price it for free.
-              </p>
-            </div>
-            <div className="button-group">
-              <Link
-                className="btn btn-white"
-                href="/contact?service=wheelchair-accessible-transport#quote"
-              >
-                Request a quote
-              </Link>
-              <a className="btn btn-outline-white" href="tel:01491414040">
-                <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                  <use href="#i-phone" />
-                </svg>
-                Call 01491 414040
-              </a>
-            </div>
-          </div>
-        </section>
+        <CtaBand
+          heading="Arrange an accessible journey"
+          body="Tell us about the wheelchair and the journey, and we'll match a suitable vehicle and price it for free."
+          quoteHref="/contact?service=wheelchair-accessible-transport#quote"
+        />
       </LegacyScope>
     </>
   );

@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import CountUp from "@/components/legacy/CountUp";
 import LegacyScope from "@/components/legacy/LegacyScope";
+import CtaBand from "@/components/CtaBand";
+import FaqSection from "@/components/FaqSection";
 
 export const metadata: Metadata = {
   title: {
@@ -248,7 +250,7 @@ export default function Page() {
             >
               <CountUp end={10000} suffix="+" />
               <span>
-                <strong>children</strong> who’ve travelled with us safely
+                <strong>children</strong> whoâ€™ve travelled with us safely
               </span>
             </div>
             <div
@@ -301,7 +303,7 @@ export default function Page() {
                 and group outing we take on.
               </p>
               <p style={{ color: "var(--ink2)", marginTop: "16px" }}>
-                We treat every passenger the way we’d want our own family
+                We treat every passenger the way weâ€™d want our own family
                 treated: with patience, kindness and respect.
               </p>
               <div className="button-group" style={{ marginTop: "28px" }}>
@@ -343,7 +345,7 @@ export default function Page() {
               <h2>Trusted by local authorities for 15+ years</h2>
               <p style={{ color: "var(--ink2)", marginTop: "16px" }}>
                 Councils award SEND and home-to-school routes through
-                competitive tender. For more than 15 years they’ve trusted us
+                competitive tender. For more than 15 years theyâ€™ve trusted us
                 with some of their most demanding journeys, and we lead the way
                 locally for wheelchair-accessible transport.
               </p>
@@ -416,7 +418,7 @@ export default function Page() {
                 <h3>Care in the small things</h3>
                 <p>
                   A warm hello, a patient driver and a calm, comfortable
-                  journey. For many passengers, that’s what makes the day start
+                  journey. For many passengers, thatâ€™s what makes the day start
                   well.
                 </p>
               </div>
@@ -432,7 +434,7 @@ export default function Page() {
                 <h3>Reliable, and always in touch</h3>
                 <p>
                   We plan every route with care, and if traffic or anything else
-                  affects a journey, we’ll let you know straight away. You’ll
+                  affects a journey, weâ€™ll let you know straight away. Youâ€™ll
                   never be left wondering.
                 </p>
               </div>
@@ -447,7 +449,7 @@ export default function Page() {
                 </span>
                 <h3>Dignity for every passenger</h3>
                 <p>
-                  Whatever someone’s age or needs, they’re treated with respect,
+                  Whatever someoneâ€™s age or needs, theyâ€™re treated with respect,
                   from the first pick-up to the last drop-off.
                 </p>
               </div>
@@ -478,7 +480,7 @@ export default function Page() {
                 <h3>Rooted in the South East, and growing</h3>
                 <p>
                   We started in Reading and now run routes in three counties. As
-                  more councils and families ask for us, we’re taking our
+                  more councils and families ask for us, weâ€™re taking our
                   service further across the South East.
                 </p>
               </div>
@@ -491,7 +493,7 @@ export default function Page() {
               <div>
                 <h2>Our fleet</h2>
                 <p>
-                  Five of the vehicles you’ll see on our routes. Behind them is
+                  Five of the vehicles youâ€™ll see on our routes. Behind them is
                   a fleet of more than 100, including 20+ wheelchair-accessible
                   vehicles.
                 </p>
@@ -535,7 +537,7 @@ export default function Page() {
                     <dt>Seats</dt>
                     <dd>4</dd>
                     <dt>Wheelchairs</dt>
-                    <dd>–</dd>
+                    <dd>â€“</dd>
                   </dl>
                   <p>Our go-to saloon for single-pupil and small-group runs</p>
                 </div>
@@ -557,7 +559,7 @@ export default function Page() {
                     <dt>Seats</dt>
                     <dd>6</dd>
                     <dt>Wheelchairs</dt>
-                    <dd>–</dd>
+                    <dd>â€“</dd>
                   </dl>
                   <p>Six seats with room for school bags and kit</p>
                 </div>
@@ -579,7 +581,7 @@ export default function Page() {
                     <dt>Seats</dt>
                     <dd>8</dd>
                     <dt>Wheelchairs</dt>
-                    <dd>–</dd>
+                    <dd>â€“</dd>
                   </dl>
                   <p>Eight seats for bigger shared routes and family groups</p>
                 </div>
@@ -756,98 +758,48 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="section-spacing" id="faq">
-          <div className="container faq-layout">
-            <div>
-              <h2>Getting to know us</h2>
-              <p>
-                Before trusting anyone with a journey, it’s natural to want to
-                know who they are. Still curious?{" "}
-                <Link href="/contact">We’d love to hear from you.</Link>
-              </p>
-            </div>
-            <div className="faq">
-              <details open>
-                <summary>Where is School Express based?</summary>
-                <p>
-                  Our office is at 3 Barrett Court on Cardiff Road in Reading.
-                  The team there plans every route and is on hand on weekdays
-                  from 7am.
-                </p>
-              </details>
-              <details>
-                <summary>How long has School Express been running?</summary>
-                <p>
-                  For more than 15 years. In that time we’ve carried over 10,000
-                  children and grown to a fleet of more than 100 vehicles.
-                </p>
-              </details>
-              <details>
-                <summary>
-                  What makes you different from a regular taxi firm?
-                </summary>
-                <p>
-                  We specialise in transporting children and vulnerable
-                  passengers. Our drivers and passenger assistants are enhanced
-                  DBS checked, trained in SEND and safeguarding, and assigned to
-                  regular routes, so passengers see a familiar face. Extra
-                  support, such as female drivers or medically trained
-                  assistants, is available on request.
-                </p>
-              </details>
-              <details>
-                <summary>
-                  How do you choose your drivers and passenger assistants?
-                </summary>
-                <p>
-                  Patience and kindness come first. Everyone then passes an
-                  enhanced DBS check and completes SEND and safeguarding
-                  training before they work with passengers.
-                </p>
-              </details>
-              <details>
-                <summary>Which councils do you work with?</summary>
-                <p>
-                  We work with Reading Borough Council, Wokingham Borough
-                  Council, West Berkshire Council, Bracknell Forest Council,
-                  South Oxfordshire District Council and Fareham Borough
-                  Council.
-                </p>
-              </details>
-            </div>
-          </div>
-        </section>
-        <section className="cta-band">
-          <div className="tiles" aria-hidden="true">
-            <i style={{ background: "var(--sky)" }}></i>
-            <i style={{ background: "var(--pink)" }}></i>
-            <i style={{ background: "var(--green)" }}></i>
-            <i style={{ background: "var(--slate)" }}></i>
-            <i style={{ background: "var(--cyan)" }}></i>
-            <i style={{ background: "var(--lteal)" }}></i>
-          </div>
-          <div className="container">
-            <div>
-              <h2>Let’s talk about your journey</h2>
-              <p>
-                Whether you’re a family, a school, a trust, a college or a care
-                provider, tell us what you need and our friendly team will get
-                back to you with a clear, honest quote.
-              </p>
-            </div>
-            <div className="button-group">
-              <Link className="btn btn-white" href="/contact#quote">
-                Request a quote
-              </Link>
-              <a className="btn btn-outline-white" href="tel:01491414040">
-                <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                  <use href="#i-phone" />
-                </svg>
-                Call 01491 414040
-              </a>
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading="Getting to know us"
+          description={
+            <>
+              Before trusting anyone with a journey, it&apos;s natural to want to
+              know who they are. Still curious?{" "}
+              <Link href="/contact">We&apos;d love to hear from you.</Link>
+            </>
+          }
+          items={[
+            {
+              question: "Where is School Express based?",
+              answer:
+                "Our office is at 3 Barrett Court on Cardiff Road in Reading. The team there plans every route and is on hand on weekdays from 7am.",
+            },
+            {
+              question: "How long has School Express been running?",
+              answer:
+                "For more than 15 years. In that time we've carried over 10,000 children and grown to a fleet of more than 100 vehicles.",
+            },
+            {
+              question: "What makes you different from a regular taxi firm?",
+              answer:
+                "We specialise in transporting children and vulnerable passengers. Our drivers and passenger assistants are enhanced DBS checked, trained in SEND and safeguarding, and assigned to regular routes, so passengers see a familiar face. Extra support, such as female drivers or medically trained assistants, is available on request.",
+            },
+            {
+              question:
+                "How do you choose your drivers and passenger assistants?",
+              answer:
+                "Patience and kindness come first. Everyone then passes an enhanced DBS check and completes SEND and safeguarding training before they work with passengers.",
+            },
+            {
+              question: "Which councils do you work with?",
+              answer:
+                "We work with Reading Borough Council, Wokingham Borough Council, West Berkshire Council, Bracknell Forest Council, South Oxfordshire District Council and Fareham Borough Council.",
+            },
+          ]}
+        />
+        <CtaBand
+          heading="Let's talk about your journey"
+          body="Whether you're a family, a school, a trust, a college or a care provider, tell us what you need and our friendly team will get back to you with a clear, honest quote."
+        />
       </LegacyScope>
     </>
   );

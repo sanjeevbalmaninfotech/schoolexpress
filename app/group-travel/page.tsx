@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import CountUp from "@/components/legacy/CountUp";
 import LegacyScope from "@/components/legacy/LegacyScope";
+import CtaBand from "@/components/CtaBand";
+import FaqSection from "@/components/FaqSection";
 
 export const metadata: Metadata = {
   title: {
@@ -170,44 +172,45 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <LegacyScope>
-        <header className="page-hero">
+        <header className="phero">
           <div className="container">
-            <div>
-              <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
-                <Link href="/">Home</Link>
-                <span aria-hidden="true">/</span>
-                <Link href="/services">Services</Link>
-                <span aria-hidden="true">/</span>
-                <span aria-current="page">Group travel and events</span>
-              </div>
-              <span className="label-chip">
-                <svg className="icon">
-                  <use href="#i-users" />
-                </svg>
-                Group travel and events
-              </span>
-              <h1>Group travel for trips, fixtures and special occasions</h1>
-              <p className="text-lead">
-                Safe, friendly minibus and group travel for school trips, sports
-                fixtures, proms, parties and outings, with the same vetted
-                drivers who run our daily routes.
-              </p>
-              <div className="button-group">
-                <Link
-                  className="btn btn-primary"
-                  href="/contact?service=group-travel#quote"
-                >
-                  Request a quote
-                </Link>
-                <a className="btn btn-outline" href="tel:01491414040">
-                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                    <use href="#i-phone" />
+            <div className="wrap">
+              <div>
+                <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
+                  <Link href="/">Home</Link>
+                  <span aria-hidden="true">/</span>
+                  <Link href="/services">Services</Link>
+                  <span aria-hidden="true">/</span>
+                  <span aria-current="page">Group travel and events</span>
+                </div>
+                <span className="label-chip">
+                  <svg className="icon">
+                    <use href="#i-users" />
                   </svg>
-                  Call 01491 414040
-                </a>
+                  Group travel and events
+                </span>
+                <h1>Group travel for trips, fixtures and special occasions</h1>
+                <p className="text-lead">
+                  Safe, friendly minibus and group travel for school trips, sports
+                  fixtures, proms, parties and outings, with the same vetted
+                  drivers who run our daily routes.
+                </p>
+                <div className="button-group">
+                  <Link
+                    className="btn btn-primary"
+                    href="/contact?service=group-travel#quote"
+                  >
+                    Request a quote
+                  </Link>
+                  <a className="btn btn-outline" href="tel:01491414040">
+                    <svg className="icon" style={{ width: "20px", height: "20px" }}>
+                      <use href="#i-phone" />
+                    </svg>
+                    Call 01491 414040
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="keyfacts">
+              <div className="keyfacts" style={{ alignSelf: "center" }}>
               <div>
                 <svg className="icon">
                   <use href="#i-bus" />
@@ -235,6 +238,7 @@ export default function Page() {
                   safe
                 </span>
               </div>
+            </div>
             </div>
           </div>
           <div className="tiles" aria-hidden="true">
@@ -351,7 +355,7 @@ export default function Page() {
                     <use href="#i-check" />
                   </svg>
                   <span>
-                    <strong>An itemised quote</strong>, so you know what you’re
+                    <strong>An itemised quote</strong>, so you know what youÃ¢â‚¬â„¢re
                     paying for
                   </span>
                 </li>
@@ -390,41 +394,43 @@ export default function Page() {
         </section>
         <section className="stats proof" aria-label="School Express in numbers">
           <div className="container">
-            <div
-              className="stat"
-              style={{ "--c": "var(--sky)" } as React.CSSProperties}
-            >
-              <CountUp end={16} suffix="" />
-              <span>
-                <strong>seats</strong> in our newest minibus
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--pink)" } as React.CSSProperties}
-            >
-              <CountUp end={100} suffix="+" />
-              <span>
-                <strong>vehicles</strong> so bigger groups can travel together
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--cyan)" } as React.CSSProperties}
-            >
-              <CountUp end={200} suffix="+" />
-              <span>
-                <strong>vetted drivers and assistants</strong> behind every trip
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--slate)" } as React.CSSProperties}
-            >
-              <CountUp end={15} suffix="+" />
-              <span>
-                <strong>years</strong> getting groups there and back
-              </span>
+            <div className="wrap">
+              <div
+                className="stat"
+                style={{ "--c": "var(--sky)" } as React.CSSProperties}
+              >
+                <CountUp end={16} suffix="" />
+                <span>
+                  <strong>seats</strong> in our newest minibus
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--pink)" } as React.CSSProperties}
+              >
+                <CountUp end={100} suffix="+" />
+                <span>
+                  <strong>vehicles</strong> so bigger groups can travel together
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--cyan)" } as React.CSSProperties}
+              >
+                <CountUp end={200} suffix="+" />
+                <span>
+                  <strong>vetted drivers and assistants</strong> behind every trip
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--slate)" } as React.CSSProperties}
+              >
+                <CountUp end={15} suffix="+" />
+                <span>
+                  <strong>years</strong> getting groups there and back
+                </span>
+              </div>
             </div>
           </div>
         </section>
@@ -467,50 +473,44 @@ export default function Page() {
             </ol>
           </div>
         </section>
-        <section className="section-spacing" id="faq">
-          <div className="container faq-layout">
-            <div>
-              <h2>Group travel questions</h2>
-              <p>
-                Organising transport for a group? These answers cover the
-                basics. <Link href="/contact">Ask us</Link> if you need more.
-              </p>
-            </div>
-            <div className="faq">
-              <details open>
-                <summary>How many passengers can you take?</summary>
-                <p>
-                  Up to 16 in our minibus. Larger groups can travel in more than
-                  one vehicle from our fleet of 100+.
-                </p>
-              </details>
-              <details>
-                <summary>Can wheelchair users travel with the group?</summary>
-                <p>
-                  Yes. Our wheelchair-accessible vehicles mean wheelchair users
-                  can travel with their group.
-                </p>
-              </details>
-              <details>
-                <summary>How far ahead should we book?</summary>
-                <p>
+        <FaqSection
+          heading="Group travel questions"
+          description={
+            <>
+              Organising transport for a group? These answers cover the
+              basics. <Link href="/contact">Ask us</Link> if you need more.
+            </>
+          }
+          items={[
+            {
+              question: "How many passengers can you take?",
+              answer:
+                "Up to 16 in our minibus. Larger groups can travel in more than one vehicle from our fleet of 100+.",
+            },
+            {
+              question: "Can wheelchair users travel with the group?",
+              answer:
+                "Yes. Our wheelchair-accessible vehicles mean wheelchair users can travel with their group.",
+            },
+            {
+              question: "How far ahead should we book?",
+              answer: (
+                <>
                   As early as you can, especially for busy dates like proms and
                   the end of term.{" "}
                   <mark className="tbc">
                     [Confirm recommended notice period]
                   </mark>
-                </p>
-              </details>
-              <details>
-                <summary>Do you do proms and parties?</summary>
-                <p>
-                  Yes. We provide safe travel for proms, parties and
-                  celebrations, as well as school trips and sports fixtures.
-                </p>
-              </details>
-            </div>
-          </div>
-        </section>
+                </>
+              ),
+            },
+            {
+              question: "Do you do proms and parties?",
+              answer:
+                "Yes. We provide safe travel for proms, parties and celebrations, as well as school trips and sports fixtures.",
+            },
+          ]}
+        />
         <section className="section-spacing section-band">
           <div className="container">
             <div className="section-header">
@@ -630,39 +630,11 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="cta-band">
-          <div className="tiles" aria-hidden="true">
-            <i style={{ background: "var(--sky)" }}></i>
-            <i style={{ background: "var(--pink)" }}></i>
-            <i style={{ background: "var(--green)" }}></i>
-            <i style={{ background: "var(--slate)" }}></i>
-            <i style={{ background: "var(--cyan)" }}></i>
-            <i style={{ background: "var(--lteal)" }}></i>
-          </div>
-          <div className="container">
-            <div>
-              <h2>Planning a trip or event?</h2>
-              <p>
-                Give us the date, destination and group size and we’ll send a
-                no-obligation quote.
-              </p>
-            </div>
-            <div className="button-group">
-              <Link
-                className="btn btn-white"
-                href="/contact?service=group-travel#quote"
-              >
-                Request a quote
-              </Link>
-              <a className="btn btn-outline-white" href="tel:01491414040">
-                <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                  <use href="#i-phone" />
-                </svg>
-                Call 01491 414040
-              </a>
-            </div>
-          </div>
-        </section>
+        <CtaBand
+          heading="Planning a trip or event?"
+          body="Give us the date, destination and group size and we'll send a no-obligation quote."
+          quoteHref="/contact?service=group-travel#quote"
+        />
       </LegacyScope>
     </>
   );

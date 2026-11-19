@@ -87,6 +87,7 @@
 .legacy .vanpanel p{margin-top:24px;font-weight:600;color:#06484D;text-align:center}
 @media (max-width:900px){.legacy .split{grid-template-columns:1fr;gap:40px}
 .legacy .sec{padding:72px 0}}
+@media (max-width:768px){.legacy .sec{padding:56px 0}}
 .legacy .fleet{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
 .legacy .veh{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
 .legacy .veh .art{background:var(--bg);padding:28px 24px 20px;display:grid;place-items:center}
@@ -453,6 +454,10 @@
   .legacy .content-split   { grid-template-columns: 1fr; gap: 40px; }
   .legacy .content-two-col { grid-template-columns: 1fr; gap: 48px; }
   .legacy .faq-layout      { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 768px) {
+  .legacy .section-spacing { padding: 56px 0; }
 }
 
 /* Typography */

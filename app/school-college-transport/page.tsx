@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import CountUp from "@/components/legacy/CountUp";
 import LegacyScope from "@/components/legacy/LegacyScope";
+import CtaBand from "@/components/CtaBand";
+import FaqSection from "@/components/FaqSection";
 
 export const metadata: Metadata = {
   title: {
@@ -180,69 +182,71 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <LegacyScope>
-        <header className="page-hero">
+        <header className="phero">
           <div className="container">
-            <div>
-              <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
-                <Link href="/">Home</Link>
-                <span aria-hidden="true">/</span>
-                <Link href="/services">Services</Link>
-                <span aria-hidden="true">/</span>
-                <span aria-current="page">Schools, trusts and colleges</span>
-              </div>
-              <span className="label-chip">
-                <svg className="icon">
-                  <use href="#i-cap" />
-                </svg>
-                School, trust and college transport
-              </span>
-              <h1>School, trust and college transport you can count on</h1>
-              <p className="text-lead">
-                Reliable daily home-to-school and college runs across Berkshire,
-                Oxfordshire, Hampshire and the South East, with a familiar
-                driver, trained passenger assistants when they’re needed, and
-                minibuses for trips and fixtures.
-              </p>
-              <div className="button-group">
-                <Link
-                  className="btn btn-primary"
-                  href="/contact?service=school-college-transport#quote"
-                >
-                  Request a quote
-                </Link>
-                <a className="btn btn-outline" href="tel:01491414040">
-                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                    <use href="#i-phone" />
+            <div className="wrap">
+              <div>
+                <div className="" role="navigation" aria-label="Breadcrumb">
+                  <Link href="/">Home</Link>
+                  <span aria-hidden="true">/</span>
+                  <Link href="/services">Services</Link>
+                  <span aria-hidden="true">/</span>
+                  <span aria-current="page">Schools, trusts and colleges</span>
+                </div>
+                <span className="label-chip">
+                  <svg className="icon">
+                    <use href="#i-cap" />
                   </svg>
-                  Call 01491 414040
-                </a>
-              </div>
-            </div>
-            <div className="keyfacts">
-              <div>
-                <svg className="icon">
-                  <use href="#i-users" />
-                </svg>
-                <span>
-                  <b>Familiar faces</b>One regular driver for each route
+                  School, trust and college transport
                 </span>
+                <h1>School, trust and college transport you can count on</h1>
+                <p className="text-lead">
+                  Reliable daily home-to-school and college runs across Berkshire,
+                  Oxfordshire, Hampshire and the South East, with a familiar
+                  driver, trained passenger assistants when they're needed, and
+                  minibuses for trips and fixtures.
+                </p>
+                <div className="button-group">
+                  <Link
+                    className="btn btn-primary"
+                    href="/contact?service=school-college-transport#quote"
+                  >
+                    Request a quote
+                  </Link>
+                  <a className="btn btn-outline" href="tel:01491414040">
+                    <svg className="icon" style={{ width: "20px", height: "20px" }}>
+                      <use href="#i-phone" />
+                    </svg>
+                    Call 01491 414040
+                  </a>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-cap" />
-                </svg>
-                <span>
-                  <b>Every type of school</b>State, private and independent
-                  schools, academy trusts and colleges
-                </span>
-              </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-bus" />
-                </svg>
-                <span>
-                  <b>Trips and fixtures</b>16-seater minibus hire
-                </span>
+              <div className="keyfacts" style={{ alignSelf: "center" }}>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-users" />
+                  </svg>
+                  <span>
+                    <b>Familiar faces</b>One regular driver for each route
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-cap" />
+                  </svg>
+                  <span>
+                    <b>Every type of school</b>State, private and independent
+                    schools, academy trusts and colleges
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-bus" />
+                  </svg>
+                  <span>
+                    <b>Trips and fixtures</b>16-seater minibus hire
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -261,7 +265,7 @@ export default function Page() {
               <div>
                 <h2>Who books our school and college runs</h2>
                 <p>
-                  Whether it’s one pupil or pupils across several schools, we
+                  Whether itÃ¢â‚¬â„¢s one pupil or pupils across several schools, we
                   plan the journey around the people travelling.
                 </p>
               </div>
@@ -321,7 +325,7 @@ export default function Page() {
               <h2>Every school run includes</h2>
               <p style={{ color: "var(--ink2)", marginTop: "16px" }}>
                 For many children, the ride to school sets the tone for the
-                whole day. That’s why we focus on the small things.
+                whole day. ThatÃ¢â‚¬â„¢s why we focus on the small things.
               </p>
               <ul className="checklist">
                 <li>
@@ -366,7 +370,7 @@ export default function Page() {
                   </svg>
                   <span>
                     <strong>Safe handover</strong>, from the moment pupils step
-                    in until they’re at the school gate or home
+                    in until they're at the school gate or home
                   </span>
                 </li>
               </ul>
@@ -428,43 +432,45 @@ export default function Page() {
         </section>
         <section className="stats proof" aria-label="School Express in numbers">
           <div className="container">
-            <div
-              className="stat"
-              style={{ "--c": "var(--sky)" } as React.CSSProperties}
-            >
-              <CountUp end={15} suffix="+" />
-              <span>
-                <strong>years</strong> running home-to-school routes
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--pink)" } as React.CSSProperties}
-            >
-              <CountUp end={10000} suffix="+" />
-              <span>
-                <strong>pupils</strong> taken to school and college safely
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--cyan)" } as React.CSSProperties}
-            >
-              <CountUp end={16} suffix="" />
-              <span>
-                <strong>seats</strong> in our largest vehicle for trips and
-                fixtures
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--slate)" } as React.CSSProperties}
-            >
-              <CountUp end={200} suffix="+" />
-              <span>
-                <strong>drivers and assistants</strong> ready for new school
-                routes
-              </span>
+            <div className="wrap">
+              <div
+                className="stat"
+                style={{ "--c": "var(--sky)" } as React.CSSProperties}
+              >
+                <CountUp end={15} suffix="+" />
+                <span>
+                  <strong>years</strong> running home-to-school routes
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--pink)" } as React.CSSProperties}
+              >
+                <CountUp end={10000} suffix="+" />
+                <span>
+                  <strong>pupils</strong> taken to school and college safely
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--cyan)" } as React.CSSProperties}
+              >
+                <CountUp end={16} suffix="" />
+                <span>
+                  <strong>seats</strong> in our largest vehicle for trips and
+                  fixtures
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--slate)" } as React.CSSProperties}
+              >
+                <CountUp end={200} suffix="+" />
+                <span>
+                  <strong>drivers and assistants</strong> ready for new school
+                  routes
+                </span>
+              </div>
             </div>
           </div>
         </section>
@@ -511,63 +517,43 @@ export default function Page() {
             </ol>
           </div>
         </section>
-        <section className="section-spacing" id="faq">
-          <div className="container faq-layout">
-            <div>
-              <h2>School and college transport questions</h2>
-              <p>
-                The things families, schools and trusts usually ask before
-                booking. For anything else,{" "}
-                <Link href="/contact">just ask</Link>.
-              </p>
-            </div>
-            <div className="faq">
-              <details open>
-                <summary>Do you work with academy trusts?</summary>
-                <p>
-                  Yes. We work with individual schools and multi-academy trusts,
-                  whether you need transport for one school or several.
-                </p>
-              </details>
-              <details>
-                <summary>
-                  Do you work with private and independent schools?
-                </summary>
-                <p>
-                  Yes. We arrange regular school runs for families at private
-                  and independent schools, as well as state schools and
-                  colleges.
-                </p>
-              </details>
-              <details>
-                <summary>
-                  Can siblings or nearby pupils share a journey?
-                </summary>
-                <p>
-                  Yes. Shared routes for siblings or pupils who live close
-                  together are common, and we’ll suggest the right vehicle when
-                  we quote.
-                </p>
-              </details>
-              <details>
-                <summary>Can one route serve more than one school?</summary>
-                <p>
-                  Yes. We often plan routes that drop pupils at several schools,
-                  which works well for trusts with more than one site.
-                </p>
-              </details>
-              <details>
-                <summary>
-                  What if my child is ill and won’t be travelling?
-                </summary>
-                <p>
-                  Call or email the office as early as you can, ideally before
-                  the pick-up time, and we’ll let the driver know.
-                </p>
-              </details>
-            </div>
-          </div>
-        </section>
+        <FaqSection
+          heading="School and college transport questions"
+          description={
+            <>
+              The things families, schools and trusts usually ask before
+              booking. For anything else,{" "}
+              <Link href="/contact">just ask</Link>.
+            </>
+          }
+          items={[
+            {
+              question: "Do you work with academy trusts?",
+              answer:
+                "Yes. We work with individual schools and multi-academy trusts, whether you need transport for one school or several.",
+            },
+            {
+              question: "Do you work with private and independent schools?",
+              answer:
+                "Yes. We arrange regular school runs for families at private and independent schools, as well as state schools and colleges.",
+            },
+            {
+              question: "Can siblings or nearby pupils share a journey?",
+              answer:
+                "Yes. Shared routes for siblings or pupils who live close together are common, and we’ll suggest the right vehicle when we quote.",
+            },
+            {
+              question: "Can one route serve more than one school?",
+              answer:
+                "Yes. We often plan routes that drop pupils at several schools, which works well for trusts with more than one site.",
+            },
+            {
+              question: "What if my child is ill and won’t be travelling?",
+              answer:
+                "Call or email the office as early as you can, ideally before the pick-up time, and we’ll let the driver know.",
+            },
+          ]}
+        />
         <section className="section-spacing section-band">
           <div className="container">
             <div className="section-header">
@@ -689,40 +675,11 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="cta-band">
-          <div className="tiles" aria-hidden="true">
-            <i style={{ background: "var(--sky)" }}></i>
-            <i style={{ background: "var(--pink)" }}></i>
-            <i style={{ background: "var(--green)" }}></i>
-            <i style={{ background: "var(--slate)" }}></i>
-            <i style={{ background: "var(--cyan)" }}></i>
-            <i style={{ background: "var(--lteal)" }}></i>
-          </div>
-          <div className="container">
-            <div>
-              <h2>Need a school or college run?</h2>
-              <p>
-                Send us the school, pick-up postcode and times, and we’ll reply
-                with a quote within{" "}
-                <mark className="tbc">[one working day]</mark>.
-              </p>
-            </div>
-            <div className="button-group">
-              <Link
-                className="btn btn-white"
-                href="/contact?service=school-college-transport#quote"
-              >
-                Request a quote
-              </Link>
-              <a className="btn btn-outline-white" href="tel:01491414040">
-                <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                  <use href="#i-phone" />
-                </svg>
-                Call 01491 414040
-              </a>
-            </div>
-          </div>
-        </section>
+        <CtaBand
+          heading="Need a school or college run?"
+          body="Send us the school, pick-up postcode and times and we'll reply with a quote within one working day."
+          quoteHref="/contact?service=school-college-transport#quote"
+        />
       </LegacyScope>
     </>
   );

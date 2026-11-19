@@ -44,7 +44,6 @@ const LINKS = [
 
 const QUOTE_HREF = "/contact#quote";
 
-// Desktop nav starts at xl (1280px). Below that -> hamburger.
 const navItem =
   "flex items-center gap-2 rounded-lg px-3 py-2 text-[20px] font-medium leading-none text-[color:var(--nav-text)] transition-colors hover:bg-[var(--nav-hover)]";
 
@@ -59,7 +58,7 @@ function Chevron({ open }: { open: boolean }) {
       viewBox="0 0 16 16"
       fill="none"
       aria-hidden="true"
-      className={`transition-transform ${open ? "rotate-180" : ""}`}
+      className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
     >
       <path
         d="M3 6l5 5 5-5"
@@ -77,16 +76,32 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const servicesRef = useRef<HTMLLIElement>(null);
+  const navRef = useRef<HTMLElement>(null);
 
-  // close everything on route change
+  // Track scroll position for shrink + shadow effect
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll(); // run once on mount
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Close everything on route change
   useEffect(() => {
     setMobileOpen(false);
     setServicesOpen(false);
     setMobileServicesOpen(false);
   }, [pathname]);
 
-  // outside click + Esc
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
+  // Outside click + Esc
   useEffect(() => {
     const onDown = (e: MouseEvent) => {
       if (
@@ -110,10 +125,36 @@ export default function Navbar() {
     };
   }, []);
 
+  // Active link helper
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href.split("#")[0]);
+
+  const activeNavItem = `${navItem} bg-[var(--nav-hover)]`;
+
   return (
-    <header className="relative z-50 w-full bg-white">
+    <header
+      ref={navRef}
+      className={[
+        // ── Sticky ──
+        "sticky top-0 z-50 w-full",
+        // ── Background: white always, blur + stronger shadow on scroll ──
+        "bg-white/95 backdrop-blur-md",
+        "transition-shadow duration-300",
+        scrolled
+          ? "shadow-[0_2px_16px_rgba(14,42,51,0.12)]"
+          : "shadow-[0_1px_0_rgba(14,42,51,0.08)]",
+      ].join(" ")}
+    >
       <div className="section-container">
-        <div className="flex h-[72px] items-center justify-between md:h-[84px] 2xl:h-[100px]">
+        {/* ── Bar ── */}
+        <div
+          className={[
+            "flex items-center justify-between transition-[height] duration-300",
+            scrolled
+              ? "h-[60px] md:h-[68px]"
+              : "h-[72px] md:h-[84px] 2xl:h-[100px]",
+          ].join(" ")}
+        >
           {/* Logo */}
           <Link href="/" aria-label="School Express home" className="shrink-0">
             <Image
@@ -122,7 +163,12 @@ export default function Navbar() {
               width={114}
               height={64}
               priority
-              className="h-auto w-[84px] 2xl:w-[114px] md:w-[100px]"
+              className={[
+                "h-auto transition-[width] duration-300",
+                scrolled
+                  ? "w-[70px] md:w-[84px]"
+                  : "w-[84px] md:w-[100px] 2xl:w-[114px]",
+              ].join(" ")}
             />
           </Link>
 
@@ -130,11 +176,15 @@ export default function Navbar() {
           <nav aria-label="Main" className="hidden xl:block">
             <ul className="flex items-center gap-[6px]">
               <li>
-                <Link href="/" className={navItem}>
+                <Link
+                  href="/"
+                  className={isActive("/") ? activeNavItem : navItem}
+                >
                   Home
                 </Link>
               </li>
 
+              {/* Services dropdown */}
               <li
                 ref={servicesRef}
                 className="relative"
@@ -146,19 +196,24 @@ export default function Navbar() {
                   aria-haspopup="true"
                   aria-expanded={servicesOpen}
                   onClick={() => setServicesOpen((v) => !v)}
-                  className={`${navItem} ${
-                    servicesOpen ? "bg-[var(--nav-hover)]" : ""
-                  }`}
+                  className={`${navItem} ${servicesOpen || SERVICES.some((s) => isActive(s.href))
+                      ? "bg-[var(--nav-hover)]"
+                      : ""
+                    }`}
                 >
                   Services
                   <Chevron open={servicesOpen} />
                 </button>
 
-                {/* pt-2 keeps hover alive between button and panel */}
+                {/* Dropdown panel — pt-2 keeps hover alive between button and panel */}
                 <div
-                  className={`absolute left-0 top-full pt-2 ${
-                    servicesOpen ? "block" : "hidden"
-                  }`}
+                  className={[
+                    "absolute left-0 top-full pt-2",
+                    "transition-all duration-200 origin-top",
+                    servicesOpen
+                      ? "opacity-100 scale-y-100 pointer-events-auto"
+                      : "opacity-0 scale-y-95 pointer-events-none",
+                  ].join(" ")}
                 >
                   <div className="w-[300px] rounded-2xl bg-white p-2 shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
                     <ul>
@@ -166,7 +221,8 @@ export default function Navbar() {
                         <li key={s.href}>
                           <Link
                             href={s.href}
-                            className="block rounded-lg px-4 py-3 transition-colors hover:bg-[var(--nav-hover)]"
+                            className={`block rounded-lg px-4 py-3 transition-colors hover:bg-[var(--nav-hover)] ${isActive(s.href) ? "bg-[var(--nav-hover)]" : ""
+                              }`}
                           >
                             <span className="block text-[18px] font-medium leading-snug text-[color:var(--nav-text)]">
                               {s.title}
@@ -181,9 +237,10 @@ export default function Navbar() {
                     <div className="mx-4 my-2 h-px bg-black/10" />
                     <Link
                       href="/services"
-                      className="block rounded-lg px-4 py-3 text-[18px] font-medium leading-snug text-[color:var(--nav-text)] transition-colors hover:bg-[var(--nav-hover)]"
+                      className={`block rounded-lg px-4 py-3 text-[18px] font-medium leading-snug text-[color:var(--nav-text)] transition-colors hover:bg-[var(--nav-hover)] ${isActive("/services") ? "bg-[var(--nav-hover)]" : ""
+                        }`}
                     >
-                      All services
+                      All services →
                     </Link>
                   </div>
                 </div>
@@ -191,7 +248,10 @@ export default function Navbar() {
 
               {LINKS.slice(1).map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className={navItem}>
+                  <Link
+                    href={l.href}
+                    className={isActive(l.href) ? activeNavItem : navItem}
+                  >
                     {l.label}
                   </Link>
                 </li>
@@ -242,16 +302,25 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile / tablet panel */}
+      {/* ── Mobile / tablet panel ── */}
       <div
-        className={`absolute left-0 right-0 top-full max-h-[calc(100vh-72px)] overflow-y-auto bg-white shadow-[0_8px_30px_rgba(0,0,0,0.12)] xl:hidden ${
-          mobileOpen ? "block" : "hidden"
-        }`}
+        className={[
+          "absolute left-0 right-0 top-full overflow-y-auto bg-white",
+          "shadow-[0_8px_30px_rgba(0,0,0,0.12)] xl:hidden",
+          "transition-all duration-300 origin-top",
+          mobileOpen
+            ? "max-h-[calc(100dvh-60px)] opacity-100 pointer-events-auto"
+            : "max-h-0 opacity-0 pointer-events-none",
+        ].join(" ")}
+        aria-hidden={!mobileOpen}
       >
         <div className="section-container py-4">
           <ul className="flex flex-col gap-[6px]">
             <li>
-              <Link href="/" className={`${navItem} w-full`}>
+              <Link
+                href="/"
+                className={`${isActive("/") ? activeNavItem : navItem} w-full`}
+              >
                 Home
               </Link>
             </li>
@@ -261,22 +330,27 @@ export default function Navbar() {
                 type="button"
                 aria-expanded={mobileServicesOpen}
                 onClick={() => setMobileServicesOpen((v) => !v)}
-                className={`${navItem} w-full justify-between ${
-                  mobileServicesOpen ? "bg-[var(--nav-hover)]" : ""
-                }`}
+                className={`${navItem} w-full justify-between ${mobileServicesOpen ? "bg-[var(--nav-hover)]" : ""
+                  }`}
               >
                 Services
                 <Chevron open={mobileServicesOpen} />
               </button>
 
-              {mobileServicesOpen && (
-                <div className="mt-1 pl-3">
+              <div
+                className={[
+                  "overflow-hidden transition-all duration-300",
+                  mobileServicesOpen ? "max-h-[600px] mt-1" : "max-h-0",
+                ].join(" ")}
+              >
+                <div className="pl-3">
                   <ul>
                     {SERVICES.map((s) => (
                       <li key={s.href}>
                         <Link
                           href={s.href}
-                          className="block rounded-lg px-3 py-3 transition-colors hover:bg-[var(--nav-hover)]"
+                          className={`block rounded-lg px-3 py-3 transition-colors hover:bg-[var(--nav-hover)] ${isActive(s.href) ? "bg-[var(--nav-hover)]" : ""
+                            }`}
                         >
                           <span className="block text-[18px] font-medium leading-snug text-[color:var(--nav-text)]">
                             {s.title}
@@ -293,15 +367,18 @@ export default function Navbar() {
                     href="/services"
                     className="block rounded-lg px-3 py-3 text-[18px] font-medium leading-snug text-[color:var(--nav-text)] transition-colors hover:bg-[var(--nav-hover)]"
                   >
-                    All services
+                    All services →
                   </Link>
                 </div>
-              )}
+              </div>
             </li>
 
             {LINKS.slice(1).map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className={`${navItem} w-full`}>
+                <Link
+                  href={l.href}
+                  className={`${isActive(l.href) ? activeNavItem : navItem} w-full`}
+                >
                   {l.label}
                 </Link>
               </li>

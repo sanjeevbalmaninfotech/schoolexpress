@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import CountUp from "@/components/legacy/CountUp";
 import LegacyScope from "@/components/legacy/LegacyScope";
+import CtaBand from "@/components/CtaBand";
+import FaqSection from "@/components/FaqSection";
 
 export const metadata: Metadata = {
   title: {
@@ -428,6 +430,7 @@ export default function Page() {
         </section>
         <section className="stats proof" aria-label="School Express in numbers">
           <div className="container">
+            <div className="wrap">
             <div
               className="stat"
               style={{ "--c": "var(--sky)" } as React.CSSProperties}
@@ -463,6 +466,7 @@ export default function Page() {
               <span>
                 <strong>years</strong> caring for vulnerable passengers
               </span>
+            </div>
             </div>
           </div>
         </section>
@@ -509,71 +513,52 @@ export default function Page() {
             </ol>
           </div>
         </section>
-        <section className="section-spacing" id="faq">
-          <div className="container faq-layout">
-            <div>
-              <h2>Questions from care providers and families</h2>
-              <p>
-                Planning care transport raises practical questions. Here are the
-                most common, and our office can help with the rest.{" "}
-                <Link href="/contact">Contact us</Link>.
-              </p>
-            </div>
-            <div className="faq">
-              <details open>
-                <summary>
-                  Can you take residents to hospital and GP appointments?
-                </summary>
-                <p>
+        <FaqSection
+          heading="Questions from care providers and families"
+          description={
+            <>
+              Planning care transport raises practical questions. Here are the
+              most common, and our office can help with the rest.{" "}
+              <Link href="/contact">Contact us</Link>.
+            </>
+          }
+          items={[
+            {
+              question: "Can you take residents to hospital and GP appointments?",
+              answer: (
+                <>
                   Yes. Tell us the appointment time and address, and we’ll plan
                   the pick-up so there’s no rush.{" "}
                   <mark className="tbc">
                     [Confirm whether drivers wait during appointments]
                   </mark>
-                </p>
-              </details>
-              <details>
-                <summary>
-                  Can you run a regular weekly route for our day centre?
-                </summary>
-                <p>
-                  Yes. We run regular routes as well as one-off journeys. Tell
-                  us the days, times and number of passengers and we’ll put
-                  together a quote.
-                </p>
-              </details>
-              <details>
-                <summary>
-                  When would a Healthcare Assistant travel with a passenger?
-                </summary>
-                <p>
-                  When someone’s health needs mean they need trained support
-                  during the journey. HCAs are available on request, so mention
-                  any needs when you get in touch.
-                </p>
-              </details>
-              <details>
-                <summary>Can residents go on group outings?</summary>
-                <p>
-                  Yes. Our 16-seater minibus and accessible vehicles are ideal
-                  for group outings, and larger groups can travel in more than
-                  one vehicle.
-                </p>
-              </details>
-              <details>
-                <summary>
-                  Can you collect passengers from different addresses on one
-                  route?
-                </summary>
-                <p>
-                  Yes. Shared routes that pick up several people from home or
-                  supported living are common, and we plan the order to keep
-                  journey times short.
-                </p>
-              </details>
-            </div>
-          </div>
-        </section>
+                </>
+              ),
+            },
+            {
+              question: "Can you run a regular weekly route for our day centre?",
+              answer:
+                "Yes. We run regular routes as well as one-off journeys. Tell us the days, times and number of passengers and we’ll put together a quote.",
+            },
+            {
+              question:
+                "When would a Healthcare Assistant travel with a passenger?",
+              answer:
+                "When someone’s health needs mean they need trained support during the journey. HCAs are available on request, so mention any needs when you get in touch.",
+            },
+            {
+              question: "Can residents go on group outings?",
+              answer:
+                "Yes. Our 16-seater minibus and accessible vehicles are ideal for group outings, and larger groups can travel in more than one vehicle.",
+            },
+            {
+              question:
+                "Can you collect passengers from different addresses on one route?",
+              answer:
+                "Yes. Shared routes that pick up several people from home or supported living are common, and we plan the order to keep journey times short.",
+            },
+          ]}
+        />
         <section className="section-spacing section-band">
           <div className="container">
             <div className="section-header">
@@ -695,39 +680,11 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="cta-band">
-          <div className="tiles" aria-hidden="true">
-            <i style={{ background: "var(--sky)" }}></i>
-            <i style={{ background: "var(--pink)" }}></i>
-            <i style={{ background: "var(--green)" }}></i>
-            <i style={{ background: "var(--slate)" }}></i>
-            <i style={{ background: "var(--cyan)" }}></i>
-            <i style={{ background: "var(--lteal)" }}></i>
-          </div>
-          <div className="container">
-            <div>
-              <h2>Arrange transport for your residents or clients</h2>
-              <p>
-                Share your weekly schedule or a single appointment and we’ll
-                come back with options and a free quote.
-              </p>
-            </div>
-            <div className="button-group">
-              <Link
-                className="btn btn-white"
-                href="/contact?service=adult-social-care-transport#quote"
-              >
-                Request a quote
-              </Link>
-              <a className="btn btn-outline-white" href="tel:01491414040">
-                <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                  <use href="#i-phone" />
-                </svg>
-                Call 01491 414040
-              </a>
-            </div>
-          </div>
-        </section>
+        <CtaBand
+          heading="Arrange transport for your residents or clients"
+          body="Share your weekly schedule or a single appointment and we'll come back with options and a free quote."
+          quoteHref="/contact?service=adult-social-care-transport#quote"
+        />
       </LegacyScope>
     </>
   );

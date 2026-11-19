@@ -50,7 +50,13 @@ body {
   padding-inline: clamp(50px, calc(33.4821vw - 292.86px), 350px);
 }
 
-/* Reusable top/bottom section padding: 100px (60px below 1024px) */
+@media (max-width: 768px) {
+  .section-container {
+    padding-inline: 24px;
+  }
+}
+
+/* Reusable top/bottom section padding: 100px (60px below 1024px, 56px on mobile) */
 .section-y {
   padding-block: 60px;
 }
@@ -58,6 +64,12 @@ body {
 @media (min-width: 1024px) {
   .section-y {
     padding-block: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-y {
+    padding-block: 56px;
   }
 }
 
@@ -125,6 +137,12 @@ body {
 @media (max-width: 900px) {
   .section-spacing {
     padding-block: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-spacing {
+    padding-block: 56px;
   }
 }
 
