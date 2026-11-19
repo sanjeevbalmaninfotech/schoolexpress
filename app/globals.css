@@ -84,6 +84,35 @@ body {
   }
 }
 
+/* top banner marquee ticker */
+@keyframes top-banner-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-top-banner-marquee {
+  display: flex;
+  width: max-content;
+  animation: top-banner-marquee 28s linear infinite;
+  will-change: transform;
+}
+
+.animate-top-banner-marquee:hover,
+.animate-top-banner-marquee:active,
+.animate-top-banner-marquee:focus-within {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-top-banner-marquee {
+    animation: none;
+  }
+}
+
 /* reusable section heading + paragraph (12px gap between them) */
 .section-head {
   display: flex;
