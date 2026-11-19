@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CountUp from "@/components/legacy/CountUp";
@@ -180,9 +180,10 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <LegacyScope>
-        <header className="page-hero">
+        <header className="phero">
           <div className="container">
-            <div>
+            <div className="wrap">
+              <div>
               <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
                 <Link href="/">Home</Link>
                 <span aria-hidden="true">/</span>
@@ -218,7 +219,7 @@ export default function Page() {
                 </a>
               </div>
             </div>
-            <div className="keyfacts">
+            <div className="keyfacts" style={{ alignSelf: "center" }}>
               <div>
                 <svg className="icon">
                   <use href="#i-medal" />
@@ -246,6 +247,7 @@ export default function Page() {
                   handovers written down
                 </span>
               </div>
+            </div>
             </div>
           </div>
           <div className="tiles" aria-hidden="true">

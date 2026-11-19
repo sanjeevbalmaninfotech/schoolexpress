@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CountUp from "@/components/legacy/CountUp";
@@ -153,9 +153,10 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <LegacyScope>
-        <header className="page-hero">
+        <header className="phero">
           <div className="container">
-            <div>
+            <div className="wrap">
+              <div>
               <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
                 <Link href="/">Home</Link>
                 <span aria-hidden="true">/</span>
@@ -188,7 +189,7 @@ export default function Page() {
                 </a>
               </div>
             </div>
-            <div className="keyfacts">
+            <div className="keyfacts" style={{ alignSelf: "center" }}>
               <div>
                 <svg className="icon">
                   <use href="#i-pin" />
@@ -215,6 +216,7 @@ export default function Page() {
                 </span>
               </div>
             </div>
+            </div>
           </div>
           <div className="tiles" aria-hidden="true">
             <i style={{ background: "var(--sky)" }}></i>
@@ -234,54 +236,56 @@ export default function Page() {
             Our story in numbers
           </h2>
           <div className="container">
-            <div
-              className="stat"
-              style={{ "--c": "var(--sky)" } as React.CSSProperties}
-            >
-              <CountUp end={15} suffix="+" />
-              <span>
-                <strong>years on the road</strong>, serving families, schools
-                and councils
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--pink)" } as React.CSSProperties}
-            >
-              <CountUp end={10000} suffix="+" />
-              <span>
-                <strong>children</strong> whoâ€™ve travelled with us safely
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--cyan)" } as React.CSSProperties}
-            >
-              <CountUp end={100} suffix="+" />
-              <span>
-                <strong>vehicles</strong>, from 4-seat saloons to 16-seat
-                minibuses
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--green)" } as React.CSSProperties}
-            >
-              <CountUp end={20} suffix="+" />
-              <span>
-                <strong>accessible vehicles</strong> for passengers who use a
-                wheelchair
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--slate)" } as React.CSSProperties}
-            >
-              <CountUp end={200} suffix="+" />
-              <span>
-                <strong>people</strong> driving and supporting passengers every
-                school day
-              </span>
+            <div className="wrap">
+              <div
+                className="stat"
+                style={{ "--c": "var(--sky)" } as React.CSSProperties}
+              >
+                <CountUp end={15} suffix="+" />
+                <span>
+                  <strong>years on the road</strong>, serving families, schools
+                  and councils
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--pink)" } as React.CSSProperties}
+              >
+                <CountUp end={10000} suffix="+" />
+                <span>
+                  <strong>children</strong> who&apos;ve travelled with us safely
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--cyan)" } as React.CSSProperties}
+              >
+                <CountUp end={100} suffix="+" />
+                <span>
+                  <strong>vehicles</strong>, from 4-seat saloons to 16-seat
+                  minibuses
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--green)" } as React.CSSProperties}
+              >
+                <CountUp end={20} suffix="+" />
+                <span>
+                  <strong>accessible vehicles</strong> for passengers who use a
+                  wheelchair
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--slate)" } as React.CSSProperties}
+              >
+                <CountUp end={200} suffix="+" />
+                <span>
+                  <strong>people</strong> driving and supporting passengers every
+                  school day
+                </span>
+              </div>
             </div>
           </div>
         </section>
