@@ -350,7 +350,7 @@ export default function Page() {
                     <dt>Seats</dt>
                     <dd>4</dd>
                     <dt>Wheelchairs</dt>
-                    <dd>–</dd>
+                    <dd>-</dd>
                   </dl>
                   <p>Quiet, low-emission everyday journeys</p>
                 </div>
@@ -372,7 +372,7 @@ export default function Page() {
                     <dt>Seats</dt>
                     <dd>6</dd>
                     <dt>Wheelchairs</dt>
-                    <dd>–</dd>
+                    <dd>-</dd>
                   </dl>
                   <p>Shared routes for siblings and small groups</p>
                 </div>
@@ -394,7 +394,7 @@ export default function Page() {
                     <dt>Seats</dt>
                     <dd>8</dd>
                     <dt>Wheelchairs</dt>
-                    <dd>–</dd>
+                    <dd>-</dd>
                   </dl>
                   <p>Larger groups and shared routes in comfort</p>
                 </div>

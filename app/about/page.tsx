@@ -157,65 +157,65 @@ export default function Page() {
           <div className="container">
             <div className="wrap">
               <div>
-              <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
-                <Link href="/">Home</Link>
-                <span aria-hidden="true">/</span>
-                <span aria-current="page">About us</span>
-              </div>
-              <span className="label-chip">
-                <svg className="icon">
-                  <use href="#i-heart" />
-                </svg>
-                About School Express
-              </span>
-              <h1>
-                More than 15 years of getting people where they need to be,
-                safely
-              </h1>
-              <p className="text-lead">
-                A Reading-based transport company with 200+ trained drivers and
-                passenger assistants, a fleet of 100+ vehicles, and a team that
-                genuinely cares about every passenger.
-              </p>
-              <div className="button-group">
-                <Link className="btn btn-primary" href="/contact#quote">
-                  Request a quote
-                </Link>
-                <a className="btn btn-outline" href="tel:01491414040">
-                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                    <use href="#i-phone" />
+                <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
+                  <Link href="/">Home</Link>
+                  <span aria-hidden="true">/</span>
+                  <span aria-current="page">About us</span>
+                </div>
+                <span className="label-chip">
+                  <svg className="icon">
+                    <use href="#i-heart" />
                   </svg>
-                  Call 01491 414040
-                </a>
-              </div>
-            </div>
-            <div className="keyfacts" style={{ alignSelf: "center" }}>
-              <div>
-                <svg className="icon">
-                  <use href="#i-pin" />
-                </svg>
-                <span>
-                  <b>Reading office</b>3 Barrett Court, 70 Cardiff Road
+                  About School Express
                 </span>
+                <h1>
+                  More than 15 years of getting people where they need to be,
+                  safely
+                </h1>
+                <p className="text-lead">
+                  A Reading-based transport company with 200+ trained drivers and
+                  passenger assistants, a fleet of 100+ vehicles, and a team that
+                  genuinely cares about every passenger.
+                </p>
+                <div className="button-group">
+                  <Link className="btn btn-primary" href="/contact#quote">
+                    Request a quote
+                  </Link>
+                  <a className="btn btn-outline" href="tel:01491414040">
+                    <svg className="icon" style={{ width: "20px", height: "20px" }}>
+                      <use href="#i-phone" />
+                    </svg>
+                    Call 01491 414040
+                  </a>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-home" />
-                </svg>
-                <span>
-                  <b>Trusted by councils</b>Reading, Wokingham, West Berkshire,
-                  Bracknell Forest, South Oxfordshire and Fareham
-                </span>
+              <div className="keyfacts" style={{ alignSelf: "center" }}>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-pin" />
+                  </svg>
+                  <span>
+                    <b>Reading office</b>3 Barrett Court, 70 Cardiff Road
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-home" />
+                  </svg>
+                  <span>
+                    <b>Trusted by councils</b>Reading, Wokingham, West Berkshire,
+                    Bracknell Forest, South Oxfordshire and Fareham
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-users" />
+                  </svg>
+                  <span>
+                    <b>Our team</b>200+ drivers and passenger assistants
+                  </span>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-users" />
-                </svg>
-                <span>
-                  <b>Our team</b>200+ drivers and passenger assistants
-                </span>
-              </div>
-            </div>
             </div>
           </div>
           <div className="tiles" aria-hidden="true">
@@ -541,7 +541,7 @@ export default function Page() {
                     <dt>Seats</dt>
                     <dd>4</dd>
                     <dt>Wheelchairs</dt>
-                    <dd>â€“</dd>
+                    <dd>-</dd>
                   </dl>
                   <p>Our go-to saloon for single-pupil and small-group runs</p>
                 </div>
@@ -563,7 +563,7 @@ export default function Page() {
                     <dt>Seats</dt>
                     <dd>6</dd>
                     <dt>Wheelchairs</dt>
-                    <dd>â€“</dd>
+                    <dd>-</dd>
                   </dl>
                   <p>Six seats with room for school bags and kit</p>
                 </div>
@@ -585,7 +585,7 @@ export default function Page() {
                     <dt>Seats</dt>
                     <dd>8</dd>
                     <dt>Wheelchairs</dt>
-                    <dd>â€“</dd>
+                    <dd>-</dd>
                   </dl>
                   <p>Eight seats for bigger shared routes and family groups</p>
                 </div>
