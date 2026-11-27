@@ -3,8 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import CountUp from "@/components/legacy/CountUp";
 import LegacyScope from "@/components/legacy/LegacyScope";
-import CtaBand from "@/components/CtaBand";
 import FaqSection from "@/components/FaqSection";
+import CtaBand from "@/components/CtaBand";
+
 
 export const metadata: Metadata = {
   title: {
