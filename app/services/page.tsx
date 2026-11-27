@@ -149,65 +149,63 @@ export default function Page() {
           <div className="container">
             <div className="wrap">
               <div>
-              <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
-                <Link href="/">Home</Link>
-                <span aria-hidden="true">/</span>
-                <span aria-current="page">Services</span>
-              </div>
-              <span className="label-chip">
-                <svg className="icon">
-                  <use href="#i-bus" />
-                </svg>
-                Our services
-              </span>
-              <h1>Transport for every passenger and every journey</h1>
-              <p className="text-lead">
-                School and college runs, adult and social care journeys, group
-                travel, wheelchair-accessible and SEND transport across
-                Berkshire, Oxfordshire, Hampshire and the South East. Whichever
-                you choose, the same experienced team plans and runs it.
-              </p>
-              <div className="button-group">
-                <Link className="btn btn-primary" href="/contact#quote">
-                  Request a quote
-                </Link>
-                <a className="btn btn-outline" href="tel:01491414040">
-                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                    <use href="#i-phone" />
+                <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
+                  <Link href="/">Home</Link>
+                  <span aria-hidden="true">/</span>
+                  <span aria-current="page">Services</span>
+                </div>
+                <span className="label-chip">
+                  <svg className="icon">
+                    <use href="#i-bus" />
                   </svg>
-                  Call 01491 414040
-                </a>
-              </div>
-            </div>
-            <div className="keyfacts" style={{ alignSelf: "center" }}>
-              <div>
-                <svg className="icon">
-                  <use href="#i-users" />
-                </svg>
-                <span>
-                  <b>For everyone</b>Families, schools, trusts, colleges, care
-                  homes and social care
+                  Our services
                 </span>
+                <h1>Transport for every passenger and every journey</h1>
+                <p className="text-lead">
+                  School and college runs, adult and social care journeys, group
+                  travel, wheelchair-accessible and SEND transport across
+                  Berkshire, Oxfordshire, Hampshire and the South East. Whichever
+                  you choose, the same experienced team plans and runs it.
+                </p>
+                <div className="button-group">
+                  <Link className="btn btn-primary" href="/contact#quote">
+                    Request a quote
+                  </Link>
+                  <a className="btn btn-outline" href="tel:01491414040">
+
+                    Call 01491 414040
+                  </a>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-bus" />
-                </svg>
-                <span>
-                  <b>100+ vehicles</b>Saloons, MPVs, accessible vans and a
-                  minibus
-                </span>
+              <div className="keyfacts" style={{ alignSelf: "center" }}>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-users" />
+                  </svg>
+                  <span>
+                    <b>For everyone</b>Families, schools, trusts, colleges, care
+                    homes and social care
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-bus" />
+                  </svg>
+                  <span>
+                    <b>100+ vehicles</b>Saloons, MPVs, accessible vans and a
+                    minibus
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-wheel" />
+                  </svg>
+                  <span>
+                    <b>20+ accessible vans</b>Ramp and lift access, ready for any
+                    service
+                  </span>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-wheel" />
-                </svg>
-                <span>
-                  <b>20+ accessible vans</b>Ramp and lift access, ready for any
-                  service
-                </span>
-              </div>
-            </div>
             </div>
           </div>
           <div className="tiles" aria-hidden="true">
@@ -515,44 +513,44 @@ export default function Page() {
         <section className="stats proof" aria-label="School Express in numbers">
           <div className="container">
             <div className="wrap">
-            <div
-              className="stat"
-              style={{ "--c": "var(--sky)" } as React.CSSProperties}
-            >
-              <CountUp end={15} suffix="+" />
-              <span>
-                <strong>years</strong> in passenger transport, with SEND at the
-                core
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--pink)" } as React.CSSProperties}
-            >
-              <CountUp end={10000} suffix="+" />
-              <span>
-                <strong>children</strong> carried safely across our services
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--cyan)" } as React.CSSProperties}
-            >
-              <CountUp end={100} suffix="+" />
-              <span>
-                <strong>vehicles</strong> covering all five services
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--slate)" } as React.CSSProperties}
-            >
-              <CountUp end={200} suffix="+" />
-              <span>
-                <strong>team members</strong> vetted and trained to support
-                every passenger
-              </span>
-            </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--sky)" } as React.CSSProperties}
+              >
+                <CountUp end={15} suffix="+" />
+                <span>
+                  <strong>years</strong> in passenger transport, with SEND at the
+                  core
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--pink)" } as React.CSSProperties}
+              >
+                <CountUp end={10000} suffix="+" />
+                <span>
+                  <strong>children</strong> carried safely across our services
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--cyan)" } as React.CSSProperties}
+              >
+                <CountUp end={100} suffix="+" />
+                <span>
+                  <strong>vehicles</strong> covering all five services
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--slate)" } as React.CSSProperties}
+              >
+                <CountUp end={200} suffix="+" />
+                <span>
+                  <strong>team members</strong> vetted and trained to support
+                  every passenger
+                </span>
+              </div>
             </div>
           </div>
         </section>

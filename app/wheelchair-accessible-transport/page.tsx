@@ -187,74 +187,72 @@ export default function Page() {
           <div className="container">
             <div className="wrap">
               <div>
-              <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
-                <Link href="/">Home</Link>
-                <span aria-hidden="true">/</span>
-                <Link href="/services">Services</Link>
-                <span aria-hidden="true">/</span>
-                <span aria-current="page">Wheelchair accessible</span>
-              </div>
-              <span className="label-chip">
-                <svg className="icon">
-                  <use href="#i-wheel" />
-                </svg>
-                Wheelchair-accessible transport
-              </span>
-              <h1>
-                Wheelchair-accessible transport, from the area’s largest
-                accessible fleet
-              </h1>
-              <p className="text-lead">
-                With 20+ wheelchair-accessible vehicles, ramp and lift access
-                and secure restraints, passengers travel safely in their own
-                chair. For school runs, care homes, appointments, days out and
-                more, across Berkshire, Oxfordshire, Hampshire and the South
-                East.
-              </p>
-              <div className="button-group">
-                <Link
-                  className="btn btn-primary"
-                  href="/contact?service=wheelchair-accessible-transport#quote"
-                >
-                  Request a quote
-                </Link>
-                <a className="btn btn-outline" href="tel:01491414040">
-                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                    <use href="#i-phone" />
+                <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
+                  <Link href="/">Home</Link>
+                  <span aria-hidden="true">/</span>
+                  <Link href="/services">Services</Link>
+                  <span aria-hidden="true">/</span>
+                  <span aria-current="page">Wheelchair accessible</span>
+                </div>
+                <span className="label-chip">
+                  <svg className="icon">
+                    <use href="#i-wheel" />
                   </svg>
-                  Call 01491 414040
-                </a>
-              </div>
-            </div>
-            <div className="keyfacts" style={{ alignSelf: "center" }}>
-              <div>
-                <svg className="icon">
-                  <use href="#i-wheel" />
-                </svg>
-                <span>
-                  <b>20+ accessible vehicles</b>The largest accessible fleet in
-                  our area
+                  Wheelchair-accessible transport
                 </span>
+                <h1>
+                  Wheelchair-accessible transport, from the area’s largest
+                  accessible fleet
+                </h1>
+                <p className="text-lead">
+                  With 20+ wheelchair-accessible vehicles, ramp and lift access
+                  and secure restraints, passengers travel safely in their own
+                  chair. For school runs, care homes, appointments, days out and
+                  more, across Berkshire, Oxfordshire, Hampshire and the South
+                  East.
+                </p>
+                <div className="button-group">
+                  <Link
+                    className="btn btn-primary"
+                    href="/contact?service=wheelchair-accessible-transport#quote"
+                  >
+                    Request a quote
+                  </Link>
+                  <a className="btn btn-outline" href="tel:01491414040">
+
+                    Call 01491 414040
+                  </a>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-check" />
-                </svg>
-                <span>
-                  <b>Travel in your own chair</b>Locked in place for the whole
-                  journey
-                </span>
+              <div className="keyfacts" style={{ alignSelf: "center" }}>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-wheel" />
+                  </svg>
+                  <span>
+                    <b>20+ accessible vehicles</b>The largest accessible fleet in
+                    our area
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-check" />
+                  </svg>
+                  <span>
+                    <b>Travel in your own chair</b>Locked in place for the whole
+                    journey
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-users" />
+                  </svg>
+                  <span>
+                    <b>Room for companions</b>Seated passengers can travel
+                    alongside
+                  </span>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-users" />
-                </svg>
-                <span>
-                  <b>Room for companions</b>Seated passengers can travel
-                  alongside
-                </span>
-              </div>
-            </div>
             </div>
           </div>
           <div className="tiles" aria-hidden="true">
@@ -427,9 +425,7 @@ export default function Page() {
                   Request a quote
                 </Link>
                 <a className="btn btn-outline" href="tel:01491414040">
-                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                    <use href="#i-phone" />
-                  </svg>
+
                   Call 01491 414040
                 </a>
               </div>
@@ -454,43 +450,43 @@ export default function Page() {
         <section className="stats proof" aria-label="School Express in numbers">
           <div className="container">
             <div className="wrap">
-            <div
-              className="stat"
-              style={{ "--c": "var(--sky)" } as React.CSSProperties}
-            >
-              <CountUp end={20} suffix="+" />
-              <span>
-                <strong>wheelchair-accessible vehicles</strong> in our fleet
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--pink)" } as React.CSSProperties}
-            >
-              <CountUp end={15} suffix="+" />
-              <span>
-                <strong>years</strong> running accessible council routes
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--cyan)" } as React.CSSProperties}
-            >
-              <CountUp end={100} suffix="+" />
-              <span>
-                <strong>vehicles</strong> including saloons and MPVs for
-                companions
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--slate)" } as React.CSSProperties}
-            >
-              <CountUp end={200} suffix="+" />
-              <span>
-                <strong>team members</strong> who help passengers board safely
-              </span>
-            </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--sky)" } as React.CSSProperties}
+              >
+                <CountUp end={20} suffix="+" />
+                <span>
+                  <strong>wheelchair-accessible vehicles</strong> in our fleet
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--pink)" } as React.CSSProperties}
+              >
+                <CountUp end={15} suffix="+" />
+                <span>
+                  <strong>years</strong> running accessible council routes
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--cyan)" } as React.CSSProperties}
+              >
+                <CountUp end={100} suffix="+" />
+                <span>
+                  <strong>vehicles</strong> including saloons and MPVs for
+                  companions
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--slate)" } as React.CSSProperties}
+              >
+                <CountUp end={200} suffix="+" />
+                <span>
+                  <strong>team members</strong> who help passengers board safely
+                </span>
+              </div>
             </div>
           </div>
         </section>

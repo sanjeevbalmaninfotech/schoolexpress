@@ -184,70 +184,68 @@ export default function Page() {
           <div className="container">
             <div className="wrap">
               <div>
-              <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
-                <Link href="/">Home</Link>
-                <span aria-hidden="true">/</span>
-                <Link href="/services">Services</Link>
-                <span aria-hidden="true">/</span>
-                <span aria-current="page">SEND and additional needs</span>
-              </div>
-              <span className="label-chip">
-                <svg className="icon">
-                  <use href="#i-heart" />
-                </svg>
-                SEND and additional needs transport
-              </span>
-              <h1>SEND transport from a team that does it every day</h1>
-              <p className="text-lead">
-                Councils across Berkshire, Oxfordshire and Hampshire have relied
-                on us for SEND routes since we began. Families, schools,
-                colleges and care providers can book that same expertise
-                directly, with journeys planned around each passenger.
-              </p>
-              <div className="button-group">
-                <Link
-                  className="btn btn-primary"
-                  href="/contact?service=send-transport#quote"
-                >
-                  Request a quote
-                </Link>
-                <a className="btn btn-outline" href="tel:01491414040">
-                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                    <use href="#i-phone" />
+                <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
+                  <Link href="/">Home</Link>
+                  <span aria-hidden="true">/</span>
+                  <Link href="/services">Services</Link>
+                  <span aria-hidden="true">/</span>
+                  <span aria-current="page">SEND and additional needs</span>
+                </div>
+                <span className="label-chip">
+                  <svg className="icon">
+                    <use href="#i-heart" />
                   </svg>
-                  Call 01491 414040
-                </a>
-              </div>
-            </div>
-            <div className="keyfacts" style={{ alignSelf: "center" }}>
-              <div>
-                <svg className="icon">
-                  <use href="#i-medal" />
-                </svg>
-                <span>
-                  <b>15+ years of SEND routes</b>Trusted by councils across
-                  Berkshire, Oxfordshire and Hampshire
+                  SEND and additional needs transport
                 </span>
+                <h1>SEND transport from a team that does it every day</h1>
+                <p className="text-lead">
+                  Councils across Berkshire, Oxfordshire and Hampshire have relied
+                  on us for SEND routes since we began. Families, schools,
+                  colleges and care providers can book that same expertise
+                  directly, with journeys planned around each passenger.
+                </p>
+                <div className="button-group">
+                  <Link
+                    className="btn btn-primary"
+                    href="/contact?service=send-transport#quote"
+                  >
+                    Request a quote
+                  </Link>
+                  <a className="btn btn-outline" href="tel:01491414040">
+
+                    Call 01491 414040
+                  </a>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-heart" />
-                </svg>
-                <span>
-                  <b>Dedicated assistants</b>Male or female, chosen to suit each
-                  passenger
-                </span>
+              <div className="keyfacts" style={{ alignSelf: "center" }}>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-medal" />
+                  </svg>
+                  <span>
+                    <b>15+ years of SEND routes</b>Trusted by councils across
+                    Berkshire, Oxfordshire and Hampshire
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-heart" />
+                  </svg>
+                  <span>
+                    <b>Dedicated assistants</b>Male or female, chosen to suit each
+                    passenger
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-doc" />
+                  </svg>
+                  <span>
+                    <b>Planned around the passenger</b>Routines, needs and
+                    handovers written down
+                  </span>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-doc" />
-                </svg>
-                <span>
-                  <b>Planned around the passenger</b>Routines, needs and
-                  handovers written down
-                </span>
-              </div>
-            </div>
             </div>
           </div>
           <div className="tiles" aria-hidden="true">
@@ -416,9 +414,7 @@ export default function Page() {
                   Request a quote
                 </Link>
                 <a className="btn btn-outline" href="tel:01491414040">
-                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                    <use href="#i-phone" />
-                  </svg>
+
                   Call 01491 414040
                 </a>
               </div>
@@ -444,43 +440,43 @@ export default function Page() {
         <section className="stats proof" aria-label="School Express in numbers">
           <div className="container">
             <div className="wrap">
-            <div
-              className="stat"
-              style={{ "--c": "var(--sky)" } as React.CSSProperties}
-            >
-              <CountUp end={15} suffix="+" />
-              <span>
-                <strong>years</strong> delivering council SEND routes
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--pink)" } as React.CSSProperties}
-            >
-              <CountUp end={200} suffix="+" />
-              <span>
-                <strong>staff</strong> with SEND and safeguarding training
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--cyan)" } as React.CSSProperties}
-            >
-              <CountUp end={20} suffix="+" />
-              <span>
-                <strong>accessible vehicles</strong> for pupils who travel in
-                their chair
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--slate)" } as React.CSSProperties}
-            >
-              <CountUp end={10000} suffix="+" />
-              <span>
-                <strong>young passengers</strong> supported since we began
-              </span>
-            </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--sky)" } as React.CSSProperties}
+              >
+                <CountUp end={15} suffix="+" />
+                <span>
+                  <strong>years</strong> delivering council SEND routes
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--pink)" } as React.CSSProperties}
+              >
+                <CountUp end={200} suffix="+" />
+                <span>
+                  <strong>staff</strong> with SEND and safeguarding training
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--cyan)" } as React.CSSProperties}
+              >
+                <CountUp end={20} suffix="+" />
+                <span>
+                  <strong>accessible vehicles</strong> for pupils who travel in
+                  their chair
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--slate)" } as React.CSSProperties}
+              >
+                <CountUp end={10000} suffix="+" />
+                <span>
+                  <strong>young passengers</strong> supported since we began
+                </span>
+              </div>
             </div>
           </div>
         </section>

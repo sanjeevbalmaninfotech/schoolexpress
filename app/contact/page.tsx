@@ -159,63 +159,61 @@ export default async function Page({
           <div className="container">
             <div className="wrap">
               <div>
-              <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
-                <Link href="/">Home</Link>
-                <span aria-hidden="true">/</span>
-                <span aria-current="page">Contact</span>
-              </div>
-              <span className="label-chip">
-                <svg className="icon">
-                  <use href="#i-chat" />
-                </svg>
-                Get in touch
-              </span>
-              <h1>Let’s plan your journey</h1>
-              <p className="text-lead">
-                Need a school run, a care journey, accessible transport or a
-                minibus for a trip? Talk to our friendly team and we’ll help you
-                plan safe, reliable travel across the South East.
-              </p>
-              <div className="button-group">
-                <a className="btn btn-primary" href="#quote">
-                  Get a free quote
-                </a>
-                <a className="btn btn-outline" href="tel:01491414040">
-                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                    <use href="#i-phone" />
+                <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
+                  <Link href="/">Home</Link>
+                  <span aria-hidden="true">/</span>
+                  <span aria-current="page">Contact</span>
+                </div>
+                <span className="label-chip">
+                  <svg className="icon">
+                    <use href="#i-chat" />
                   </svg>
-                  Call 01491 414040
-                </a>
-              </div>
-            </div>
-            <div className="keyfacts" style={{ alignSelf: "center" }}>
-              <div>
-                <svg className="icon">
-                  <use href="#i-clock" />
-                </svg>
-                <span>
-                  <b>Office hours</b>Monday to Friday, 7am to 5pm
+                  Get in touch
                 </span>
+                <h1>Let’s plan your journey</h1>
+                <p className="text-lead">
+                  Need a school run, a care journey, accessible transport or a
+                  minibus for a trip? Talk to our friendly team and we’ll help you
+                  plan safe, reliable travel across the South East.
+                </p>
+                <div className="button-group">
+                  <a className="btn btn-primary" href="#quote">
+                    Get a free quote
+                  </a>
+                  <a className="btn btn-outline" href="tel:01491414040">
+
+                    Call 01491 414040
+                  </a>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-chat" />
-                </svg>
-                <span>
-                  <b>Reply time</b>Within{" "}
-                  <mark className="tbc">[one working day]</mark>
-                </span>
+              <div className="keyfacts" style={{ alignSelf: "center" }}>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-clock" />
+                  </svg>
+                  <span>
+                    <b>Office hours</b>Monday to Friday, 7am to 5pm
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-chat" />
+                  </svg>
+                  <span>
+                    <b>Reply time</b>Within{" "}
+                    <mark className="tbc">[one working day]</mark>
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-users" />
+                  </svg>
+                  <span>
+                    <b>Looking for work?</b>
+                    <Link href="/careers">Apply on our careers page</Link>
+                  </span>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-users" />
-                </svg>
-                <span>
-                  <b>Looking for work?</b>
-                  <Link href="/careers">Apply on our careers page</Link>
-                </span>
-              </div>
-            </div>
             </div>
           </div>
           <div className="tiles" aria-hidden="true">

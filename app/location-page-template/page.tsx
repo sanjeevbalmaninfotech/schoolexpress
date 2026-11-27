@@ -134,67 +134,65 @@ export default function Page() {
           <div className="container">
             <div className="wrap">
               <div>
-              <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
-                <Link href="/">Home</Link>
-                <span aria-hidden="true">/</span>
-                <Link href="/contact#areas">Areas we cover</Link>
-                <span aria-hidden="true">/</span>
-                <span aria-current="page">[Town]</span>
-              </div>
-              <span className="label-chip">
-                <svg className="icon">
-                  <use href="#i-cap" />
-                </svg>
-                School transport in [Town]
-              </span>
-              <h1>School Transport Services in [Town]</h1>
-              <p className="text-lead">
-                [2-3 original sentences: the schools, trusts and colleges you
-                take pupils to in [Town], the council you work with there, and
-                why families choose you.]
-              </p>
-              <div className="button-group">
-                <Link
-                  className="btn btn-primary"
-                  href="/contact?service=school-college-transport#quote"
-                >
-                  Request a quote
-                </Link>
-                <a className="btn btn-outline" href="tel:01491414040">
-                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                    <use href="#i-phone" />
+                <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
+                  <Link href="/">Home</Link>
+                  <span aria-hidden="true">/</span>
+                  <Link href="/contact#areas">Areas we cover</Link>
+                  <span aria-hidden="true">/</span>
+                  <span aria-current="page">[Town]</span>
+                </div>
+                <span className="label-chip">
+                  <svg className="icon">
+                    <use href="#i-cap" />
                   </svg>
-                  Call 01491 414040
-                </a>
-              </div>
-            </div>
-            <div className="keyfacts" style={{ alignSelf: "center" }}>
-              <div>
-                <svg className="icon">
-                  <use href="#i-users" />
-                </svg>
-                <span>
-                  <b>[Local fact 1]</b>[e.g. Routes to [number] schools in
-                  [Town]]
+                  School transport in [Town]
                 </span>
+                <h1>School Transport Services in [Town]</h1>
+                <p className="text-lead">
+                  [2-3 original sentences: the schools, trusts and colleges you
+                  take pupils to in [Town], the council you work with there, and
+                  why families choose you.]
+                </p>
+                <div className="button-group">
+                  <Link
+                    className="btn btn-primary"
+                    href="/contact?service=school-college-transport#quote"
+                  >
+                    Request a quote
+                  </Link>
+                  <a className="btn btn-outline" href="tel:01491414040">
+
+                    Call 01491 414040
+                  </a>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-cap" />
-                </svg>
-                <span>
-                  <b>[Local fact 2]</b>[e.g. Working with [Council name]]
-                </span>
+              <div className="keyfacts" style={{ alignSelf: "center" }}>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-users" />
+                  </svg>
+                  <span>
+                    <b>[Local fact 1]</b>[e.g. Routes to [number] schools in
+                    [Town]]
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-cap" />
+                  </svg>
+                  <span>
+                    <b>[Local fact 2]</b>[e.g. Working with [Council name]]
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-bus" />
+                  </svg>
+                  <span>
+                    <b>[Local fact 3]</b>[e.g. Drivers living in or near [Town]]
+                  </span>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-bus" />
-                </svg>
-                <span>
-                  <b>[Local fact 3]</b>[e.g. Drivers living in or near [Town]]
-                </span>
-              </div>
-            </div>
             </div>
           </div>
           <div className="tiles" aria-hidden="true">
@@ -312,9 +310,6 @@ export default function Page() {
                   Request a quote
                 </Link>
                 <a className="btn btn-outline" href="tel:01491414040">
-                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                    <use href="#i-phone" />
-                  </svg>
                   Call 01491 414040
                 </a>
               </div>

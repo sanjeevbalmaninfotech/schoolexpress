@@ -227,9 +227,7 @@ export default function Page() {
                     Request a quote
                   </Link>
                   <a className="btn btn-outline" href="tel:01491414040">
-                    <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                      <use href="#i-phone" />
-                    </svg>
+
                     Call 01491 414040
                   </a>
                 </div>
@@ -426,9 +424,7 @@ export default function Page() {
                   Request a quote
                 </Link>
                 <a className="btn btn-outline" href="tel:01491414040">
-                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                    <use href="#i-phone" />
-                  </svg>
+
                   Call 01491 414040
                 </a>
               </div>

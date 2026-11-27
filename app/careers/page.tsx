@@ -143,63 +143,60 @@ export default function Page() {
           <div className="container">
             <div className="wrap">
               <div>
-              <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
-                <Link href="/">Home</Link>
-                <span aria-hidden="true">/</span>
-                <span aria-current="page">Careers</span>
-              </div>
-              <span className="label-chip">
-                <svg className="icon">
-                  <use href="#i-users" />
-                </svg>
-                Join our team
-              </span>
-              <h1>Work that fits around school hours, and matters</h1>
-              <p className="text-lead">
-                We’re recruiting drivers and passenger assistants across the
-                South East. If you’re patient, reliable and good with people,
-                we’ll give you the training to do the rest.
-              </p>
-              <div className="button-group">
-                <a className="btn btn-primary" href="#apply">
-                  Apply now
-                </a>
-                <a className="btn btn-outline" href="tel:01491414040">
-                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                    <use href="#i-phone" />
+                <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
+                  <Link href="/">Home</Link>
+                  <span aria-hidden="true">/</span>
+                  <span aria-current="page">Careers</span>
+                </div>
+                <span className="label-chip">
+                  <svg className="icon">
+                    <use href="#i-users" />
                   </svg>
-                  Call 01491 414040
-                </a>
-              </div>
-            </div>
-            <div className="keyfacts" style={{ alignSelf: "center" }}>
-              <div>
-                <svg className="icon">
-                  <use href="#i-cal" />
-                </svg>
-                <span>
-                  <b>School-day hours</b>Work mornings and afternoons
+                  Join our team
                 </span>
+                <h1>Work that fits around school hours, and matters</h1>
+                <p className="text-lead">
+                  We’re recruiting drivers and passenger assistants across the
+                  South East. If you’re patient, reliable and good with people,
+                  we’ll give you the training to do the rest.
+                </p>
+                <div className="button-group">
+                  <a className="btn btn-primary" href="#apply">
+                    Apply now
+                  </a>
+                  <a className="btn btn-outline" href="tel:01491414040">
+                    Call 01491 414040
+                  </a>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-medal" />
-                </svg>
-                <span>
-                  <b>Paid training and DBS</b>SEND and safeguarding training
-                  included
-                </span>
+              <div className="keyfacts" style={{ alignSelf: "center" }}>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-cal" />
+                  </svg>
+                  <span>
+                    <b>School-day hours</b>Work mornings and afternoons
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-medal" />
+                  </svg>
+                  <span>
+                    <b>Paid training and DBS</b>SEND and safeguarding training
+                    included
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-users" />
+                  </svg>
+                  <span>
+                    <b>A team of 200+</b>Drivers, assistants and a friendly office
+                    team
+                  </span>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-users" />
-                </svg>
-                <span>
-                  <b>A team of 200+</b>Drivers, assistants and a friendly office
-                  team
-                </span>
-              </div>
-            </div>
             </div>
           </div>
           <div className="tiles" aria-hidden="true">

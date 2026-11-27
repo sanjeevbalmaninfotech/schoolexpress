@@ -39,13 +39,7 @@ export default function CtaBand({
               Request a quote
             </Link>
             <a className="btn btn-outline-white" href="tel:01491414040">
-              <svg
-                className="icon"
-                style={{ width: "20px", height: "20px" }}
-                aria-hidden="true"
-              >
-                <use href="#i-phone" />
-              </svg>
+
               Call 01491 414040
             </a>
           </div>
