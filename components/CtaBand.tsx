@@ -1,11 +1,12 @@
 import Link from "next/link";
 
 interface CtaBandProps {
-  heading: string;
+
   body: string;
+  heading: string;
+  wrapClassName?: string;
   /** href for the primary "Request a quote" button (default: /contact#quote) */
   quoteHref?: string;
-  wrapClassName?: string;
 }
 
 const TILES = [
