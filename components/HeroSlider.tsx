@@ -80,7 +80,7 @@ function SlideView({
           {slide.audience.map((a) => (
             <span
               key={a}
-              className="ff-ui rounded-[50px] border border-[#FFFFFF4D] bg-[#FFFFFF1A] px-[14px] py-1 text-[15px] text-white md:text-[13px]"
+              className=" rounded-[50px] border border-[#FFFFFF4D] bg-[#FFFFFF1A] px-[14px] py-1 text-[15px] text-white"
             >
               {a}
             </span>
@@ -91,7 +91,7 @@ function SlideView({
           <Link
             href={slide.primaryCta.href}
             tabIndex={active ? 0 : -1}
-            className="ff-ui rounded-xl bg-[#E2542B] px-[26px] py-3 text-[17px] font-medium text-white transition-opacity hover:opacity-90"
+            className="ff-ui rounded-xl bg-[#E2542B] px-[26px] py-3 text-[15px] font-medium text-white "
           >
             {slide.primaryCta.label}
           </Link>

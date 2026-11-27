@@ -125,9 +125,23 @@ export default function Navbar() {
     };
   }, []);
 
-  // Active link helper
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href.split("#")[0]);
+  // Active link helper.
+  //
+  // Rules:
+  //  1. Hash-only anchors (e.g. "/#councils", "/about#fleet") are scroll
+  //     targets, not distinct routes → they NEVER get their own active state.
+  //     The parent page link (e.g. "/" or "/about") handles that.
+  //  2. "/" is an exact match only, so "/about" etc. don't inherit it.
+  //  3. All other paths use a prefix match (so "/about" matches "/about/faq").
+  const isActive = (href: string) => {
+    const [path] = href.split("#");
+    // If the href has a hash fragment the path segment must be non-empty,
+    // otherwise it is a hash-only anchor → never active on its own.
+    if (href.includes("#") && path === "") return false; // bare "#section"
+    if (href.includes("#")) return false; // anchor links — parent page marks active
+    if (path === "/") return pathname === "/";
+    return pathname === path || pathname.startsWith(path + "/");
+  };
 
   const activeNavItem = `${navItem} bg-[var(--nav-hover)]`;
 
@@ -197,8 +211,8 @@ export default function Navbar() {
                   aria-expanded={servicesOpen}
                   onClick={() => setServicesOpen((v) => !v)}
                   className={`${navItem} ${servicesOpen || SERVICES.some((s) => isActive(s.href))
-                      ? "bg-[var(--nav-hover)]"
-                      : ""
+                    ? "bg-[var(--nav-hover)]"
+                    : ""
                     }`}
                 >
                   Services
@@ -305,16 +319,16 @@ export default function Navbar() {
       {/* ── Mobile / tablet panel ── */}
       <div
         className={[
-          "absolute left-0 right-0 top-full overflow-y-auto bg-white",
+          "absolute left-0 right-0 top-full bg-white",
           "shadow-[0_8px_30px_rgba(0,0,0,0.12)] xl:hidden",
           "transition-all duration-300 origin-top",
           mobileOpen
-            ? "max-h-[calc(100dvh-60px)] opacity-100 pointer-events-auto"
-            : "max-h-0 opacity-0 pointer-events-none",
+            ? "h-[calc(100dvh-60px)] opacity-100 pointer-events-auto"
+          : "h-0 opacity-0 pointer-events-none overflow-hidden",
         ].join(" ")}
-        aria-hidden={!mobileOpen}
+      aria-hidden={!mobileOpen}
       >
-        <div className="section-container py-4">
+        <div className="section-container flex h-full flex-col overflow-y-auto py-4">
           <ul className="flex flex-col gap-[6px]">
             <li>
               <Link
@@ -387,7 +401,7 @@ export default function Navbar() {
 
           <Link
             href={QUOTE_HREF}
-            className={`${ctaButton} mt-4 block text-center`}
+            className={`${ctaButton} mt-auto block text-center py-4`}
           >
             Get a quote
           </Link>

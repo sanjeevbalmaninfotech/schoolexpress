@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CountUp from "@/components/legacy/CountUp";
@@ -186,67 +186,79 @@ export default function Page() {
           <div className="container">
             <div className="wrap">
               <div>
-              <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
-                <Link href="/">Home</Link>
-                <span aria-hidden="true">/</span>
-                <Link href="/services">Services</Link>
-                <span aria-hidden="true">/</span>
-                <span aria-current="page">Adults and social care</span>
-              </div>
-              <span className="label-chip">
-                <svg className="icon">
-                  <use href="#i-home" />
-                </svg>
-                Adult and social care transport
-              </span>
-              <h1>Adult and social care transport, provided with dignity</h1>
-              <p className="text-lead">
-                Comfortable, unhurried travel for adults, care home residents
-                and social care clients, to day centres, appointments,
-                activities and outings. Regular routes or one-off journeys.
-              </p>
-              <div className="button-group">
-                <Link
-                  className="btn btn-primary"
-                  href="/contact?service=adult-social-care-transport#quote"
-                >
-                  Request a quote
-                </Link>
-                <a className="btn btn-outline" href="tel:01491414040">
-                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                    <use href="#i-phone" />
-                  </svg>
-                  Call 01491 414040
-                </a>
-              </div>
-            </div>
-            <div className="keyfacts" style={{ alignSelf: "center" }}>
-              <div>
-                <svg className="icon">
-                  <use href="#i-wheel" />
-                </svg>
-                <span>
-                  <b>Wheelchair accessible</b>Ramp and lift vans for residents
+                <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
+                  <Link href="/">Home</Link>
+                  <span aria-hidden="true">/</span>
+                  <Link href="/services">Services</Link>
+                  <span aria-hidden="true">/</span>
+                  <span aria-current="page">Adults and social care</span>
+                </div>
+                <span className="label-chip">
+                  <img
+                    src="/services/icons/Adultsocialcaretransport.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "20px", height: "20px", objectFit: "contain" }}
+                  />
+                  Adult and social care transport
                 </span>
+                <h1>Adult and social care transport, provided with dignity</h1>
+                <p className="text-lead">
+                  Comfortable, unhurried travel for adults, care home residents
+                  and social care clients, to day centres, appointments,
+                  activities and outings. Regular routes or one-off journeys.
+                </p>
+                <div className="button-group">
+                  <Link
+                    className="btn btn-primary"
+                    href="/contact?service=adult-social-care-transport#quote"
+                  >
+                    Request a quote
+                  </Link>
+                  <a className="btn btn-outline" href="tel:01491414040">
+                    <svg className="icon" style={{ width: "20px", height: "20px" }}>
+                      <use href="#i-phone" />
+                    </svg>
+                    Call 01491 414040
+                  </a>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-cal" />
-                </svg>
-                <span>
-                  <b>Regular or one-off</b>Weekly routes, appointments and
-                  outings
-                </span>
+              <div className="keyfacts" style={{ alignSelf: "center" }}>
+                <div>
+                  <img
+                    src="/services/icons/WheelchairaccessibleOne.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "25px", height: "25px", objectFit: "contain" }}
+                  />
+                  <span>
+                    <b>Wheelchair accessible</b>Ramp and lift vans for residents
+                  </span>
+                </div>
+                <div>
+                  <img
+                    src="/services/icons/Regularoroneoff.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "25px", height: "25px", objectFit: "contain" }}
+                  />
+                  <span>
+                    <b>Regular or one-off</b>Weekly routes, appointments and
+                    outings
+                  </span>
+                </div>
+                <div>
+                  <img
+                    src="/services/icons/Healthcaresupport.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "25px", height: "25px", objectFit: "contain" }}
+                  />
+                  <span>
+                    <b>Healthcare support</b>Trained HCAs available on request
+                  </span>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-plus" />
-                </svg>
-                <span>
-                  <b>Healthcare support</b>Trained HCAs available on request
-                </span>
-              </div>
-            </div>
             </div>
           </div>
           <div className="tiles" aria-hidden="true">
@@ -271,44 +283,45 @@ export default function Page() {
             </div>
             <div className="content-grid-3">
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#A9DEC3" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-home" />
-                  </svg>
-                </span>
+
+                <img
+                  src="/services/icons/Carehomes.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
+
                 <h3>Care homes</h3>
                 <p>
                   Regular appointments, community activities and group outings
                   for residents.
                 </p>
               </div>
+
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#CBD8E2" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-users" />
-                  </svg>
-                </span>
+
+                <img
+                  src="/services/icons/Socialproviderscentres.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
+
                 <h3>Social care providers and day centres</h3>
                 <p>
                   Dependable regular routes for clients, planned around your
                   timetable.
                 </p>
               </div>
+
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#FAC9C6" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-heart" />
-                  </svg>
-                </span>
+
+                <img
+                  src="/services/icons/Adultsandfamilies.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
                 <h3>Adults and families</h3>
                 <p>
                   Private journeys to appointments, activities and visits, at a
@@ -377,24 +390,19 @@ export default function Page() {
               <div className="onreq">
                 <b>Care extras on request</b>
                 <ul>
-                  <li>
-                    <svg className="icon">
-                      <use href="#i-female" />
-                    </svg>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#FF5900]"></span>
                     Female drivers for passengers who prefer one
                   </li>
-                  <li>
-                    <svg className="icon">
-                      <use href="#i-female" />
-                    </svg>
+
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#FF5900]"></span>
                     First aid and epilepsy buccal medication trained assistants
                   </li>
-                  <li>
-                    <svg className="icon">
-                      <use href="#i-female" />
-                    </svg>
-                    Trained Healthcare Assistants (HCAs) for residents and
-                    clients
+
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#FF5900]"></span>
+                    Trained Healthcare Assistants (HCAs) for residents and clients
                   </li>
                 </ul>
               </div>
@@ -406,25 +414,26 @@ export default function Page() {
                   Request a quote
                 </Link>
                 <a className="btn btn-outline" href="tel:01491414040">
-                  <svg className="icon" style={{ width: "20px", height: "20px" }}>
-                    <use href="#i-phone" />
-                  </svg>
+
                   Call 01491 414040
                 </a>
               </div>
             </div>
-            <figure className="figsm">
+            <figure className="figsm md:self-start! md:sticky! md:top-24! max-md:order-first">
               <Image
-                src="/images/carers-with-older-woman-in-wheelchair.jpg"
+                src="/services/image/Everypassengertreatedwithdignity.jpg"
                 alt="Two carers smiling with an older woman in a wheelchair"
                 loading="lazy"
                 width={370}
                 height={240}
               />
               <figcaption>
-                <svg className="icon">
-                  <use href="#i-heart" />
-                </svg>
+                <img
+                  src="/services/icons/Everypassengertrateddignity.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                />
                 Every passenger treated with dignity
               </figcaption>
             </figure>
@@ -433,42 +442,42 @@ export default function Page() {
         <section className="stats proof" aria-label="School Express in numbers">
           <div className="container">
             <div className="wrap">
-            <div
-              className="stat"
-              style={{ "--c": "var(--sky)" } as React.CSSProperties}
-            >
-              <CountUp end={20} suffix="+" />
-              <span>
-                <strong>accessible vehicles</strong> ready for care journeys
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--pink)" } as React.CSSProperties}
-            >
-              <CountUp end={100} suffix="+" />
-              <span>
-                <strong>vehicles</strong> to match any group size
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--cyan)" } as React.CSSProperties}
-            >
-              <CountUp end={16} suffix="" />
-              <span>
-                <strong>seats</strong> for residents’ outings
-              </span>
-            </div>
-            <div
-              className="stat"
-              style={{ "--c": "var(--slate)" } as React.CSSProperties}
-            >
-              <CountUp end={15} suffix="+" />
-              <span>
-                <strong>years</strong> caring for vulnerable passengers
-              </span>
-            </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--sky)" } as React.CSSProperties}
+              >
+                <CountUp end={20} suffix="+" />
+                <span>
+                  <strong>accessible vehicles</strong> ready for care journeys
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--pink)" } as React.CSSProperties}
+              >
+                <CountUp end={100} suffix="+" />
+                <span>
+                  <strong>vehicles</strong> to match any group size
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--cyan)" } as React.CSSProperties}
+              >
+                <CountUp end={16} suffix="" />
+                <span>
+                  <strong>seats</strong> for residents’ outings
+                </span>
+              </div>
+              <div
+                className="stat"
+                style={{ "--c": "var(--slate)" } as React.CSSProperties}
+              >
+                <CountUp end={15} suffix="+" />
+                <span>
+                  <strong>years</strong> caring for vulnerable passengers
+                </span>
+              </div>
             </div>
           </div>
         </section>

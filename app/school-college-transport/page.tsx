@@ -186,17 +186,30 @@ export default function Page() {
           <div className="container">
             <div className="wrap">
               <div>
-                <div className="" role="navigation" aria-label="Breadcrumb">
-                  <Link href="/">Home</Link>
+                <div className="text-[#ACD0D8]" role="navigation" aria-label="Breadcrumb">
+                  <Link href="/" className="text-[#ACD0D8]!">
+                    Home
+                  </Link>
+
                   <span aria-hidden="true">/</span>
-                  <Link href="/services">Services</Link>
+
+                  <Link href="/services" className="text-[#ACD0D8]!">
+                    Services
+                  </Link>
+
                   <span aria-hidden="true">/</span>
-                  <span aria-current="page">Schools, trusts and colleges</span>
+
+                  <span className="text-[#ACD0D8]">
+                    Schools, trusts and colleges
+                  </span>
                 </div>
                 <span className="label-chip">
-                  <svg className="icon">
-                    <use href="#i-cap" />
-                  </svg>
+                  <img
+                    src="/services/icons/Schooltrustcollege.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "20px", height: "20px", objectFit: "contain" }}
+                  />
                   School, trust and college transport
                 </span>
                 <h1>School, trust and college transport you can count on</h1>
@@ -223,26 +236,37 @@ export default function Page() {
               </div>
               <div className="keyfacts" style={{ alignSelf: "center" }}>
                 <div>
-                  <svg className="icon">
-                    <use href="#i-users" />
-                  </svg>
+                  <img
+                    src="/services/icons/Familiarfaces.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "25px", height: "25px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>Familiar faces</b>One regular driver for each route
                   </span>
                 </div>
+
                 <div>
-                  <svg className="icon">
-                    <use href="#i-cap" />
-                  </svg>
+                  <img
+                    src="/services/icons/Everytypeschool.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "25px", height: "25px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>Every type of school</b>State, private and independent
                     schools, academy trusts and colleges
                   </span>
                 </div>
+
                 <div>
-                  <svg className="icon">
-                    <use href="#i-bus" />
-                  </svg>
+                  <img
+                    src="/services/icons/Tripsfixtures.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "25px", height: "25px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>Trips and fixtures</b>16-seater minibus hire
                   </span>
@@ -265,51 +289,47 @@ export default function Page() {
               <div>
                 <h2>Who books our school and college runs</h2>
                 <p>
-                  Whether itÃ¢â‚¬â„¢s one pupil or pupils across several schools, we
+                  Whether it's one pupil or pupils across several schools, we
                   plan the journey around the people travelling.
                 </p>
               </div>
             </div>
             <div className="content-grid-3">
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#FAC9C6" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-heart" />
-                  </svg>
-                </span>
+                <img
+                  src="/services/icons/Parentsandcarers.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "42px", height: "42px" }}
+                />
                 <h3>Parents and carers</h3>
                 <p>
                   Private school runs that start and end the day calmly,
                   including shared routes for siblings and nearby pupils.
                 </p>
               </div>
+
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#B7DDF9" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-cap" />
-                  </svg>
-                </span>
+                <img
+                  src="/services/icons/Schoolsacademy.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "42px", height: "42px" }}
+                />
                 <h3>Schools and academy trusts</h3>
                 <p>
                   Regular routes, trips and sports fixtures for individual
                   schools and multi-academy trusts.
                 </p>
               </div>
+
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#A9DEC3" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-users" />
-                  </svg>
-                </span>
+                <img
+                  src="/services/icons/Colleges.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "42px", height: "42px" }}
+                />
                 <h3>Colleges</h3>
                 <p>
                   Dependable daily travel for college students, including those
@@ -325,7 +345,7 @@ export default function Page() {
               <h2>Every school run includes</h2>
               <p style={{ color: "var(--ink2)", marginTop: "16px" }}>
                 For many children, the ride to school sets the tone for the
-                whole day. ThatÃ¢â‚¬â„¢s why we focus on the small things.
+                whole day. That's why we focus on the small things.
               </p>
               <ul className="checklist">
                 <li>
@@ -413,19 +433,21 @@ export default function Page() {
                 </a>
               </div>
             </div>
-            <figure className="figsm">
+            <figure className="figsm md:self-start! md:sticky! md:top-24! max-md:order-first">
               <Image
-                src="/images/pupils-walking-to-school-transport.jpg"
+                src="/services/image/serviceSchool.jpg"
                 alt="Pupils with backpacks walking towards their school transport"
                 loading="lazy"
                 width={370}
                 height={240}
               />
               <figcaption>
-                <svg className="icon">
-                  <use href="#i-clock" />
-                </svg>
-                Timed to fit the school day
+                <img
+                  src="/services/icons/Timedfitthe school.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "25px", height: "25px", objectFit: "contain" }}
+                />                Timed to fit the school day
               </figcaption>
             </figure>
           </div>
@@ -675,11 +697,14 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <CtaBand
-          heading="Need a school or college run?"
-          body="Send us the school, pick-up postcode and times and we'll reply with a quote within one working day."
-          quoteHref="/contact?service=school-college-transport#quote"
-        />
+        <div className="">
+          <CtaBand
+            heading="Need a school or college run?"
+            body="Send us the school, pick-up postcode and times and we'll reply with a quote within one working day."
+            quoteHref="/contact?service=school-college-transport#quote"
+          />
+        </div>
+
       </LegacyScope>
     </>
   );

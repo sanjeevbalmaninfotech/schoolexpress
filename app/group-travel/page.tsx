@@ -211,34 +211,34 @@ export default function Page() {
                 </div>
               </div>
               <div className="keyfacts" style={{ alignSelf: "center" }}>
-              <div>
-                <svg className="icon">
-                  <use href="#i-bus" />
-                </svg>
-                <span>
-                  <b>Up to 16 seats</b>In our new minibus, with more vehicles
-                  for bigger groups
-                </span>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-bus" />
+                  </svg>
+                  <span>
+                    <b>Up to 16 seats</b>In our new minibus, with more vehicles
+                    for bigger groups
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-wheel" />
+                  </svg>
+                  <span>
+                    <b>Accessible options</b>Space for wheelchair users on the
+                    trip
+                  </span>
+                </div>
+                <div>
+                  <svg className="icon">
+                    <use href="#i-shield" />
+                  </svg>
+                  <span>
+                    <b>Vetted drivers</b>DBS cleared and trained to keep groups
+                    safe
+                  </span>
+                </div>
               </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-wheel" />
-                </svg>
-                <span>
-                  <b>Accessible options</b>Space for wheelchair users on the
-                  trip
-                </span>
-              </div>
-              <div>
-                <svg className="icon">
-                  <use href="#i-shield" />
-                </svg>
-                <span>
-                  <b>Vetted drivers</b>DBS cleared and trained to keep groups
-                  safe
-                </span>
-              </div>
-            </div>
             </div>
           </div>
           <div className="tiles" aria-hidden="true">
@@ -355,7 +355,7 @@ export default function Page() {
                     <use href="#i-check" />
                   </svg>
                   <span>
-                    <strong>An itemised quote</strong>, so you know what youÃ¢â‚¬â„¢re
+                    <strong>An itemised quote</strong>, so you know what you're
                     paying for
                   </span>
                 </li>
@@ -375,7 +375,7 @@ export default function Page() {
                 </a>
               </div>
             </div>
-            <figure className="figsm">
+            <figure className="figsm md:self-start! md:sticky! md:top-24! max-md:order-first">
               <Image
                 src="/images/teenagers-on-group-day-out.jpg"
                 alt="Group of smiling teenagers on a day out"

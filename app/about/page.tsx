@@ -341,9 +341,7 @@ export default function Page() {
           <div className="container content-two-col">
             <div>
               <span className="label-chip">
-                <svg className="icon">
-                  <use href="#i-medal" />
-                </svg>
+                <img src="home/icons/homemen.svg" alt="Home" className="" />
                 Our SEND expertise
               </span>
               <h2>Trusted by local authorities for 15+ years</h2>
@@ -497,7 +495,7 @@ export default function Page() {
               <div>
                 <h2>Our fleet</h2>
                 <p>
-                  Five of the vehicles youâ€™ll see on our routes. Behind them is
+                  Five of the vehicles you'll see on our routes. Behind them is
                   a fleet of more than 100, including 20+ wheelchair-accessible
                   vehicles.
                 </p>

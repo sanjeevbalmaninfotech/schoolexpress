@@ -151,9 +151,7 @@ export default function Page() {
           <div className="container content-split">
             <div>
               <span className="label-chip">
-                <svg className="icon">
-                  <use href="#i-heart" />
-                </svg>
+                <img src="/home/icons/homemen.svg" alt="Home" className="" />
                 Our SEND expertise
               </span>
               <h2>15+ years of SEND expertise, on every journey you book</h2>
@@ -263,39 +261,27 @@ export default function Page() {
             </div>
             <ul className="safelist">
               <li>
-                <svg className="icon">
-                  <use href="#i-lic" />
-                </svg>
+                <img src="/home/eduSection/Licensedprivatehire operator.svg" alt="" className="icon" />
                 Licensed private hire operator
               </li>
               <li>
-                <svg className="icon">
-                  <use href="#i-doc" />
-                </svg>
+                <img src="/home/eduSection/Insuredpassengertransport.svg" alt="" className="icon" />
                 Insured for passenger transport
               </li>
               <li>
-                <svg className="icon">
-                  <use href="#i-shield" />
-                </svg>
+                <img src="/home/eduSection/Enhancedchecks.svg" alt="" className="icon" />
                 Enhanced DBS checks for every driver and assistant
               </li>
               <li>
-                <svg className="icon">
-                  <use href="#i-cap" />
-                </svg>
+                <img src="/home/eduSection/users.svg" alt="" className="icon" />
                 SEND and safeguarding training for all staff
               </li>
               <li>
-                <svg className="icon">
-                  <use href="#i-wrench" />
-                </svg>
+                <img src="/home/eduSection/Regularservicing.svg" alt="" className="icon" />
                 Regular servicing and MOT checks
               </li>
               <li>
-                <svg className="icon">
-                  <use href="#i-star" />
-                </svg>
+                <img src="/home/eduSection/Cleancomfortablevehicles.svg" alt="" className="icon" />
                 Clean, comfortable vehicles
               </li>
             </ul>
@@ -314,21 +300,27 @@ export default function Page() {
             </div>
             <div className="fsum">
               <span>
-                <svg className="icon">
-                  <use href="#i-bus" />
-                </svg>
+                <img
+                  src="/home/vehiclesection/vehiclesintotal.svg"
+                  alt=""
+                  className="icon"
+                />
                 100+ vehicles in total
               </span>
               <span>
-                <svg className="icon">
-                  <use href="#i-wheel" />
-                </svg>
+                <img
+                  src="/home/vehiclesection/wheelchairaccessible.svg"
+                  alt=""
+                  className="icon"
+                />
                 20+ wheelchair accessible
               </span>
               <span>
-                <svg className="icon">
-                  <use href="#i-users" />
-                </svg>
+                <img
+                  src="/home/vehiclesection/4to16seats.svg"
+                  alt=""
+                  className="icon"
+                />
                 4 to 16 seats
               </span>
             </div>

@@ -29,7 +29,7 @@ export default function CtaBand({
         ))}
       </div>
       <div className="container">
-        <div className="wrap">
+        <div className="wrap !pl=0px !pr=0">
           <div>
             <h2>{heading}</h2>
             <p>{body}</p>

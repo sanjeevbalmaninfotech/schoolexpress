@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CountUp from "@/components/legacy/CountUp";
@@ -423,7 +423,7 @@ export default function Page() {
                 </a>
               </div>
             </div>
-            <figure className="figsm">
+            <figure className="figsm md:self-start! md:sticky! md:top-24! max-md:order-first">
               <Image
                 className="crop-top"
                 src="/images/smiling-girl-in-wheelchair.jpg"

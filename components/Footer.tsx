@@ -128,7 +128,7 @@ export default function Footer() {
           </p>
           <ul className="flex flex-wrap items-center gap-x-[22px] gap-y-2">
             {POLICIES.map((p) => (
-              <li key={p.href}>
+              <li key={p.label}>
                 <Link href={p.href} className={link}>
                   {p.label}
                 </Link>
