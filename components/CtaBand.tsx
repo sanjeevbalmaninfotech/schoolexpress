@@ -5,6 +5,7 @@ interface CtaBandProps {
   body: string;
   /** href for the primary "Request a quote" button (default: /contact#quote) */
   quoteHref?: string;
+  wrapClassName?: string;
 }
 
 const TILES = [
@@ -20,6 +21,7 @@ export default function CtaBand({
   heading,
   body,
   quoteHref = "/contact#quote",
+  wrapClassName = "",
 }: CtaBandProps) {
   return (
     <section className="ctaband">
@@ -29,7 +31,7 @@ export default function CtaBand({
         ))}
       </div>
       <div className="container">
-        <div className="wrap !pl=0px !pr=0">
+        <div className={`wrap px-0!${wrapClassName ? ` ${wrapClassName}` : ""}`}>
           <div>
             <h2>{heading}</h2>
             <p>{body}</p>
