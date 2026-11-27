@@ -186,11 +186,20 @@ export default function Page() {
           <div className="container">
             <div className="wrap">
               <div>
-                <div className="breadcrumb" role="navigation" aria-label="Breadcrumb">
+                <div
+                  className="breadcrumb"
+                  role="navigation"
+                  aria-label="Breadcrumb"
+                  style={{ color: "#ACD0D8" }}
+                >
                   <Link href="/">Home</Link>
+                  &#x20;
                   <span aria-hidden="true">/</span>
+                  &#x20;
                   <Link href="/services">Services</Link>
+                  &#x20;
                   <span aria-hidden="true">/</span>
+                  &#x20;
                   <span aria-current="page">Adults and social care</span>
                 </div>
                 <span className="label-chip">

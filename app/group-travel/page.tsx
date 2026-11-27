@@ -184,9 +184,12 @@ export default function Page() {
                   <span aria-current="page">Group travel and events</span>
                 </div>
                 <span className="label-chip">
-                  <svg className="icon">
-                    <use href="#i-users" />
-                  </svg>
+                  <img
+                    src="/services/icons/Grouptravelevents.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "20px", height: "20px", objectFit: "contain" }}
+                  />
                   Group travel and events
                 </span>
                 <h1>Group travel for trips, fixtures and special occasions</h1>
@@ -210,27 +213,38 @@ export default function Page() {
               </div>
               <div className="keyfacts" style={{ alignSelf: "center" }}>
                 <div>
-                  <svg className="icon">
-                    <use href="#i-bus" />
-                  </svg>
+                  <img
+                    src="/services/icons/Upto16seats.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>Up to 16 seats</b>In our new minibus, with more vehicles
                     for bigger groups
                   </span>
                 </div>
+
                 <div>
-                  <svg className="icon">
-                    <use href="#i-wheel" />
-                  </svg>
+                  <img
+                    src="/services/icons/Accessibleoptions.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>Accessible options</b>Space for wheelchair users on the
                     trip
                   </span>
                 </div>
+
                 <div>
-                  <svg className="icon">
-                    <use href="#i-shield" />
-                  </svg>
+                  <img
+                    src="/services/icons/Vetteddrivers.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>Vetted drivers</b>DBS cleared and trained to keep groups
                     safe
@@ -261,40 +275,36 @@ export default function Page() {
             </div>
             <div className="content-grid-3">
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#B7DDF9" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-cap" />
-                  </svg>
-                </span>
+                <img
+                  src="/services/icons/Schoolstrustscollege.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
                 <h3>Schools, trusts and colleges</h3>
                 <p>
                   School trips, sports fixtures, discos and end-of-year events.
                 </p>
               </div>
+
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#A6E1EC" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-star" />
-                  </svg>
-                </span>
+                <img
+                  src="/services/icons/Familiesgroups.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
                 <h3>Families and groups</h3>
                 <p>Proms, parties, celebrations and days out.</p>
               </div>
+
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#A9DEC3" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-home" />
-                  </svg>
-                </span>
+                <img
+                  src="/services/icons/Carehomesclubs.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
                 <h3>Care homes and clubs</h3>
                 <p>
                   Accessible outings and activities for residents and members.
@@ -313,45 +323,60 @@ export default function Page() {
               </p>
               <ul className="checklist">
                 <li>
-                  <svg className="icon">
-                    <use href="#i-check" />
-                  </svg>
+                  <img
+                    src="/services/icons/checkServices.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <strong>16-seater minibus</strong>, plus cars and MPVs of up
                     to 8 seats for smaller groups
                   </span>
                 </li>
                 <li>
-                  <svg className="icon">
-                    <use href="#i-check" />
-                  </svg>
+                  <img
+                    src="/services/icons/checkServices.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <strong>More than one vehicle</strong> for larger groups,
                     from a fleet of 100+
                   </span>
                 </li>
                 <li>
-                  <svg className="icon">
-                    <use href="#i-check" />
-                  </svg>
+                  <img
+                    src="/services/icons/checkServices.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <strong>Wheelchair-accessible options</strong>, so nobody is
                     left out
                   </span>
                 </li>
                 <li>
-                  <svg className="icon">
-                    <use href="#i-check" />
-                  </svg>
+                  <img
+                    src="/services/icons/checkServices.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <strong>Drivers vetted to the same standard</strong> as our
                     school routes
                   </span>
                 </li>
                 <li>
-                  <svg className="icon">
-                    <use href="#i-check" />
-                  </svg>
+                  <img
+                    src="/services/icons/checkServices.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <strong>An itemised quote</strong>, so you know what you're
                     paying for
@@ -373,16 +398,20 @@ export default function Page() {
             </div>
             <figure className="figsm md:self-start! md:sticky! md:top-24! max-md:order-first">
               <Image
-                src="/images/teenagers-on-group-day-out.jpg"
+                //"C:\repos\schoolexpress\public\services\image\Tripsfixturespromsoutings.jpg"
+                src="/services/image/Tripsfixturespromsoutings.jpg"
                 alt="Group of smiling teenagers on a day out"
                 loading="lazy"
                 width={370}
                 height={240}
               />
               <figcaption>
-                <svg className="icon">
-                  <use href="#i-star" />
-                </svg>
+                <img
+                  src="/services/icons/cap.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                />
                 Trips, fixtures, proms and outings
               </figcaption>
             </figure>

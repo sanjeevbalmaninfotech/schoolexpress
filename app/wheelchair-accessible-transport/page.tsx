@@ -195,9 +195,12 @@ export default function Page() {
                   <span aria-current="page">Wheelchair accessible</span>
                 </div>
                 <span className="label-chip">
-                  <svg className="icon">
-                    <use href="#i-wheel" />
-                  </svg>
+                  <img
+                    src="/services/icons/Wheelchairaccessibletransport.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "20px", height: "20px", objectFit: "contain" }}
+                  />
                   Wheelchair-accessible transport
                 </span>
                 <h1>
@@ -226,27 +229,38 @@ export default function Page() {
               </div>
               <div className="keyfacts" style={{ alignSelf: "center" }}>
                 <div>
-                  <svg className="icon">
-                    <use href="#i-wheel" />
-                  </svg>
+                  <img
+                    src="/services/icons/20accessiblevehicles.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>20+ accessible vehicles</b>The largest accessible fleet in
                     our area
                   </span>
                 </div>
+
                 <div>
-                  <svg className="icon">
-                    <use href="#i-check" />
-                  </svg>
+                  <img
+                    src="/services/icons/Travelinyouownchair.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>Travel in your own chair</b>Locked in place for the whole
                     journey
                   </span>
                 </div>
+
                 <div>
-                  <svg className="icon">
-                    <use href="#i-users" />
-                  </svg>
+                  <img
+                    src="/services/icons/Roomcompanions.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>Room for companions</b>Seated passengers can travel
                     alongside
@@ -277,29 +291,26 @@ export default function Page() {
             </div>
             <div className="content-grid-3">
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#FAC9C6" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-heart" />
-                  </svg>
-                </span>
+                <img
+                  src="/services/icons/FamiliesOne.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
                 <h3>Families</h3>
                 <p>
                   School runs, appointments and days out for wheelchair users of
                   any age.
                 </p>
               </div>
+
               <Link className="content-card" href="/adult-social-care-transport">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#A9DEC3" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-home" />
-                  </svg>
-                </span>
+                <img
+                  src="/services/icons/Carehomesdayservices.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
                 <h3>Care homes and day services</h3>
                 <p>
                   Regular trips to day centres and appointments, plus outings
@@ -312,15 +323,14 @@ export default function Page() {
                   </svg>
                 </span>
               </Link>
+
               <Link className="content-card" href="/school-college-transport">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#B7DDF9" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-cap" />
-                  </svg>
-                </span>
+                <img
+                  src="/services/icons/SchoolstrustscollegesServices.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
                 <h3>Schools, trusts and colleges</h3>
                 <p>
                   Accessible daily routes, trips and fixtures, with
@@ -396,23 +406,16 @@ export default function Page() {
               <div className="onreq">
                 <b>Extras you can request</b>
                 <ul>
-                  <li>
-                    <svg className="icon">
-                      <use href="#i-female" />
-                    </svg>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#FF5900]"></span>
                     Female drivers on accessible journeys
                   </li>
-                  <li>
-                    <svg className="icon">
-                      <use href="#i-female" />
-                    </svg>
-                    Buccal medication for epilepsy, given by first-aid-trained
-                    assistants
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#FF5900]"></span>
+                    Buccal medication for epilepsy, given by first-aid-trained assistants
                   </li>
-                  <li>
-                    <svg className="icon">
-                      <use href="#i-female" />
-                    </svg>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#FF5900]"></span>
                     HCAs to support passengers with health conditions
                   </li>
                 </ul>
@@ -432,16 +435,20 @@ export default function Page() {
             </div>
             <figure className="figsm md:self-start! md:sticky! md:top-24! max-md:order-first">
               <Image
-                src="/images/wheelchair-user-accessible-van-lift.jpg"
+                // "C:\repos\schoolexpress\public\services\image\Accessiblebydesign.jpg"
+                src="/services/image/Accessiblebydesign.jpg"
                 alt="Wheelchair user rolling onto the lowered lift of an accessible van"
                 loading="lazy"
                 width={800}
                 height={600}
               />
               <figcaption>
-                <svg className="icon">
-                  <use href="#i-wheel" />
-                </svg>
+                <img
+                  src="/services/icons/cap.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                />
                 20+ wheelchair-accessible vehicles
               </figcaption>
             </figure>

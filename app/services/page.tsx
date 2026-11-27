@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CountUp from "@/components/legacy/CountUp";
@@ -155,9 +155,12 @@ export default function Page() {
                   <span aria-current="page">Services</span>
                 </div>
                 <span className="label-chip">
-                  <svg className="icon">
-                    <use href="#i-bus" />
-                  </svg>
+                  <img
+                    src="/services/icons/Ourservices.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "20px", height: "20px", objectFit: "contain" }}
+                  />
                   Our services
                 </span>
                 <h1>Transport for every passenger and every journey</h1>
@@ -179,27 +182,38 @@ export default function Page() {
               </div>
               <div className="keyfacts" style={{ alignSelf: "center" }}>
                 <div>
-                  <svg className="icon">
-                    <use href="#i-users" />
-                  </svg>
+                  <img
+                    src="/services/icons/Foreveryone.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>For everyone</b>Families, schools, trusts, colleges, care
                     homes and social care
                   </span>
                 </div>
+
                 <div>
-                  <svg className="icon">
-                    <use href="#i-bus" />
-                  </svg>
+                  <img
+                    src="/services/icons/100vehicles.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>100+ vehicles</b>Saloons, MPVs, accessible vans and a
                     minibus
                   </span>
                 </div>
+
                 <div>
-                  <svg className="icon">
-                    <use href="#i-wheel" />
-                  </svg>
+                  <img
+                    src="/services/icons/20accessiblevans.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>20+ accessible vans</b>Ramp and lift access, ready for any
                     service
@@ -246,21 +260,15 @@ export default function Page() {
                   </div>
                   <ul>
                     <li>
-                      <svg className="icon">
-                        <use href="#i-check" />
-                      </svg>
+                      <img src="/services/icons/greenCheck.svg" alt="" className="check-icon" />
                       The same face at the door each day
                     </li>
                     <li>
-                      <svg className="icon">
-                        <use href="#i-check" />
-                      </svg>
+                      <img src="/services/icons/greenCheck.svg" alt="" className="check-icon" />
                       Fits school start and finish times
                     </li>
                     <li>
-                      <svg className="icon">
-                        <use href="#i-check" />
-                      </svg>
+                      <img src="/services/icons/greenCheck.svg" alt="" className="check-icon" />
                       Minibus for trips and fixtures
                     </li>
                   </ul>
@@ -298,21 +306,15 @@ export default function Page() {
                   </div>
                   <ul>
                     <li>
-                      <svg className="icon">
-                        <use href="#i-check" />
-                      </svg>
+                      <img src="/services/icons/greenCheck.svg" alt="" className="check-icon" />
                       Weekly routes or single trips
                     </li>
                     <li>
-                      <svg className="icon">
-                        <use href="#i-check" />
-                      </svg>
+                      <img src="/services/icons/greenCheck.svg" alt="" className="check-icon" />
                       Accessible vehicles on every booking
                     </li>
                     <li>
-                      <svg className="icon">
-                        <use href="#i-check" />
-                      </svg>
+                      <img src="/services/icons/greenCheck.svg" alt="" className="check-icon" />
                       HCAs available
                     </li>
                   </ul>
@@ -350,21 +352,15 @@ export default function Page() {
                   </div>
                   <ul>
                     <li>
-                      <svg className="icon">
-                        <use href="#i-check" />
-                      </svg>
+                      <img src="/services/icons/greenCheck.svg" alt="" className="check-icon" />
                       16 seats per minibus
                     </li>
                     <li>
-                      <svg className="icon">
-                        <use href="#i-check" />
-                      </svg>
+                      <img src="/services/icons/greenCheck.svg" alt="" className="check-icon" />
                       Extra vehicles for big groups
                     </li>
                     <li>
-                      <svg className="icon">
-                        <use href="#i-check" />
-                      </svg>
+                      <img src="/services/icons/greenCheck.svg" alt="" className="check-icon" />
                       Accessible seating
                     </li>
                   </ul>
@@ -402,21 +398,15 @@ export default function Page() {
                   </div>
                   <ul>
                     <li>
-                      <svg className="icon">
-                        <use href="#i-check" />
-                      </svg>
+                      <img src="/services/icons/greenCheck.svg" alt="" className="check-icon" />
                       No need to transfer
                     </li>
                     <li>
-                      <svg className="icon">
-                        <use href="#i-check" />
-                      </svg>
+                      <img src="/services/icons/greenCheck.svg" alt="" className="check-icon" />
                       Seats for companions
                     </li>
                     <li>
-                      <svg className="icon">
-                        <use href="#i-check" />
-                      </svg>
+                      <img src="/services/icons/greenCheck.svg" alt="" className="check-icon" />
                       All ages, all journeys
                     </li>
                   </ul>
@@ -454,21 +444,15 @@ export default function Page() {
                   </div>
                   <ul>
                     <li>
-                      <svg className="icon">
-                        <use href="#i-check" />
-                      </svg>
+                      <img src="/services/icons/greenCheck.svg" alt="" className="check-icon" />
                       Support from a trained assistant
                     </li>
                     <li>
-                      <svg className="icon">
-                        <use href="#i-check" />
-                      </svg>
+                      <img src="/services/icons/greenCheck.svg" alt="" className="check-icon" />
                       A written travel plan
                     </li>
                     <li>
-                      <svg className="icon">
-                        <use href="#i-check" />
-                      </svg>
+                      <img src="/services/icons/greenCheck.svg" alt="" className="check-icon" />
                       Female drivers if you prefer
                     </li>
                   </ul>
@@ -489,21 +473,30 @@ export default function Page() {
               <h2>Available on request</h2>
               <ul>
                 <li>
-                  <svg className="icon">
-                    <use href="#i-female" />
-                  </svg>
+                  <img
+                    src="/services/icons/hartIcon.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "20px", height: "20px", objectFit: "contain" }}
+                  />
                   Female drivers
                 </li>
                 <li>
-                  <svg className="icon">
-                    <use href="#i-heart" />
-                  </svg>
+                  <img
+                    src="/services/icons/hartIcon.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "20px", height: "20px", objectFit: "contain" }}
+                  />
                   Epilepsy buccal medication and first-aid-trained assistants
                 </li>
                 <li>
-                  <svg className="icon">
-                    <use href="#i-plus" />
-                  </svg>
+                  <img
+                    src="/services/icons/hartIcon.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "20px", height: "20px", objectFit: "contain" }}
+                  />
                   Trained Healthcare Assistants (HCAs)
                 </li>
               </ul>

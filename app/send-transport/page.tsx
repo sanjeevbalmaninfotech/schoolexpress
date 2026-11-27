@@ -192,9 +192,12 @@ export default function Page() {
                   <span aria-current="page">SEND and additional needs</span>
                 </div>
                 <span className="label-chip">
-                  <svg className="icon">
-                    <use href="#i-heart" />
-                  </svg>
+                  <img
+                    src="/services/icons/SENDadditionalneedstransport.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "20px", height: "20px", objectFit: "contain" }}
+                  />
                   SEND and additional needs transport
                 </span>
                 <h1>SEND transport from a team that does it every day</h1>
@@ -219,27 +222,38 @@ export default function Page() {
               </div>
               <div className="keyfacts" style={{ alignSelf: "center" }}>
                 <div>
-                  <svg className="icon">
-                    <use href="#i-medal" />
-                  </svg>
+                  <img
+                    src="/services/icons/15yearsofSENDroutes.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>15+ years of SEND routes</b>Trusted by councils across
                     Berkshire, Oxfordshire and Hampshire
                   </span>
                 </div>
+
                 <div>
-                  <svg className="icon">
-                    <use href="#i-heart" />
-                  </svg>
+                  <img
+                    src="/services/icons/Dedicatedassistants.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>Dedicated assistants</b>Male or female, chosen to suit each
                     passenger
                   </span>
                 </div>
+
                 <div>
-                  <svg className="icon">
-                    <use href="#i-doc" />
-                  </svg>
+                  <img
+                    src="/services/icons/Plannedaroundthepassenger.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>Planned around the passenger</b>Routines, needs and
                     handovers written down
@@ -270,44 +284,40 @@ export default function Page() {
             </div>
             <div className="content-grid-3">
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#FAC9C6" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-heart" />
-                  </svg>
-                </span>
+                <img
+                  src="/services/icons/ParentsandcarersOne.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
                 <h3>Parents and carers</h3>
                 <p>
                   Private journeys to school, college, therapy or activities,
                   with the patience and routine your child needs.
                 </p>
               </div>
+
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#B7DDF9" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-cap" />
-                  </svg>
-                </span>
+                <img
+                  src="/services/icons/Schoolstrustandcolleges.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
                 <h3>Schools, trusts and colleges</h3>
                 <p>
                   Transport for pupils and students with additional needs, for
                   daily routes, trips and activities.
                 </p>
               </div>
+
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#A9DEC3" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-home" />
-                  </svg>
-                </span>
+                <img
+                  src="/services/icons/Careproviders.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
                 <h3>Care providers</h3>
                 <p>
                   Calm, supported travel for the people you care for, with staff
@@ -328,54 +338,72 @@ export default function Page() {
               </p>
               <ul className="checklist">
                 <li>
-                  <svg className="icon">
-                    <use href="#i-check" />
-                  </svg>
+                  <img
+                    src="/services/icons/checkServices.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <strong>Same driver and assistant on regular routes</strong>
                     , so routines stay calm and predictable
                   </span>
                 </li>
                 <li>
-                  <svg className="icon">
-                    <use href="#i-check" />
-                  </svg>
+                  <img
+                    src="/services/icons/checkServices.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <strong>Matched passenger assistants</strong>, male or
                     female, chosen for each passenger’s needs
                   </span>
                 </li>
                 <li>
-                  <svg className="icon">
-                    <use href="#i-check" />
-                  </svg>
+                  <img
+                    src="/services/icons/checkServices.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <strong>A written plan for each passenger</strong>, agreed
                     with the family before the first journey
                   </span>
                 </li>
                 <li>
-                  <svg className="icon">
-                    <use href="#i-check" />
-                  </svg>
+                  <img
+                    src="/services/icons/checkServices.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <strong>Specialist SEND and safeguarding training</strong>{" "}
                     for drivers and assistants, all enhanced DBS checked
                   </span>
                 </li>
                 <li>
-                  <svg className="icon">
-                    <use href="#i-check" />
-                  </svg>
+                  <img
+                    src="/services/icons/checkServices.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <strong>Wheelchair access when needed</strong>, from the
                     area’s largest accessible fleet
                   </span>
                 </li>
                 <li>
-                  <svg className="icon">
-                    <use href="#i-check" />
-                  </svg>
+                  <img
+                    src="/services/icons/checkServices.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <strong>Clear communication</strong>, with a call from the
                     office the moment plans change
@@ -385,23 +413,16 @@ export default function Page() {
               <div className="onreq">
                 <b>On request for SEND journeys</b>
                 <ul>
-                  <li>
-                    <svg className="icon">
-                      <use href="#i-female" />
-                    </svg>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#FF5900]"></span>
                     Female drivers when a family prefers one
                   </li>
-                  <li>
-                    <svg className="icon">
-                      <use href="#i-female" />
-                    </svg>
-                    Assistants trained to give epilepsy buccal medication, with
-                    first aid training
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#FF5900]"></span>
+                    Assistants trained to give epilepsy buccal medication, with first aid training
                   </li>
-                  <li>
-                    <svg className="icon">
-                      <use href="#i-female" />
-                    </svg>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#FF5900]"></span>
                     Trained HCAs for complex health needs
                   </li>
                 </ul>
@@ -422,16 +443,20 @@ export default function Page() {
             <figure className="figsm md:self-start! md:sticky! md:top-24! max-md:order-first">
               <Image
                 className="crop-top"
-                src="/images/smiling-girl-in-wheelchair.jpg"
+                // "C:\repos\schoolexpress\public\services\image\Whyfamiliestrustujourneys.jpg"
+                src="/services/image/Whyfamiliestrustujourneys.jpg"
                 alt="Smiling girl sitting in her wheelchair outdoors"
                 loading="lazy"
                 width={896}
                 height={673}
               />
               <figcaption>
-                <svg className="icon">
-                  <use href="#i-cap" />
-                </svg>
+                <img
+                  src="/services/icons/cap.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                />
                 Patience and routine on every run
               </figcaption>
             </figure>
