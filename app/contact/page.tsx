@@ -1,7 +1,8 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import LegacyScope from "@/components/legacy/LegacyScope";
 import FaqSection from "@/components/FaqSection";
+import EnquiryForm from "@/components/EnquiryForm";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -187,26 +188,20 @@ export default async function Page({
               </div>
               <div className="keyfacts" style={{ alignSelf: "center" }}>
                 <div>
-                  <svg className="icon">
-                    <use href="#i-clock" />
-                  </svg>
+                  <Image src="/contact/icons/Officehours.svg" alt="Office hours" width={24} height={24} />
                   <span>
                     <b>Office hours</b>Monday to Friday, 7am to 5pm
                   </span>
                 </div>
                 <div>
-                  <svg className="icon">
-                    <use href="#i-chat" />
-                  </svg>
+                  <Image src="/contact/icons/Replytime.svg" alt="Reply time" width={24} height={24} />
                   <span>
                     <b>Reply time</b>Within{" "}
                     <mark className="tbc">[one working day]</mark>
                   </span>
                 </div>
                 <div>
-                  <svg className="icon">
-                    <use href="#i-users" />
-                  </svg>
+                  <Image src="/contact/icons/Lookingforwork.svg" alt="Looking for work?" width={24} height={24} />
                   <span>
                     <b>Looking for work?</b>
                     <Link href="/careers">Apply on our careers page</Link>
@@ -230,33 +225,21 @@ export default async function Page({
               <h2>Contact details</h2>
               <div className="cl">
                 <div>
-                  <span className="icon-box">
-                    <svg className="icon">
-                      <use href="#i-phone" />
-                    </svg>
-                  </span>
+                  <Image src="/contact/icons/Contacticon.svg" alt="Landline" width={44} height={44} />
                   <span>
                     <small>Landline</small>
                     <a href="tel:01491414040">01491 414040</a>
                   </span>
                 </div>
                 <div>
-                  <span className="icon-box">
-                    <svg className="icon">
-                      <use href="#i-phone" />
-                    </svg>
-                  </span>
+                  <Image src="/contact/icons/Contacticon.svg" alt="Mobile" width={44} height={44} />
                   <span>
                     <small>Mobile</small>
                     <a href="tel:07484093555">07484 093555</a>
                   </span>
                 </div>
                 <div>
-                  <span className="icon-box">
-                    <svg className="icon">
-                      <use href="#i-mail" />
-                    </svg>
-                  </span>
+                  <Image src="/contact/icons/emailicon.svg" alt="Email" width={44} height={44} />
                   <span>
                     <small>Email</small>
                     <a
@@ -268,20 +251,14 @@ export default async function Page({
                   </span>
                 </div>
                 <div>
-                  <span className="icon-box">
-                    <svg className="icon">
-                      <use href="#i-pin" />
-                    </svg>
-                  </span>
+                  <Image src="/contact/icons/officelocation.svg" alt="Office location" width={44} height={44} />
                   <span>
                     <small>Office</small>3 Barrett Court, 70 Cardiff Road
                     <br />
                     Reading RG1 8ED
                     <br />
                     <a
-                      href={
-                        "https://www.google.com/maps/search/?api=1&query=3+Barrett+Court+70+Cardiff+Road+Reading+RG1+8ED"
-                      }
+                      href="https://www.google.com/maps/search/?api=1&query=3+Barrett+Court+70+Cardiff+Road+Reading+RG1+8ED"
                       style={{
                         font: "600 16px 'Public Sans',sans-serif",
                         color: "var(--teal)",
@@ -294,119 +271,14 @@ export default async function Page({
                   </span>
                 </div>
                 <div>
-                  <span className="icon-box">
-                    <svg className="icon">
-                      <use href="#i-clock" />
-                    </svg>
-                  </span>
+                  <Image src="/contact/icons/officehoursContact.svg" alt="Office hours" width={44} height={44} />
                   <span>
                     <small>Office hours</small>Monday to Friday, 7am to 5pm
                   </span>
                 </div>
               </div>
             </div>
-            <form
-              id="quote"
-              action="#"
-              method="post"
-              aria-label="Quote request"
-            >
-              <h2 style={{ fontSize: "28px" }}>Request a quote</h2>
-              <div className="row">
-                <label htmlFor="q-name">
-                  Your name
-                  <input
-                    id="q-name"
-                    name="name"
-                    type="text"
-                    autoComplete="name"
-                    required
-                  />
-                </label>
-                <label htmlFor="q-role">
-                  I am a…
-                  <select id="q-role" name="role">
-                    <option>Parent or carer</option>
-                    <option>School, trust or college staff</option>
-                    <option>Care home or social care provider</option>
-                    <option>Other</option>
-                  </select>
-                </label>
-              </div>
-              <div className="row">
-                <label htmlFor="q-email">
-                  Email
-                  <input
-                    id="q-email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                  />
-                </label>
-                <label htmlFor="q-phone">
-                  Phone
-                  <input
-                    id="q-phone"
-                    name="phone"
-                    type="tel"
-                    autoComplete="tel"
-                  />
-                </label>
-              </div>
-              <label htmlFor="q-service">
-                Service needed
-                <select
-                  id="q-service"
-                  name="service"
-                  defaultValue={defaultService}
-                >
-                  <option value="School or college transport">
-                    School or college transport
-                  </option>
-                  <option value="Adult and social care transport">
-                    Adult and social care transport
-                  </option>
-                  <option value="Group travel or an event">
-                    Group travel or an event
-                  </option>
-                  <option value="Wheelchair-accessible transport">
-                    Wheelchair-accessible transport
-                  </option>
-                  <option value="SEND or additional needs transport">
-                    SEND or additional needs transport
-                  </option>
-                  <option value="Not sure yet">Not sure yet</option>
-                </select>
-              </label>
-              <div className="row">
-                <label htmlFor="q-school">
-                  School or destination
-                  <input id="q-school" name="school" type="text" />
-                </label>
-                <label htmlFor="q-postcode">
-                  Pick-up postcode
-                  <input
-                    id="q-postcode"
-                    name="postcode"
-                    type="text"
-                    autoComplete="postal-code"
-                  />
-                </label>
-              </div>
-              <label htmlFor="q-msg">
-                What do you need?
-                <textarea
-                  id="q-msg"
-                  name="message"
-                  rows={4}
-                  placeholder="Number of passengers, days and times, and any wheelchair, access, medical or care needs"
-                ></textarea>
-              </label>
-              <button className="btn btn-primary" type="submit">
-                Send enquiry
-              </button>
-            </form>
+            <EnquiryForm variant="quote" defaultService={defaultService} />
           </div>
         </section>
         <section className="section-spacing section-band" id="areas">

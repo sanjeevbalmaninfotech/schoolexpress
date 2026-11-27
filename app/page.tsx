@@ -6,6 +6,7 @@ import StatsBar from "@/components/StatsBar";
 import LegacyScope from "@/components/legacy/LegacyScope";
 import TransportSection from "@/components/TransportSection";
 import FaqSection from "@/components/FaqSection";
+import EnquiryForm from "@/components/EnquiryForm";
 
 export const metadata: Metadata = {
   title: {
@@ -887,103 +888,7 @@ export default function Page() {
                 </div>
               </div>
             </div>
-            <form
-              id="quote"
-              action="#"
-              method="post"
-              aria-label="Quote request"
-            >
-              <div className="row">
-                <label htmlFor="q-name">
-                  Your name
-                  <input
-                    id="q-name"
-                    name="name"
-                    type="text"
-                    autoComplete="name"
-                    required
-                  />
-                </label>
-                <label htmlFor="q-role">
-                  I am a…
-                  <select id="q-role" name="role">
-                    <option>Parent or carer</option>
-                    <option>School, trust or college staff</option>
-                    <option>Care home or social care provider</option>
-                    <option>Other</option>
-                  </select>
-                </label>
-              </div>
-              <div className="row">
-                <label htmlFor="q-email">
-                  Email
-                  <input
-                    id="q-email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                  />
-                </label>
-                <label htmlFor="q-phone">
-                  Phone
-                  <input
-                    id="q-phone"
-                    name="phone"
-                    type="tel"
-                    autoComplete="tel"
-                  />
-                </label>
-              </div>
-              <label htmlFor="q-service">
-                Service needed
-                <select id="q-service" name="service">
-                  <option value="School or college transport">
-                    School or college transport
-                  </option>
-                  <option value="Adult and social care transport">
-                    Adult and social care transport
-                  </option>
-                  <option value="Group travel or an event">
-                    Group travel or an event
-                  </option>
-                  <option value="Wheelchair-accessible transport">
-                    Wheelchair-accessible transport
-                  </option>
-                  <option value="SEND or additional needs transport">
-                    SEND or additional needs transport
-                  </option>
-                  <option value="Not sure yet">Not sure yet</option>
-                </select>
-              </label>
-              <div className="row">
-                <label htmlFor="q-school">
-                  School or destination
-                  <input id="q-school" name="school" type="text" />
-                </label>
-                <label htmlFor="q-postcode">
-                  Pick-up postcode
-                  <input
-                    id="q-postcode"
-                    name="postcode"
-                    type="text"
-                    autoComplete="postal-code"
-                  />
-                </label>
-              </div>
-              <label htmlFor="q-msg">
-                What do you need?
-                <textarea
-                  id="q-msg"
-                  name="message"
-                  rows={4}
-                  placeholder="Number of passengers, days and times, and any wheelchair, access, medical or care needs"
-                ></textarea>
-              </label>
-              <button className="btn btn-primary" type="submit">
-                Send enquiry
-              </button>
-            </form>
+            <EnquiryForm variant="quote" heading={null} />
           </div>
         </section>
       </LegacyScope>

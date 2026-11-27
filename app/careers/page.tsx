@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import LegacyScope from "@/components/legacy/LegacyScope";
 import FaqSection from "@/components/FaqSection";
+import EnquiryForm from "@/components/EnquiryForm";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -332,77 +333,7 @@ export default function Page() {
                 7am to 5pm.
               </p>
             </div>
-            <form
-              id="apply"
-              action="#"
-              method="post"
-              aria-label="Job application"
-            >
-              <h2 style={{ fontSize: "28px" }}>Apply now</h2>
-              <div className="row">
-                <label htmlFor="a-name">
-                  Your name
-                  <input
-                    id="a-name"
-                    name="name"
-                    type="text"
-                    autoComplete="name"
-                    required
-                  />
-                </label>
-                <label htmlFor="a-role">
-                  Role
-                  <select id="a-role" name="role">
-                    <option>Driver</option>
-                    <option>Passenger assistant</option>
-                    <option>Not sure yet</option>
-                  </select>
-                </label>
-              </div>
-              <div className="row">
-                <label htmlFor="a-email">
-                  Email
-                  <input
-                    id="a-email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                  />
-                </label>
-                <label htmlFor="a-phone">
-                  Phone
-                  <input
-                    id="a-phone"
-                    name="phone"
-                    type="tel"
-                    autoComplete="tel"
-                    required
-                  />
-                </label>
-              </div>
-              <label htmlFor="a-postcode">
-                Home postcode
-                <input
-                  id="a-postcode"
-                  name="postcode"
-                  type="text"
-                  autoComplete="postal-code"
-                />
-              </label>
-              <label htmlFor="a-msg">
-                Tell us a little about yourself
-                <textarea
-                  id="a-msg"
-                  name="message"
-                  rows={4}
-                  placeholder="Any relevant experience, and when you're available"
-                ></textarea>
-              </label>
-              <button className="btn btn-primary" type="submit">
-                Send application
-              </button>
-            </form>
+            <EnquiryForm variant="apply" />
           </div>
         </section>
         <FaqSection
