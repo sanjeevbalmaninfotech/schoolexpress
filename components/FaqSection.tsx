@@ -25,9 +25,8 @@ export default function FaqSection({
   id = "faq",
   className = "",
 }: FaqSectionProps) {
-  const sectionClass = `section-spacing${band ? " section-band" : ""}${
-    className ? ` ${className}` : ""
-  }`;
+  const sectionClass = `section-spacing${band ? " section-band" : ""}${className ? ` ${className}` : ""
+    }`;
 
   return (
     <section className={sectionClass} id={id}>
@@ -47,23 +46,23 @@ export default function FaqSection({
         <div className="faq">
           {items
             ? items.map((item, index) => {
-                const isOpen =
-                  item.open !== undefined ? item.open : index === 0;
-                return (
-                  <details key={index} open={isOpen ? true : undefined}>
-                    <summary>{item.question}</summary>
-                    {typeof item.answer === "string" ? (
-                      <p>{item.answer}</p>
-                    ) : React.isValidElement(item.answer) &&
-                      (item.answer.type === "p" ||
-                        item.answer.type === "div") ? (
-                      item.answer
-                    ) : (
-                      <p>{item.answer}</p>
-                    )}
-                  </details>
-                );
-              })
+              const isOpen =
+                item.open !== undefined ? item.open : index === 0;
+              return (
+                <details key={index} open={isOpen ? true : undefined}>
+                  <summary>{item.question}</summary>
+                  {typeof item.answer === "string" ? (
+                    <p>{item.answer}</p>
+                  ) : React.isValidElement(item.answer) &&
+                    (item.answer.type === "p" ||
+                      item.answer.type === "div") ? (
+                    item.answer
+                  ) : (
+                    <p>{item.answer}</p>
+                  )}
+                </details>
+              );
+            })
             : children}
         </div>
       </div>
