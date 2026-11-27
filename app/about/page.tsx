@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CountUp from "@/components/legacy/CountUp";
@@ -163,9 +163,12 @@ export default function Page() {
                   <span aria-current="page">About us</span>
                 </div>
                 <span className="label-chip">
-                  <svg className="icon">
-                    <use href="#i-heart" />
-                  </svg>
+                  <img
+                    src="/services/icons/AboutSchoolExpress.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "20px", height: "20px", objectFit: "contain" }}
+                  />
                   About School Express
                 </span>
                 <h1>
@@ -189,26 +192,37 @@ export default function Page() {
               </div>
               <div className="keyfacts" style={{ alignSelf: "center" }}>
                 <div>
-                  <svg className="icon">
-                    <use href="#i-pin" />
-                  </svg>
+                  <img
+                    src="/services/icons/Readingoffice.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>Reading office</b>3 Barrett Court, 70 Cardiff Road
                   </span>
                 </div>
+
                 <div>
-                  <svg className="icon">
-                    <use href="#i-home" />
-                  </svg>
+                  <img
+                    src="/services/icons/Trustedcouncils.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>Trusted by councils</b>Reading, Wokingham, West Berkshire,
                     Bracknell Forest, South Oxfordshire and Fareham
                   </span>
                 </div>
+
                 <div>
-                  <svg className="icon">
-                    <use href="#i-users" />
-                  </svg>
+                  <img
+                    src="/services/icons/Ourteam.svg"
+                    alt=""
+                    className="icon"
+                    style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                  />
                   <span>
                     <b>Our team</b>200+ drivers and passenger assistants
                   </span>
@@ -305,7 +319,7 @@ export default function Page() {
                 and group outing we take on.
               </p>
               <p style={{ color: "var(--ink2)", marginTop: "16px" }}>
-                We treat every passenger the way weâ€™d want our own family
+                We treat every passenger the way we'd want our own family
                 treated: with patience, kindness and respect.
               </p>
               <div className="button-group" style={{ marginTop: "28px" }}>
@@ -319,7 +333,7 @@ export default function Page() {
             </div>
             <figure className="figsm">
               <Image
-                src="/images/primary-pupils-walking-to-school.jpg"
+                src="/services/image/Thestorybehind.jpg"
                 alt="Primary school pupils in uniform walking together"
                 loading="lazy"
                 style={{ aspectRatio: "4/3" }}
@@ -327,9 +341,12 @@ export default function Page() {
                 height={673}
               />
               <figcaption>
-                <svg className="icon">
-                  <use href="#i-heart" />
-                </svg>
+                <img
+                  src="/services/icons/cap.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "24px", height: "24px", objectFit: "contain" }}
+                />
                 More than 10,000 children transported safely
               </figcaption>
             </figure>
@@ -339,13 +356,13 @@ export default function Page() {
           <div className="container content-two-col">
             <div>
               <span className="label-chip">
-                <img src="home/icons/homemen.svg" alt="Home" className="" />
+                {/* <img src="home/icons/homemen.svg" alt="Home" className="" /> */}
                 Our SEND expertise
               </span>
               <h2>Trusted by local authorities for 15+ years</h2>
               <p style={{ color: "var(--ink2)", marginTop: "16px" }}>
                 Councils award SEND and home-to-school routes through
-                competitive tender. For more than 15 years theyâ€™ve trusted us
+                competitive tender. For more than 15 years they've trusted us
                 with some of their most demanding journeys, and we lead the way
                 locally for wheelchair-accessible transport.
               </p>
@@ -389,98 +406,91 @@ export default function Page() {
                 </p>
               </div>
             </div>
-            <div className="content-grid-3">
+            <div className="content-grid-3 grid-cols-1! md:grid-cols-2! lg:grid-cols-3! [font-family:var(--font-public-sans),'Public_Sans',sans-serif]! [&_h3]:[font-family:var(--font-public-sans),'Public_Sans',sans-serif]!">
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#B7DDF9" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-shield" />
-                  </svg>
-                </span>
-                <h3>Safety, without shortcuts</h3>
+                <img
+                  src="/about/icons/Safetywithoutshortcuts.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
+                <h3 >Safety, without shortcuts</h3>
                 <p>
                   Enhanced DBS checks, SEND and safeguarding training, and
                   vehicles that are MOT compliant, regularly serviced and kept
                   clean. Safety is never where we save time.
                 </p>
               </div>
+
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#FAC9C6" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-heart" />
-                  </svg>
-                </span>
+                <img
+                  src="/about/icons/Careinthesmallthings.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
                 <h3>Care in the small things</h3>
                 <p>
                   A warm hello, a patient driver and a calm, comfortable
-                  journey. For many passengers, thatâ€™s what makes the day start
+                  journey. For many passengers, that's what makes the day start
                   well.
                 </p>
               </div>
+
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#A9DEC3" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-chat" />
-                  </svg>
-                </span>
+                <img
+                  src="/about/icons/Reliablealwaystouch.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
                 <h3>Reliable, and always in touch</h3>
                 <p>
                   We plan every route with care, and if traffic or anything else
-                  affects a journey, weâ€™ll let you know straight away. Youâ€™ll
+                  affects a journey, we'll let you know straight away. You'll
                   never be left wondering.
                 </p>
               </div>
+
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#CBD8E2" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-users" />
-                  </svg>
-                </span>
+                <img
+                  src="/about/icons/Dignityforeverypassenger.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
                 <h3>Dignity for every passenger</h3>
                 <p>
-                  Whatever someoneâ€™s age or needs, theyâ€™re treated with respect,
+                  Whatever someone's age or needs, they're treated with respect,
                   from the first pick-up to the last drop-off.
                 </p>
               </div>
+
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#A6E1EC" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-doc" />
-                  </svg>
-                </span>
+                <img
+                  src="/about/icons/Honestandopen.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
                 <h3>Honest and open</h3>
                 <p>
                   Clear quotes with no surprises, and a friendly office team to
                   talk to whenever you need us.
                 </p>
               </div>
+
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#B5DAD6" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-pin" />
-                  </svg>
-                </span>
+                <img
+                  src="/about/icons/RootedSouth.svg"
+                  alt=""
+                  className="icon"
+                  style={{ width: "40px", height: "40px", objectFit: "contain" }}
+                />
                 <h3>Rooted in the South East, and growing</h3>
                 <p>
                   We started in Reading and now run routes in three counties. As
-                  more councils and families ask for us, weâ€™re taking our
+                  more councils and families ask for us, we're taking our
                   service further across the South East.
                 </p>
               </div>
@@ -501,21 +511,15 @@ export default function Page() {
             </div>
             <div className="fsum">
               <span>
-                <svg className="icon">
-                  <use href="#i-bus" />
-                </svg>
+                <Image src="/about/icons/SaloonsandMPVs.svg" alt="Saloons and MPVs" width={24} height={24} />
                 Saloons and MPVs
               </span>
               <span>
-                <svg className="icon">
-                  <use href="#i-wheel" />
-                </svg>
+                <Image src="/about/icons/Wheelchairaccessiblevans.svg" alt="Wheelchair-accessible vans" width={24} height={24} />
                 Wheelchair-accessible vans
               </span>
               <span>
-                <svg className="icon">
-                  <use href="#i-users" />
-                </svg>
+                <Image src="/about/icons/A16seatminibus.svg" alt="A 16-seat minibus" width={24} height={24} />
                 A 16-seat minibus
               </span>
             </div>
@@ -648,39 +652,27 @@ export default function Page() {
             </div>
             <ul className="safelist">
               <li>
-                <svg className="icon">
-                  <use href="#i-lic" />
-                </svg>
+                <Image src="/about/icons/Licensedoperator.svg" alt="Licensed operator" width={24} height={24} />
                 Licensed operator
               </li>
               <li>
-                <svg className="icon">
-                  <use href="#i-doc" />
-                </svg>
+                <Image src="/about/icons/Fullyinsured.svg" alt="Fully insured" width={24} height={24} />
                 Fully insured
               </li>
               <li>
-                <svg className="icon">
-                  <use href="#i-shield" />
-                </svg>
+                <Image src="/about/icons/EnhancedDBSchecked.svg" alt="Enhanced DBS checked" width={24} height={24} />
                 Enhanced DBS checked
               </li>
               <li>
-                <svg className="icon">
-                  <use href="#i-cap" />
-                </svg>
+                <Image src="/about/icons/SENDandsafeguardingtrained.svg" alt="SEND and safeguarding trained" width={24} height={24} />
                 SEND and safeguarding trained
               </li>
               <li>
-                <svg className="icon">
-                  <use href="#i-wrench" />
-                </svg>
+                <Image src="/about/icons/MOTcompliantandregularlyserviced.svg" alt="MOT compliant and regularly serviced" width={24} height={24} />
                 MOT compliant and regularly serviced
               </li>
               <li>
-                <svg className="icon">
-                  <use href="#i-star" />
-                </svg>
+                <Image src="/about/icons/Cleanwellkeptvehicles.svg" alt="Clean, well-kept vehicles" width={24} height={24} />
                 Clean, well-kept vehicles
               </li>
             </ul>
@@ -716,9 +708,7 @@ export default function Page() {
             </div>
             <div className="perks">
               <div className="perk-card">
-                <svg className="icon">
-                  <use href="#i-wheel" />
-                </svg>
+                <Image src="/about/icons/Drivers.svg" alt="Drivers" width={24} height={24} />
                 <b>Drivers</b>
                 <span>
                   Licensed, vetted and assigned to regular routes. Female
@@ -726,9 +716,7 @@ export default function Page() {
                 </span>
               </div>
               <div className="perk-card">
-                <svg className="icon">
-                  <use href="#i-heart" />
-                </svg>
+                <Image src="/about/icons/Passengerassistants.svg" alt="Passenger assistants" width={24} height={24} />
                 <b>Passenger assistants</b>
                 <span>
                   Support for passengers who need extra help, with epilepsy
@@ -736,9 +724,7 @@ export default function Page() {
                 </span>
               </div>
               <div className="perk-card">
-                <svg className="icon">
-                  <use href="#i-plus" />
-                </svg>
+                <Image src="/about/icons/HealthcareAssistants.svg" alt="Healthcare Assistants" width={24} height={24} />
                 <b>Healthcare Assistants</b>
                 <span>
                   Trained HCAs available on request for passengers with
@@ -746,9 +732,7 @@ export default function Page() {
                 </span>
               </div>
               <div className="perk-card">
-                <svg className="icon">
-                  <use href="#i-users" />
-                </svg>
+                <Image src="/about/icons/Officeteam.svg" alt="Office team" width={24} height={24} />
                 <b>Office team</b>
                 <span>
                   Planning routes, matching teams and keeping you informed,

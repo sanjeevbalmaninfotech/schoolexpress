@@ -1,7 +1,8 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import LegacyScope from "@/components/legacy/LegacyScope";
 import FaqSection from "@/components/FaqSection";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: {
@@ -149,9 +150,7 @@ export default function Page() {
                   <span aria-current="page">Careers</span>
                 </div>
                 <span className="label-chip">
-                  <svg className="icon">
-                    <use href="#i-users" />
-                  </svg>
+                  <Image src="/careers/icons/Joinourteam.svg" alt="Join our team" width={20} height={20} />
                   Join our team
                 </span>
                 <h1>Work that fits around school hours, and matters</h1>
@@ -171,26 +170,20 @@ export default function Page() {
               </div>
               <div className="keyfacts" style={{ alignSelf: "center" }}>
                 <div>
-                  <svg className="icon">
-                    <use href="#i-cal" />
-                  </svg>
+                  <Image src="/careers/icons/Schooldayhours.svg" alt="School-day hours" width={24} height={24} />
                   <span>
                     <b>School-day hours</b>Work mornings and afternoons
                   </span>
                 </div>
                 <div>
-                  <svg className="icon">
-                    <use href="#i-medal" />
-                  </svg>
+                  <Image src="/careers/icons/PaidtrainingDBS.svg" alt="Paid training and DBS" width={24} height={24} />
                   <span>
                     <b>Paid training and DBS</b>SEND and safeguarding training
                     included
                   </span>
                 </div>
                 <div>
-                  <svg className="icon">
-                    <use href="#i-users" />
-                  </svg>
+                  <Image src="/careers/icons/Ateamof200.svg" alt="A team of 200+" width={24} height={24} />
                   <span>
                     <b>A team of 200+</b>Drivers, assistants and a friendly office
                     team
@@ -216,70 +209,70 @@ export default function Page() {
                 <p>Two ways to join the team behind every journey.</p>
               </div>
             </div>
-            <div className="roles">
-              <article className="role">
-                <h3>Drivers</h3>
-                <dl>
-                  <div>
-                    <dt>What you’ll do</dt>
-                    <dd>
-                      Drive regular school, college, care and group routes,
-                      getting to know your passengers and keeping every journey
-                      safe and calm.
-                    </dd>
-                  </div>
-                  <div>
-                    <dt>What you’ll need</dt>
-                    <dd>
-                      A full UK licence held for{" "}
-                      <mark className="tbc">[X]</mark>+ years, and a private
-                      hire badge, or we’ll help you get one.
-                    </dd>
-                  </div>
-                  <div>
-                    <dt>What you’ll get</dt>
-                    <dd>
-                      Paid training and enhanced DBS check, regular routes and a
-                      supportive office team.
-                    </dd>
-                  </div>
-                </dl>
-                <a className="btn btn-primary" href="#apply">
-                  Apply to drive
-                </a>
-              </article>
-              <article className="role">
-                <h3>Passenger assistants</h3>
-                <dl>
-                  <div>
-                    <dt>What you’ll do</dt>
-                    <dd>
-                      Travel with passengers who need extra support, helping
-                      them feel safe, settled and comfortable from pick-up to
-                      drop-off.
-                    </dd>
-                  </div>
-                  <div>
-                    <dt>What you’ll need</dt>
-                    <dd>
-                      A caring, patient and reliable nature. No driving licence
-                      needed.
-                    </dd>
-                  </div>
-                  <div>
-                    <dt>What you’ll get</dt>
-                    <dd>
-                      Paid SEND and safeguarding training, with opportunities to
-                      train in first aid and epilepsy buccal medication.
-                    </dd>
-                  </div>
-                </dl>
-                <a className="btn btn-primary" href="#apply">
-                  Apply to assist
-                </a>
-              </article>
+              <div className="roles [&_dt]:normal-case! [&_dt]:tracking-normal!">
+                <article className="role">
+                  <h3>Drivers</h3>
+                  <dl>
+                    <div>
+                      <dt>What you’ll do</dt>
+                      <dd>
+                        Drive regular school, college, care and group routes,
+                        getting to know your passengers and keeping every journey
+                        safe and calm.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>What you’ll need</dt>
+                      <dd>
+                        A full UK licence held for{" "}
+                        <mark className="tbc">[X]</mark>+ years, and a private
+                        hire badge, or we’ll help you get one.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>What you’ll get</dt>
+                      <dd>
+                        Paid training and enhanced DBS check, regular routes and a
+                        supportive office team.
+                      </dd>
+                    </div>
+                  </dl>
+                  <a className="btn btn-primary" href="#apply">
+                    Apply to drive
+                  </a>
+                </article>
+                <article className="role">
+                  <h3>Passenger assistants</h3>
+                  <dl>
+                    <div>
+                      <dt>What you’ll do</dt>
+                      <dd>
+                        Travel with passengers who need extra support, helping
+                        them feel safe, settled and comfortable from pick-up to
+                        drop-off.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>What you’ll need</dt>
+                      <dd>
+                        A caring, patient and reliable nature. No driving licence
+                        needed.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>What you’ll get</dt>
+                      <dd>
+                        Paid SEND and safeguarding training, with opportunities to
+                        train in first aid and epilepsy buccal medication.
+                      </dd>
+                    </div>
+                  </dl>
+                  <a className="btn btn-primary" href="#apply">
+                    Apply to assist
+                  </a>
+                </article>
+              </div>
             </div>
-          </div>
         </section>
         <section className="section-spacing section-band">
           <div className="container">
@@ -295,55 +288,30 @@ export default function Page() {
               }}
             >
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#B7DDF9" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-cal" />
-                  </svg>
-                </span>
+                <Image src="/careers/icons/Term-timehours.svg" alt="Term-time hours" width={40} height={40} />
                 <h3>Term-time hours</h3>
                 <p>Morning and afternoon routes, with school holidays free.</p>
               </div>
+
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#FAC9C6" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-medal" />
-                  </svg>
-                </span>
+                <Image src="/careers/icons/Paidwhileyoutrain.svg" alt="Paid while you train" width={40} height={40} />
                 <h3>Paid while you train</h3>
                 <p>
                   Your DBS check is covered, and pay is{" "}
                   <mark className="tbc">£[X]</mark> per hour.
                 </p>
               </div>
+
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#A9DEC3" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-users" />
-                  </svg>
-                </span>
+                <Image src="/careers/icons/Regularroutes.svg" alt="Regular routes" width={40} height={40} />
                 <h3>Regular routes</h3>
                 <p>
                   The same passengers each day, so you really get to know them.
                 </p>
               </div>
+
               <div className="content-card">
-                <span
-                  className="icon-box"
-                  style={{ "--bg": "#CBD8E2" } as React.CSSProperties}
-                >
-                  <svg className="icon">
-                    <use href="#i-heart" />
-                  </svg>
-                </span>
+                <Image src="/careers/icons/Workthatmatters.svg" alt="Work that matters" width={40} height={40} />
                 <h3>Work that matters</h3>
                 <p>
                   Help children and adults get where they need to be, safely and

@@ -2,6 +2,7 @@
 import Link from "next/link";
 import LegacyScope from "@/components/legacy/LegacyScope";
 import FaqSection from "@/components/FaqSection";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: {
@@ -165,9 +166,7 @@ export default async function Page({
                   <span aria-current="page">Contact</span>
                 </div>
                 <span className="label-chip">
-                  <svg className="icon">
-                    <use href="#i-chat" />
-                  </svg>
+                  <Image src="/contact/icons/Gettouch.svg" alt="Get in touch" width={20} height={20} />
                   Get in touch
                 </span>
                 <h1>Let’s plan your journey</h1>
